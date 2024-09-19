@@ -11,7 +11,7 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination.mySwiperPagination",
   },
   effect: "fade",
   loop: true,
@@ -20,13 +20,21 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper1 = new Swiper(".catalogSwiper", {
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".catalog__btns-item.right",
+    prevEl: ".catalog__btns-item.left",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination.catalogSwiperPagination",
   },
-  effect: "fade",
+  slidesPerView: 4,
+  modules: [Navigation, Pagination]
+});
+
+var swiper3 = new Swiper(".itemSwiper", {
+  pagination: {
+    el: ".swiper-pagination.itemSwiperPagination",
+  },
+  // effect: "fade",
   loop: true,
-  modules: [Navigation, Pagination, EffectFade]
+  modules: [Pagination, EffectFade]
 });

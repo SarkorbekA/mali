@@ -156,6 +156,7 @@
   &-header {
     display: flex;
     justify-content: space-between;
+    @include res("margin-bottom", 50px);
   }
   &-title {
     @include res("font-size", 40px);
@@ -163,5 +164,184 @@
     font-weight: 700;
     text-align: left;
     color: $black;
+  }
+  &__btns {
+    display: flex;
+    @include res("gap", 20px);
+    &-item {
+      @include res("width", 30px);
+      @include res("height", 30px);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $default;
+      svg {
+        @include res("width", 20px);
+        @include res("height", 20px);
+      }
+    }
+  }
+  &-slider {
+    // @include res("height", 280px);
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  &__item {
+    background: $beige;
+    width: 100%;
+    height: 100%;
+    @include res("border-radius", 50px);
+    border-bottom-left-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-img {
+      width: 100%;
+      @include res("padding", 10px);
+      @include res("height", 260px);
+    }
+    &-box {
+      @include res("margin-top", 22px);
+      @include res("padding-left", 40px);
+      @include res("padding-right", 40px);
+      @include res("padding-bottom", 36px);
+    }
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22.5px;
+      @include res("font-size", 18px);
+      @include res("line-height", 22.5px);
+      color: $black;
+      text-align: left;
+    }
+    &-text {
+      @include res("margin-top", 15px);
+      font-weight: 300;
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      color: $black;
+      text-align: left;
+    }
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include res("margin-top", 40px);
+      h3 {
+        @include res("font-size", 14px);
+        @include res("line-height", 17.5px);
+        font-weight: 300;
+        color: $gray;
+      }
+    }
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include res("margin-top", 40px);
+    @include res("margin-bottom", 40px);
+    .swiper-pagination {
+      @include res("left", -5px);
+      position: relative;
+      display: flex;
+      bottom: 0;
+      top: 0;
+      &-bullet {
+        --swiper-pagination-color: #e80029;
+        --swiper-pagination-bullet-inactive-color: #f1f1f0;
+        @include res("--swiper-pagination-bullet-horizontal-gap", 5px);
+        opacity: 1;
+        @include res("width", 57.5px);
+        @include res("height", 2px);
+        @include res("border-radius", 2px);
+      }
+    }
+  }
+  &-button {
+    width: fit-content;
+    display: flex;
+    @include res("gap", 15px);
+    align-items: center;
+    h3 {
+      @include res("font-size", 16px);
+      @include res("line-height", 20px);
+      font-weight: 400;
+      text-align: left;
+      color: $default;
+      text-wrap: nowrap;
+    }
+    svg {
+      @include res("height", 30px);
+      @include res("width", 30px);
+    }
+  }
+}
+
+.catalogSwiper.swiper {
+  overflow: visible !important;
+  width: 100%;
+  height: 100%;
+  @include res("width", 1210px);
+  margin-left: auto;
+  margin-right: auto;
+  @include res("padding-left", 15px);
+  @include res("padding-right", 15px);
+}
+
+.catalogSwiper {
+  & > .swiper-wrapper {
+    width: 100%;
+    & > .swiper {
+      &-slide {
+        @include res("padding-right", 20px);
+
+        &:last-child {
+          padding-right: 0;
+        }
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        @include res("padding-bottom", 8px);
+      }
+    }
+  }
+}
+
+.itemSwiper.swiper {
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-color: #e80029;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  @include res("--swiper-pagination-bottom", 4px);
+  @include res("--swiper-pagination-bullet-horizontal-gap", 2px);
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.itemSwiper .swiper {
+  &-slide {
+    padding: 0;
+  }
+  &-pagination {
+    transform: translateX(-30%);
+    &-bullet {
+      opacity: 1;
+      @include res("width", 10px);
+      @include res("height", 2px);
+      @include res("border-radius", 2px);
+    }
   }
 }

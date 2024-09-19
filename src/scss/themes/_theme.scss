@@ -47,8 +47,8 @@ body {
     @include res("width", 1210px);
     margin-left: auto;
     margin-right: auto;
-    @include resm("padding-left", 15px);
-    @include resm("padding-right", 15px);
+    @include res("padding-left", 15px);
+    @include res("padding-right", 15px);
     // @include media(1400) {
     //     @include resm("width", 976px);
     // }
