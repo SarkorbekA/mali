@@ -11,6 +11,11 @@
   @include res("letter-spacing", 0.8px);
   text-align: center;
   background-color: $default;
-  color: #ffffff;
+  color: $white;
   text-transform: uppercase;
+  &.other {
+    outline-color: $white;
+    outline-style: solid;
+    @include res("outline-width", 1px);
+  }
 }

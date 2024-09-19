@@ -345,3 +345,165 @@
     }
   }
 }
+
+.partners {
+  @include res("margin-top", 150px);
+  @include res("width", 1360px);
+  margin-left: auto;
+  margin-right: auto;
+  @include res("padding-left", 15px);
+  @include res("padding-right", 15px);
+
+  &-wrapper {
+    background-color: $default;
+    @include res("border-radius", 50px);
+    border-bottom-left-radius: 0;
+    @include res("padding", 70px);
+    @include res("padding-top", 52px);
+    @include res("padding-bottom", 60px);
+    display: flex;
+    align-items: center;
+    @include res("gap", 44px);
+  }
+  &-title {
+    font-weight: 700;
+    @include res("font-size", 40px);
+    @include res("line-height", 48px);
+    @include res("max-width", 300px);
+    text-align: left;
+    color: $white;
+  }
+  &-text {
+    @include res("font-size", 22px);
+    @include res("line-height", 27.5px);
+    @include res("margin-top", 20px);
+    @include res("max-width", 460px);
+    font-weight: 400;
+    text-align: left;
+    color: $white;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    @include res("margin-top", 38px);
+    @include res("gap", 20px);
+    &-item {
+      @include res("width", 180px);
+      aspect-ratio: 180\60;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-btn {
+    width: fit-content;
+    display: flex;
+    @include res("gap", 15px);
+    align-items: center;
+    h3 {
+      @include res("font-size", 16px);
+      @include res("line-height", 20px);
+      font-weight: 400;
+      text-align: left;
+      color: $white;
+      text-wrap: nowrap;
+    }
+    svg {
+      @include res("height", 30px);
+      @include res("width", 30px);
+    }
+  }
+  &__right {
+    @include res("padding", 40px);
+    @include res("padding-top", 28px);
+    background: $white;
+    @include res("border-radius", 30px);
+    &-title {
+      @include res("font-size", 22px);
+      @include res("line-height", 27.5px);
+      font-weight: 400;
+      text-align: left;
+      color: $black;
+      @include res("max-width", 281px);
+    }
+    &-text {
+      @include res("max-width", 450px);
+      @include res("margin-top", 10px);
+      font-weight: 400;
+      @include res("font-size", 16px);
+      @include res("line-height", 20px);
+      text-align: left;
+      color: $black;
+    }
+    &-bottom {
+      @include res("margin-top", 36px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-button {
+      width: fit-content;
+      display: flex;
+      @include res("gap", 15px);
+      align-items: center;
+      h3 {
+        @include res("font-size", 16px);
+        @include res("line-height", 20px);
+        font-weight: 400;
+        text-align: left;
+        color: $default;
+        text-wrap: nowrap;
+      }
+      svg {
+        @include res("height", 30px);
+        @include res("width", 30px);
+      }
+    }
+  }
+}
+
+.call {
+  @include res("margin-top", 120px);
+  @include res("margin-bottom", 75px);
+  @include res("width", 810px);
+  margin-left: auto;
+  margin-right: auto;
+  @include res("padding-left", 15px);
+  @include res("padding-right", 15px);
+
+  &-wrapper {
+    background-color: $default;
+    @include res("border-radius", 50px);
+    @include res("padding", 20px);
+    @include res("padding-left", 48px);
+    @include res("padding-right", 26px);
+    display: flex;
+    align-items: center;
+    @include res("gap", 60px);
+    justify-content: space-between;
+  }
+  &-title {
+    @include res("font-size", 16px);
+    @include res("line-height", 20px);
+    font-weight: 400;
+    text-align: left;
+    color: $white;
+    @include res("max-width", 180px);
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    @include res("gap", 15px);
+    svg {
+      @include res("width", 20px);
+      @include res("height", 20px);
+    }
+    h3 {
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 400;
+      text-align: left;
+      color: $white;
+    }
+  }
+}
