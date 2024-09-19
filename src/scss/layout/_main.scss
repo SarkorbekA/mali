@@ -1,0 +1,167 @@
+.main {
+  @include res("margin-top", 100px);
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include res("gap", 20px);
+  padding-bottom: 40px;
+  &-title {
+    font-weight: 700;
+    @include res("font-size", 40px);
+    @include res("line-height", 48px);
+    text-align: left;
+    color: $black;
+  }
+  &-subtitle {
+    @include res("margin-top", 12px);
+    @include res("font-size", 22px);
+    @include res("line-height", 27.5px);
+    font-weight: 400;
+    text-align: left;
+    color: $black;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    &-top {
+      display: flex;
+      @include res("gap", 20px);
+    }
+    &-item {
+      @include res("width", 280px);
+      @include res("height", 140px);
+      display: flex;
+      align-items: flex-start;
+      @include res("gap", 20px);
+      border-color: $beige;
+      border-style: solid;
+      @include res("border-width", 5px);
+      @include res("padding-top", 30px);
+      @include res("padding-left", 20px);
+      @include res("padding-right", 20px);
+      @include res("border-radius", 30px);
+      border-bottom-left-radius: 0;
+      svg {
+        @include res("min-width", 40px);
+        @include res("width", 40px);
+        @include res("height", 40px);
+      }
+    }
+    &-texts {
+      @include res("padding-top", 4px);
+      h3 {
+        @include res("font-size", 16px);
+        @include res("line-height", 20px);
+        font-weight: 500;
+        text-align: left;
+        color: $black;
+      }
+      p {
+        @include res("margin-top", 12px);
+        @include res("font-size", 14px);
+        @include res("line-height", 17.5px);
+        font-weight: 300;
+        text-align: left;
+        color: $black;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    @include res("gap", 20px);
+    justify-content: space-between;
+    &-item {
+      @include res("width", 380px);
+      @include res("height", 140px);
+      display: flex;
+      align-items: flex-start;
+      @include res("gap", 20px);
+      border-color: $beige;
+      border-style: solid;
+      @include res("border-width", 5px);
+      @include res("padding-top", 30px);
+      @include res("padding-left", 20px);
+      @include res("padding-right", 40px);
+      @include res("border-radius", 30px);
+      border-bottom-left-radius: 0;
+      svg {
+        @include res("min-width", 40px);
+        @include res("width", 40px);
+        @include res("height", 40px);
+      }
+    }
+  }
+}
+
+.info {
+  @include res("margin-top", 100px);
+  @include res("gap", 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-img {
+    @include res("width", 378px);
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &-title {
+    @include res("font-size", 22px);
+    @include res("line-height", 27.5px);
+    font-weight: 400;
+    text-align: left;
+    color: $black;
+    @include res("max-width", 240px);
+  }
+  &-text {
+    @include res("font-size", 16px);
+    @include res("line-height", 20px);
+    font-weight: 400;
+    text-align: left;
+    color: $black;
+    @include res("max-width", 275px);
+    @include res("margin-top", 10px);
+  }
+  &__btns {
+    display: flex;
+    @include res("gap", 80px);
+    @include res("margin-top", 36px);
+    &-item {
+      display: flex;
+      @include res("gap", 15px);
+      align-items: center;
+      h3 {
+        @include res("font-size", 16px);
+        @include res("line-height", 20px);
+        font-weight: 400;
+        text-align: left;
+        color: $default;
+      }
+      svg {
+        @include res("height", 30px);
+        @include res("width", 30px);
+      }
+    }
+  }
+}
+
+.catalog {
+  @include res("margin-top", 95px);
+  &-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-title {
+    @include res("font-size", 40px);
+    @include res("line-height", 48px);
+    font-weight: 700;
+    text-align: left;
+    color: $black;
+  }
+}

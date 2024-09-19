@@ -1,0 +1,69 @@
+// Тема по умолчанию
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Geologica", sans-serif;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+html,
+body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    .main {
+        flex: 1 1 auto;
+    }
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+// delete this code
+body {
+    background: $white;
+    color: $black;
+    main {
+        z-index: z(header);
+    }
+}
+
+.container {
+    @include res("width", 1210px);
+    margin-left: auto;
+    margin-right: auto;
+    @include resm("padding-left", 15px);
+    @include resm("padding-right", 15px);
+    // @include media(1400) {
+    //     @include resm("width", 976px);
+    // }
+    @include media(576) {
+        @include resa("width", 343px);
+    }
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999999999;
+    background: transparent;
+    mix-blend-mode: difference;
+}

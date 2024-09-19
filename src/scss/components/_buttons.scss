@@ -1,0 +1,16 @@
+//Кнопки
+
+.button {
+  @include res("border-radius", 1000px);
+  @include res("padding", 16px);
+  @include res("padding-left", 40px);
+  @include res("padding-right", 40px);
+  font-weight: 600;
+  @include res("font-size", 14px);
+  @include res("line-height", 17.5px);
+  @include res("letter-spacing", 0.8px);
+  text-align: center;
+  background-color: $default;
+  color: #ffffff;
+  text-transform: uppercase;
+}
