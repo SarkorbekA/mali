@@ -1,0 +1,63 @@
+.partners {
+  @include res("margin-top", 62px);
+  @include res("padding-bottom", 140px);
+  &-title {
+    @include res("font-size", 40px);
+    @include res("line-height", 48px);
+    font-weight: 700;
+    text-align: left;
+  }
+  &__list {
+    display: flex;
+    @include res("gap", 20px);
+    flex-wrap: wrap;
+    @include res("margin-top", 40px);
+    &-item {
+      @include res("height", 70px);
+      @include res("border-radius", 10px);
+      @include res("border-width", 1px);
+      border-color: $grayLight;
+      border-style: solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include res("font-size", 22px);
+      @include res("line-height", 27.5px);
+      font-weight: 400;
+      text-align: center;
+      color: $gray;
+
+      &.one {
+        @include res("width", 180px);
+      }
+      &.two {
+        @include res("width", 380px);
+      }
+      &.three {
+        @include res("width", 307px);
+      }
+      &.four {
+        @include res("width", 416px);
+      }
+      &.five {
+        @include res("width", 480px);
+      }
+      &.six {
+        @include res("width", 330px);
+      }
+      &.seven {
+        @include res("width", 169px);
+      }
+      &.eight {
+        @include res("width", 113px);
+      }
+      &.nine {
+        @include res("width", 180px);
+      }
+      &.ten {
+        @include res("width", 200px);
+      }
+    }
+  }
+}

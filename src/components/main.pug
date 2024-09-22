@@ -90,7 +90,7 @@ mixin main()
                     h2.info-title Mali - ваш верный помощник на кухне!
                     h2.info-text Закажите доставку или ищите нас в магазинах вашего города!
                     .info__btns 
-                        a(href="#").info__btns-item
+                        a(href="#").button-other
                             h3 Стать партнёром
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="30" height="30" rx="15" fill="#E80029"/>
@@ -101,7 +101,7 @@ mixin main()
                                 <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="white"/>
                                 </g>
                             </svg>
-                        a(href="#").info__btns-item
+                        a(href="#").button-other
                             h3 Контакты
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="30" height="30" rx="15" fill="#E80029"/>
@@ -112,11 +112,11 @@ mixin main()
                                 <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="white"/>
                                 </g>
                             </svg>
-            .catalog 
-                .catalog-header 
-                    h3.catalog-title Популярное
-                    .catalog__btns 
-                        button(type="button").catalog__btns-item.left
+            .product 
+                .product-header 
+                    h3.product-title Популярное
+                    .product__btns 
+                        button(type="button").product__btns-item.left
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0_102_5" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                                 <rect width="20" height="20" fill="#D9D9D9"/>
@@ -125,7 +125,7 @@ mixin main()
                                 <path d="M6.83333 10L12.7083 15.875C12.9028 16.0695 13 16.3056 13 16.5834C13 16.8612 12.9028 17.0973 12.7083 17.2917C12.5139 17.4862 12.2778 17.5834 12 17.5834C11.7222 17.5834 11.4861 17.4862 11.2917 17.2917L5.0625 11.0625C4.90972 10.9098 4.79861 10.7431 4.72917 10.5625C4.65972 10.382 4.625 10.1945 4.625 10C4.625 9.8056 4.65972 9.61809 4.72917 9.43754C4.79861 9.25698 4.90972 9.09032 5.0625 8.93754L11.2917 2.70837C11.4861 2.51393 11.7222 2.41671 12 2.41671C12.2778 2.41671 12.5139 2.51393 12.7083 2.70837C12.9028 2.90282 13 3.13893 13 3.41671C13 3.69448 12.9028 3.9306 12.7083 4.12504L6.83333 10Z" fill="white"/>
                                 </g>
                             </svg>
-                        button(type="button").catalog__btns-item.right
+                        button(type="button").product__btns-item.right
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0_102_137" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                                 <rect width="20" height="20" fill="#D9D9D9"/>
@@ -134,12 +134,12 @@ mixin main()
                                 <path d="M13.1667 9.99996L7.29167 4.12496C7.09722 3.93051 7 3.6944 7 3.41663C7 3.13885 7.09722 2.90274 7.29167 2.70829C7.48611 2.51385 7.72222 2.41663 8 2.41663C8.27778 2.41663 8.51389 2.51385 8.70833 2.70829L14.9375 8.93746C15.0903 9.09024 15.2014 9.2569 15.2708 9.43746C15.3403 9.61801 15.375 9.80551 15.375 9.99996C15.375 10.1944 15.3403 10.3819 15.2708 10.5625C15.2014 10.743 15.0903 10.9097 14.9375 11.0625L8.70833 17.2916C8.51389 17.4861 8.27778 17.5833 8 17.5833C7.72222 17.5833 7.48611 17.4861 7.29167 17.2916C7.09722 17.0972 7 16.8611 7 16.5833C7 16.3055 7.09722 16.0694 7.29167 15.875L13.1667 9.99996Z" fill="white"/>
                                 </g>
                             </svg>
-        .catalog-slider
-            .swiper.catalogSwiper
+        .product-slider
+            .swiper.productSwiper
                 .swiper-wrapper
                     .swiper-slide  
-                        .catalog__item 
-                            .catalog__item-img
+                        a(href="/detail.html").product__item 
+                            .product__item-img
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
@@ -149,15 +149,15 @@ mixin main()
                                         .swiper-slide 
                                             img(src="@img/product.webp" alt="")
                                     .swiper-pagination.itemSwiperPagination
-                            .catalog__item-box
-                                h3.catalog__item-title Катлама «С луком» 
-                                p.catalog__item-text Хрустящая, ароматная, традиционная
-                                .catalog__item-bottom 
+                            .product__item-box
+                                h3.product__item-title Катлама «С луком» 
+                                p.product__item-text Хрустящая, ароматная, традиционная
+                                .product__item-bottom 
                                     h3 500 г / 4 шт
                                     h3 1000 г
                     .swiper-slide  
-                        .catalog__item 
-                            .catalog__item-img
+                        a(href="/detail.html").product__item 
+                            .product__item-img
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
@@ -167,15 +167,15 @@ mixin main()
                                         .swiper-slide 
                                             img(src="@img/product.webp" alt="")
                                     .swiper-pagination.itemSwiperPagination
-                            .catalog__item-box
-                                h3.catalog__item-title Катлама «С луком» 
-                                p.catalog__item-text Хрустящая, ароматная, традиционная
-                                .catalog__item-bottom 
+                            .product__item-box
+                                h3.product__item-title Катлама «С луком» 
+                                p.product__item-text Хрустящая, ароматная, традиционная
+                                .product__item-bottom 
                                     h3 500 г / 4 шт
                                     h3 1000 г
                     .swiper-slide  
-                        .catalog__item 
-                            .catalog__item-img
+                        a(href="/detail.html").product__item 
+                            .product__item-img
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
@@ -185,15 +185,15 @@ mixin main()
                                         .swiper-slide 
                                             img(src="@img/product.webp" alt="")
                                     .swiper-pagination.itemSwiperPagination
-                            .catalog__item-box
-                                h3.catalog__item-title Катлама «С луком» 
-                                p.catalog__item-text Хрустящая, ароматная, традиционная
-                                .catalog__item-bottom 
+                            .product__item-box
+                                h3.product__item-title Катлама «С луком» 
+                                p.product__item-text Хрустящая, ароматная, традиционная
+                                .product__item-bottom 
                                     h3 500 г / 4 шт
                                     h3 1000 г
                     .swiper-slide  
-                        .catalog__item 
-                            .catalog__item-img
+                        a(href="/detail.html").product__item 
+                            .product__item-img
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
@@ -203,15 +203,15 @@ mixin main()
                                         .swiper-slide 
                                             img(src="@img/product.webp" alt="")
                                     .swiper-pagination.itemSwiperPagination
-                            .catalog__item-box
-                                h3.catalog__item-title Катлама «С луком» 
-                                p.catalog__item-text Хрустящая, ароматная, традиционная
-                                .catalog__item-bottom 
+                            .product__item-box
+                                h3.product__item-title Катлама «С луком» 
+                                p.product__item-text Хрустящая, ароматная, традиционная
+                                .product__item-bottom 
                                     h3 500 г / 4 шт
                                     h3 1000 г
                     .swiper-slide  
-                        .catalog__item 
-                            .catalog__item-img
+                        a(href="/detail.html").product__item 
+                            .product__item-img
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
@@ -221,15 +221,15 @@ mixin main()
                                         .swiper-slide 
                                             img(src="@img/product.webp" alt="")
                                     .swiper-pagination.itemSwiperPagination
-                            .catalog__item-box
-                                h3.catalog__item-title Катлама «С луком» 
-                                p.catalog__item-text Хрустящая, ароматная, традиционная
-                                .catalog__item-bottom 
+                            .product__item-box
+                                h3.product__item-title Катлама «С луком» 
+                                p.product__item-text Хрустящая, ароматная, традиционная
+                                .product__item-bottom 
                                     h3 500 г / 4 шт
                                     h3 1000 г
                     .swiper-slide  
-                        .catalog__item 
-                            .catalog__item-img
+                        a(href="/detail.html").product__item 
+                            .product__item-img
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
@@ -239,16 +239,38 @@ mixin main()
                                         .swiper-slide 
                                             img(src="@img/product.webp" alt="")
                                     .swiper-pagination.itemSwiperPagination
-                            .catalog__item-box
-                                h3.catalog__item-title Катлама «С луком» 
-                                p.catalog__item-text Хрустящая, ароматная, традиционная
-                                .catalog__item-bottom 
+                            .product__item-box
+                                h3.product__item-title Катлама «С луком» 
+                                p.product__item-text Хрустящая, ароматная, традиционная
+                                .product__item-bottom 
                                     h3 500 г / 4 шт
                                     h3 1000 г
+                    .swiper-slide  
+                        a(href="/detail.html").product__item 
+                            .product__item-img
+                                .swiper.itemSwiper
+                                    .swiper-wrapper
+                                        .swiper-slide 
+                                            img(src="@img/product.webp" alt="")
+                                        .swiper-slide 
+                                            img(src="@img/product.webp" alt="")
+                                        .swiper-slide 
+                                            img(src="@img/product.webp" alt="")
+                                    .swiper-pagination.itemSwiperPagination
+                            .product__item-box
+                                h3.product__item-title Катлама «С луком» 
+                                p.product__item-text Хрустящая, ароматная, традиционная
+                                .product__item-bottom 
+                                    h3 500 г / 4 шт
+                                    h3 1000 г
+
+
+
+
         .container 
-            .catalog-bottom 
-                .swiper-pagination.catalogSwiperPagination 
-                a(href="#").catalog-button
+            .product-bottom 
+                .swiper-pagination.productSwiperPagination 
+                a(href="#").button-other
                     h3 Вся продукция
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="30" height="30" rx="15" fill="#E80029"/>
@@ -259,54 +281,25 @@ mixin main()
                         <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="white"/>
                         </g>
                     </svg>
-        .partners 
-            .partners-wrapper
-                .partners-left 
-                    h3.partners-title Партнерская программа
-                    p.partners-text C Mali активно сотрудничают ведущие ритейлеры и представители индустрии HoReCa, такие как:
-                    ul.partners__list 
-                        li.partners__list-item
-                            img(src="@img/partners/el1.webp" alt="partner")
-                        li.partners__list-item
-                            img(src="@img/partners/el2.webp" alt="partner")
-                        a(href="#").partners-btn 
-                            h3 Вся продукция
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="30" height="30" rx="15" fill="white"/>
-                                <mask id="mask0_102_779" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
-                                <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
-                                </mask>
-                                <g mask="url(#mask0_102_779)">
-                                <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="#E80029"/>
-                                </g>
-                            </svg>
-                .partners__right 
-                    h3.partners__right-title Заполните заявку на участие в программе
-                    p.partners__right-text и получите эксклюзивные условия сотрудничества, включая специализированные продуктовые линии и маркетинговую поддержку
-                    .partners__right-bottom
-                        a(href="#").partners__right-button
-                            h3 Презентация
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="30" height="30" rx="15" fill="#E80029"/>
-                                <mask id="mask0_102_791" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
-                                <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
-                                </mask>
-                                <g mask="url(#mask0_102_791)">
-                                <path d="M11 19H17V17.5H11V19ZM11 15.75H19V14.25H11V15.75ZM11 12.5H19V11H11V12.5ZM9.5 22C9.0875 22 8.73437 21.8531 8.44062 21.5594C8.14687 21.2656 8 20.9125 8 20.5V9.5C8 9.0875 8.14687 8.73438 8.44062 8.44063C8.73437 8.14688 9.0875 8 9.5 8H20.5C20.9125 8 21.2656 8.14688 21.5594 8.44063C21.8531 8.73438 22 9.0875 22 9.5V20.5C22 20.9125 21.8531 21.2656 21.5594 21.5594C21.2656 21.8531 20.9125 22 20.5 22H9.5ZM9.5 20.5H20.5V9.5H9.5V20.5Z" fill="white"/>
-                                </g>
-                            </svg>
-                        a(href="#").button заполнить заявку
-        .call 
-            .call-wrapper 
-                h3.call-title Позвоните если у вас возникли вопросы
-                .call-item 
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_55_2076" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-                        <rect width="20" height="20" fill="#D9D9D9"/>
-                        </mask>
-                        <g mask="url(#mask0_55_2076)">
-                        <path d="M2.89579 16.8958L1.24995 15.2292C1.05551 15.0347 0.954813 14.8021 0.947869 14.5312C0.940925 14.2604 1.03467 14.0278 1.22912 13.8333C2.32634 12.6528 3.62495 11.7188 5.12495 11.0312C6.62495 10.3438 8.24995 10 9.99995 10C11.75 10 13.375 10.3438 14.875 11.0312C16.375 11.7188 17.6736 12.6528 18.7708 13.8333C18.9652 14.0278 19.059 14.2604 19.052 14.5312C19.0451 14.8021 18.9444 15.0347 18.75 15.2292L17.1041 16.8958C16.9513 17.0486 16.7569 17.1458 16.5208 17.1875C16.2847 17.2292 16.0486 17.1667 15.8125 17L13.4166 15.2917C13.2916 15.1944 13.1909 15.0729 13.1145 14.9271C13.0381 14.7813 13 14.6344 13 14.4865V11.9583C12.5138 11.8056 12.0226 11.691 11.5262 11.6146C11.0298 11.5382 10.5211 11.5 9.99995 11.5C9.47884 11.5 8.97009 11.5382 8.4737 11.6146C7.97731 11.691 7.48606 11.8056 6.99995 11.9583V14.4865C6.99995 14.6344 6.96176 14.7813 6.88537 14.9271C6.80898 15.0729 6.70829 15.1944 6.58329 15.2917L4.18745 17C3.95134 17.1667 3.71176 17.2257 3.4687 17.1771C3.22565 17.1285 3.03467 17.0347 2.89579 16.8958ZM5.49995 12.3542C4.98606 12.6042 4.48954 12.9028 4.01037 13.25C3.5312 13.5972 3.07634 13.9722 2.64579 14.375L3.66662 15.3958L5.49995 14.0833V12.3542ZM14.5 12.3542V14.0833L16.3333 15.3958L17.3541 14.375C16.9236 13.9583 16.4722 13.5799 16 13.2396C15.5277 12.8993 15.0277 12.6042 14.5 12.3542ZM9.24995 6V2H10.75V6H9.24995ZM14.4375 8.22917L13.375 7.16667L16.2083 4.33333L17.2708 5.39583L14.4375 8.22917ZM5.56245 8.22917L2.72912 5.39583L3.79162 4.33333L6.62495 7.16667L5.56245 8.22917Z" fill="white"/>
-                        </g>
-                    </svg>
-                    h3 +998 71 200 30 05
-                a(href="#").button.other обратный звонок
+        include ./program 
+        +program
+        include ./call 
+        +call
+        .factors 
+            .container 
+                .factors-left 
+                    h2.factors-title Производство свежезамороженных продуктов
+                    a(href="").button-other 
+                        h3 Подробнее
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="30" height="30" rx="15" fill="#E80029"/>
+                            <mask id="mask0_13_696" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                            <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_13_696)">
+                            <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="white"/>
+                            </g>
+                        </svg>
+                .factors__right 
+                    p.factors__right-title Компания «Mali» с 2016 года представляет на рынке Узбекистана разнообразие полуфабрикатов глубокой заморозки. Вся наша продукция изготавливается при строгом соблюдении технологического процесса, что является залогом стабильного высокого качества.
+                    p.factors__right-text «Mali» предлагает широкий ассортимент замороженных полуфабрикатов и готовой продукции, созданных из отборных, натуральных ингредиентов. Наша продукция помогает вам готовить вкусно и полезно за считанные минуты, сохраняя все полезные свойства и натуральный вкус. Мы заботимся о каждом этапе производства, чтобы вы могли наслаждаться качественными и безопасными продуктами на вашем столе.

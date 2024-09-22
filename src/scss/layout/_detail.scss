@@ -1,0 +1,201 @@
+.detail {
+  @include res("margin-top", 60px);
+  @include res("margin-bottom", 36px);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-share {
+      display: flex;
+      align-items: center;
+      @include res("gap", 10px);
+      h3 {
+        @include res("font-size", 14px);
+        @include res("line-height", 17.5px);
+        color: $default;
+        font-weight: 300;
+      }
+      svg {
+        @include res("width", 30px);
+        @include res("height", 30px);
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    @include res("gap", 60px);
+    @include res("margin-top", 22px);
+  }
+  &__item {
+    &-img {
+      @include res("width", 440px);
+    }
+    &-type {
+      @include res("font-size", 18px);
+      @include res("line-height", 22.5px);
+      font-weight: 500;
+      text-align: left;
+      color: $default;
+    }
+    &-name {
+      @include res("margin-top", 13px);
+      @include res("font-size", 40px);
+      @include res("line-height", 48px);
+      font-weight: 700;
+      text-align: left;
+    }
+    &-info {
+      @include res("margin-top", 18px);
+      @include res("font-size", 16px);
+      @include res("line-height", 20px);
+      font-weight: 400;
+      text-align: left;
+    }
+    &-btns {
+      @include res("margin-top", 36px);
+      display: flex;
+      @include res("gap", 100px);
+      @include res("padding-bottom", 34px);
+      border-bottom-color: $grayLight;
+      border-bottom-style: solid;
+      @include res("border-width", 1px);
+    }
+  }
+  &__options {
+    @include res("margin-top", 46px);
+    display: flex;
+    @include res("gap", 10px);
+    &-item {
+      @include res("width", 190px);
+      @include res("height", 180px);
+      border-style: solid;
+      border-color: $grayLight;
+      @include res("border-width", 2px);
+      @include res("border-radius", 30px);
+      @include res("padding-top", 14px);
+      @include res("padding-left", 21px);
+      @include res("padding-bottom", 24px);
+      &.active {
+        border-color: $default;
+      }
+    }
+    &-title {
+      font-weight: 500;
+      @include res("font-size", 16px);
+      @include res("line-height", 20px);
+      text-align: left;
+    }
+    &-list {
+      @include res("margin-top", 23.5px);
+      display: flex;
+      flex-direction: column;
+      @include res("gap", 9.5px);
+    }
+    &-el {
+      display: flex;
+      align-items: center;
+      @include res("gap", 20px);
+      h4 {
+        @include res("font-size", 12px);
+        @include res("line-height", 15px);
+        font-weight: 300;
+        text-align: left;
+        color: $gray;
+      }
+      h3 {
+        @include res("font-size", 14px);
+        @include res("line-height", 17.5px);
+        font-weight: 300;
+        text-align: left;
+      }
+    }
+  }
+  &__img {
+    &-main {
+      width: 100%;
+      @include res("height", 440px);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-list {
+      @include res("margin-top", 20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include res("gap", 20px);
+    }
+    &-item {
+      @include res("width", 90px);
+      @include res("height", 90px);
+      @include res("border-radius", 30px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $beige;
+      overflow: hidden;
+      position: relative;
+      &.video {
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include res("width", 30px);
+        @include res("height", 30px);
+      }
+    }
+  }
+  &__info {
+    @include res("margin-top", 34px);
+    display: flex;
+    flex-direction: column;
+    @include res("gap", 20px);
+    &-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      @include res("gap", 10px);
+      h3 {
+        @include res("font-size", 16px);
+        @include res("line-height", 20px);
+        font-weight: 500;
+        text-align: left;
+      }
+      svg {
+        @include res("width", 20px);
+        @include res("height", 20px);
+        transition: 0.2s all;
+      }
+      &.active {
+        svg {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+    &-content {
+      transition: 0.2s all;
+      height: 0;
+      overflow: hidden;
+      p {
+        @include res("padding-top", 12px);
+        @include res("padding-bottom", 2px);
+        @include res("font-size", 14px);
+        @include res("line-height", 17.5px);
+        font-weight: 300;
+        text-align: left;
+      }
+    }
+  }
+  &-product {
+    @include res("margin-top", 13px);
+  }
+}

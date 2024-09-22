@@ -13,7 +13,7 @@
     @include res("font-size", 40px);
     @include res("line-height", 48px);
     text-align: left;
-    color: $black;
+    text-wrap: nowrap;
   }
   &-subtitle {
     @include res("margin-top", 12px);
@@ -21,7 +21,6 @@
     @include res("line-height", 27.5px);
     font-weight: 400;
     text-align: left;
-    color: $black;
   }
   &__top {
     display: flex;
@@ -59,7 +58,6 @@
         @include res("line-height", 20px);
         font-weight: 500;
         text-align: left;
-        color: $black;
       }
       p {
         @include res("margin-top", 12px);
@@ -67,7 +65,6 @@
         @include res("line-height", 17.5px);
         font-weight: 300;
         text-align: left;
-        color: $black;
       }
     }
   }
@@ -116,7 +113,7 @@
     @include res("line-height", 27.5px);
     font-weight: 400;
     text-align: left;
-    color: $black;
+
     @include res("max-width", 240px);
   }
   &-text {
@@ -124,7 +121,7 @@
     @include res("line-height", 20px);
     font-weight: 400;
     text-align: left;
-    color: $black;
+
     @include res("max-width", 275px);
     @include res("margin-top", 10px);
   }
@@ -132,26 +129,10 @@
     display: flex;
     @include res("gap", 80px);
     @include res("margin-top", 36px);
-    &-item {
-      display: flex;
-      @include res("gap", 15px);
-      align-items: center;
-      h3 {
-        @include res("font-size", 16px);
-        @include res("line-height", 20px);
-        font-weight: 400;
-        text-align: left;
-        color: $default;
-      }
-      svg {
-        @include res("height", 30px);
-        @include res("width", 30px);
-      }
-    }
   }
 }
 
-.catalog {
+.product {
   @include res("margin-top", 95px);
   &-header {
     display: flex;
@@ -163,7 +144,6 @@
     @include res("line-height", 48px);
     font-weight: 700;
     text-align: left;
-    color: $black;
   }
   &__btns {
     display: flex;
@@ -215,7 +195,7 @@
       line-height: 22.5px;
       @include res("font-size", 18px);
       @include res("line-height", 22.5px);
-      color: $black;
+
       text-align: left;
     }
     &-text {
@@ -223,7 +203,7 @@
       font-weight: 300;
       @include res("font-size", 14px);
       @include res("line-height", 17.5px);
-      color: $black;
+
       text-align: left;
     }
     &-bottom {
@@ -243,8 +223,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include res("margin-top", 40px);
-    @include res("margin-bottom", 40px);
+    @include res("padding-top", 40px);
+    @include res("padding-bottom", 40px);
+    @include res("margin-bottom", 20px);
     .swiper-pagination {
       @include res("left", -5px);
       position: relative;
@@ -282,7 +263,7 @@
   }
 }
 
-.catalogSwiper.swiper {
+.productSwiper.swiper {
   overflow: visible !important;
   width: 100%;
   height: 100%;
@@ -293,7 +274,7 @@
   @include res("padding-right", 15px);
 }
 
-.catalogSwiper {
+.productSwiper {
   & > .swiper-wrapper {
     width: 100%;
     & > .swiper {
@@ -346,9 +327,9 @@
   }
 }
 
-.partners {
-  @include res("margin-top", 150px);
-  @include res("width", 1360px);
+.program {
+  @include res("margin-top", 90px);
+  @include res("max-width", 1360px);
   margin-left: auto;
   margin-right: auto;
   @include res("padding-left", 15px);
@@ -423,7 +404,7 @@
       @include res("line-height", 27.5px);
       font-weight: 400;
       text-align: left;
-      color: $black;
+
       @include res("max-width", 281px);
     }
     &-text {
@@ -433,7 +414,6 @@
       @include res("font-size", 16px);
       @include res("line-height", 20px);
       text-align: left;
-      color: $black;
     }
     &-bottom {
       @include res("margin-top", 36px);
@@ -464,7 +444,6 @@
 
 .call {
   @include res("margin-top", 120px);
-  @include res("margin-bottom", 75px);
   @include res("width", 810px);
   margin-left: auto;
   margin-right: auto;
@@ -504,6 +483,45 @@
       font-weight: 400;
       text-align: left;
       color: $white;
+    }
+  }
+}
+
+.factors {
+  @include res("padding-top", 190px);
+  @include res("padding-bottom", 150px);
+  .container {
+    display: flex;
+    @include res("gap", 60px);
+  }
+  &-left {
+    @include res("padding-top", 6px);
+    @include res("max-width", 240px);
+  }
+  &-title {
+    @include res("font-size", 22px);
+    @include res("line-height", 27.5px);
+    font-weight: 400;
+    text-align: left;
+
+    @include res("margin-bottom", 28px);
+  }
+  &__right {
+    @include res("max-width", 380px);
+    display: flex;
+    flex-direction: column;
+    @include res("gap", 30px);
+    &-title {
+      @include res("font-size", 18px);
+      @include res("line-height", 22.5px);
+      font-weight: 300;
+      text-align: left;
+    }
+    &-text {
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      text-align: left;
     }
   }
 }

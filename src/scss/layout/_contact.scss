@@ -1,0 +1,108 @@
+.contact {
+  min-height: 40vh;
+  &-title {
+    @include res("font-size", 40px);
+    @include res("line-height", 48px);
+    font-weight: 700;
+    text-align: left;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-btns {
+      display: flex;
+      align-items: center;
+      @include res("gap", 88px);
+    }
+  }
+  &-content {
+    @include res("margin-top", 68px);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include res("gap", 135px);
+    @include res("padding-bottom", 46px);
+    border-bottom-color: $grayLight;
+    border-bottom-style: solid;
+    @include res("border-width", 1px);
+    &-item {
+      display: flex;
+      flex-direction: column;
+      @include res("gap", 26px);
+    }
+    &-left {
+      display: flex;
+      align-items: flex-start;
+      @include res("gap", 154px);
+    }
+    &-right {
+      display: flex;
+      @include res("gap", 89px);
+      align-items: center;
+    }
+  }
+  &__item {
+    &-title {
+      @include res("font-size", 16px);
+      @include res("line-height", 20px);
+      font-weight: 400;
+      text-align: left;
+    }
+    &-link {
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      text-align: left;
+      color: $default;
+    }
+  }
+}
+
+.form {
+  @include res("margin-top", 58px);
+  &-title {
+    @include res("font-size", 22px);
+    @include res("line-height", 27.5px);
+    font-weight: 400;
+    text-align: left;
+  }
+  &__box {
+    @include res("margin-top", 34px);
+    &-top {
+      display: flex;
+      @include res("gap", 20px);
+    }
+    &-input {
+      @include res("width", 380px);
+      @include res("height", 50px);
+    }
+    &-bottom {
+      @include res("margin-top", 20px);
+      display: flex;
+      align-items: flex-end;
+      @include res("gap", 20px);
+    }
+    &-message {
+      @include res("height", 110px);
+      @include res("width", 880px);
+      textarea {
+        width: 100%;
+        max-width: 100%;
+        resize: none;
+        @include res("height", 110px);
+        &::-webkit-scrollbar {
+          width: 6px;
+          &-thumb {
+            background-color: $default;
+          }
+        }
+      }
+    }
+    &-button {
+      @include res("width", 280px);
+    }
+  }
+}

@@ -1,0 +1,312 @@
+.about {
+  @include res("margin-top", 52px);
+  @include res("margin-bottom", 40px);
+  &-title {
+    @include res("font-size", 40px);
+    @include res("line-height", 48px);
+    font-weight: 700;
+    text-align: left;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-btns {
+      display: flex;
+      align-items: center;
+      @include res("gap", 60px);
+    }
+  }
+  &-text {
+    @include res("margin-top", 76px);
+    display: flex;
+    flex-direction: column;
+    @include res("gap", 12.5px);
+    @include res("max-width", 580px);
+    p {
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      text-align: left;
+    }
+  }
+  &-content {
+    @include res("margin-top", 76px);
+  }
+  &__video {
+    @include res("margin-top", 104px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-top {
+      position: relative;
+      z-index: 2;
+      @include res("max-width", 580px);
+      background-color: $default;
+      @include res("padding", 100px);
+      @include res("padding-top", 42px);
+      @include res("padding-bottom", 46px);
+      @include res("font-size", 18px);
+      @include res("line-height", 22.5px);
+      @include res("border-radius", 50px);
+      border-bottom-left-radius: 0;
+      font-weight: 300;
+      text-align: left;
+      color: $white;
+    }
+    &-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include res("width", 60px);
+      @include res("height", 60px);
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-slider {
+      position: relative;
+      @include res("top", -20px);
+      @include res("max-width", 780px);
+      @include res("height", 450px);
+      .videoSlider.swiper {
+        width: 100%;
+        height: 100%;
+        @include res("border-radius", 50px);
+        border-bottom-left-radius: 0;
+        &-wrapper {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .videoSlider .swiper {
+        &-slide {
+          height: 100%;
+          overflow: hidden;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        // &-button {
+        //   &-next,
+        //   &-prev {
+        //     z-index: 11;
+        //     @include res("height", 30px);
+        //     @include res("width", 30px);
+        //     transform: translateY(-1.2vw);
+        //     border-radius: 50%;
+        //     background-color: $default;
+        //     &::after {
+        //       @include res("font-size", 12px);
+        //       color: $white;
+        //       transform: translate(0.0625vw, 0.0625vw);
+        //     }
+        //   }
+        //   &-prev {
+        //     &::after {
+        //       transform: translate(-0.0625vw, 0.0625vw);
+        //     }
+        //   }
+        // }
+        // &-pagination {
+        //   &-bullet {
+        //     opacity: 1;
+        //     @include res("width", 100px);
+        //     @include res("height", 2px);
+        //     @include res("border-radius", 2px);
+        //   }
+        // }
+      }
+    }
+    &-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include res("margin-top", 20px);
+      @include res("gap", 50px);
+    }
+    &-next,
+    &-prev {
+      @include res("width", 30px);
+      @include res("height", 30px);
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__center {
+    @include res("margin-top", 160px);
+    display: flex;
+    align-items: flex-start;
+    &-img {
+      @include res("width", 200px);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &-title {
+      @include res("margin-top", 10px);
+      @include res("margin-left", 100px);
+      @include res("font-size", 60px);
+      @include res("line-height", 57px);
+      font-weight: 700;
+      text-align: left;
+      @include res("max-width", 425px);
+    }
+    &-text {
+      @include res("margin-top", 12px);
+      @include res("margin-left", 35px);
+      @include res("font-size", 18px);
+      font-weight: 300;
+      @include res("line-height", 22.5px);
+      text-align: left;
+      @include res("max-width", 420px);
+    }
+  }
+  &__aim {
+    @include res("margin-top", 104px);
+    &-top {
+      display: flex;
+      justify-content: center;
+      @include res("gap", 177px);
+    }
+    &-title {
+      @include res("font-size", 22px);
+      @include res("line-height", 27.5px);
+      font-weight: 400;
+      text-align: left;
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      @include res("gap", 24px);
+      @include res("max-width", 480px);
+    }
+    &-text {
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      text-align: left;
+    }
+    &-bottom {
+      @include res("margin-top", 70px);
+      display: flex;
+      align-items: flex-start;
+      @include res("gap", 80px);
+    }
+    &-img {
+      @include res("border-radius", 50px);
+      border-bottom-left-radius: 0;
+      overflow: hidden;
+      &.first {
+        @include res("width", 480px);
+        @include res("height", 300px);
+      }
+      &.second {
+        @include res("margin-top", 90px);
+        @include res("width", 680px);
+        @include res("height", 400px);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.standarts {
+  @include res("margin-top", 152px);
+  &-title {
+    @include res("font-size", 40px);
+    @include res("line-height", 48px);
+    font-weight: 700;
+    text-align: left;
+  }
+  &__header {
+    @include res("margin-top", 32px);
+    display: flex;
+    align-items: flex-start;
+    @include res("gap", 20px);
+    &-text {
+      @include res("max-width", 580px);
+      @include res("font-size", 18px);
+      @include res("line-height", 22.5px);
+      font-weight: 300;
+      text-align: left;
+    }
+    &-subtext {
+      @include res("margin-top", 4px);
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      text-align: left;
+    }
+  }
+  &__list {
+    @include res("margin-top", 52px);
+    display: flex;
+    @include res("gap", 20px);
+    &-item {
+      @include res("width", 380px);
+      @include res("height", 181px);
+      @include res("border-radius", 30px);
+      @include res("border-width", 1px);
+      border-color: $grayLight;
+      border-style: solid;
+      @include res("padding", 20px);
+      display: flex;
+      align-items: center;
+      @include res("gap", 50px);
+    }
+  }
+  &__item {
+    &-img {
+      @include res("width", 110px);
+      @include res("height", 110px);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+    }
+    &-type {
+      @include res("font-size", 12px);
+      @include res("line-height", 15px);
+      font-weight: 300;
+      text-align: left;
+      color: $gray;
+    }
+    &-names {
+      @include res("margin-top", 13px);
+      display: flex;
+      flex-direction: column;
+      @include res("height", 36px);
+      h3 {
+        @include res("font-size", 14px);
+        @include res("line-height", 17.5px);
+        font-weight: 300;
+        text-align: left;
+      }
+    }
+    &-btn {
+      @include res("margin-top", 18px);
+    }
+  }
+}

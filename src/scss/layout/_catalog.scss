@@ -1,0 +1,377 @@
+.catalog {
+  @include res("margin-top", 48px);
+  @include res("margin-bottom", 40px);
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &-right {
+      display: flex;
+      align-items: center;
+      @include res("gap", 130px);
+      @include res("padding-top", 7px);
+    }
+    &-search {
+      @include res("width", 380px);
+      @include res("height", 50px);
+      position: relative;
+      input {
+        width: 100%;
+        height: 100%;
+        @include res("border-radius", 30px);
+        border-color: $grayMid;
+        transition: 0.3s all;
+        border-style: solid;
+        @include res("border-width", 1px);
+        @include res("padding-left", 20px);
+        @include res("padding-right", 48px);
+        @include res("font-size", 14px);
+        @include res("line-height", 17.5px);
+        font-weight: 300;
+        text-align: left;
+        &::placeholder {
+          color: $gray;
+        }
+        &:focus {
+          border-color: $yellow;
+        }
+      }
+      &:hover {
+        input {
+          border-color: $yellow;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        @include res("width", 48px);
+        @include res("padding-top", 15px);
+        @include res("padding-bottom", 15px);
+        @include res("padding-right", 20px);
+      }
+      svg {
+        @include res("width", 20px);
+        @include res("height", 20px);
+      }
+    }
+  }
+  &-title {
+    font-weight: 700;
+    text-align: left;
+    @include res("font-size", 40px);
+    @include res("line-height", 48px);
+  }
+  &__wrapper {
+    @include res("margin-top", 48px);
+    display: flex;
+    @include res("gap", 20px);
+  }
+  &__side {
+    @include res("width", 280px);
+    &-select {
+      display: flex;
+      flex-direction: column;
+      @include res("gap", 20px);
+      @include res("padding-bottom", 46px);
+      border-bottom-color: $grayLight;
+      border-bottom-style: solid;
+      @include res("border-width", 1px);
+    }
+    &-types {
+      @include res("margin-top", 30px);
+      display: flex;
+      flex-direction: column;
+      @include res("gap", 10px);
+      @include res("padding-bottom", 30px);
+      border-bottom-color: $grayLight;
+      border-bottom-style: solid;
+      @include res("border-width", 1px);
+    }
+    &-action {
+      @include res("margin-top", 30px);
+    }
+  }
+  &__select {
+    @include res("padding-left", 30px);
+    @include res("padding-right", 24px);
+    @include res("border-radius", 30px);
+    border-bottom-left-radius: 0;
+    transition: 0.3s all;
+    &.active {
+      background-color: $beige;
+    }
+    &-btn {
+      display: flex;
+      align-items: center;
+      @include res("gap", 10px);
+      transition: 0.3s all;
+      h3 {
+        font-weight: 400;
+        text-align: left;
+        @include res("font-size", 16px);
+        @include res("line-height", 20px);
+      }
+      &.active {
+        @include res("padding-top", 24px);
+        h3 {
+          color: $default;
+        }
+        svg {
+          path {
+            fill: $default;
+          }
+        }
+      }
+    }
+    &-arrow {
+      transition: 0.2s all;
+      @include res("width", 20px);
+      @include res("height", 20px);
+      &.active {
+        transform: rotate(180deg);
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+        path {
+          fill: $black;
+        }
+      }
+    }
+    &-content {
+      transition: 0.3s all;
+      height: 0;
+      overflow: hidden;
+    }
+    &-list {
+      @include res("padding-top", 22px);
+      @include res("padding-bottom", 26px);
+      display: flex;
+      flex-direction: column;
+      @include res("gap", 12px);
+    }
+    &-item {
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      text-align: left;
+    }
+  }
+  &__content {
+    @include res("width", 880px);
+    &-banner {
+      width: 100%;
+      display: inline-block;
+      @include res("height", 120px);
+      @include res("border-radius", 30px);
+      border-bottom-left-radius: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-top {
+      @include res("margin-top", 20px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include res("padding-bottom", 20px);
+      border-bottom-color: $grayLight;
+      border-bottom-style: solid;
+      @include res("border-width", 1px);
+    }
+  }
+  &__drop {
+    &-btn {
+      display: flex;
+      align-items: center;
+      @include res("gap", 10px);
+      h3 {
+        @include res("font-size", 12px);
+        @include res("line-height", 15px);
+        font-weight: 300;
+        text-align: left;
+      }
+      svg {
+        @include res("width", 20px);
+        @include res("height", 20px);
+      }
+    }
+  }
+  &__list {
+    @include res("margin-top", 20px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include res("row-gap", 50px);
+    @include res("column-gap", 20px);
+  }
+  &__item {
+    background-color: $beige;
+    width: 100%;
+    @include res("border-radius", 50px);
+    border-bottom-left-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-top {
+      position: relative;
+      width: 100%;
+      @include res("width", 280px);
+      @include res("height", 280px);
+      @include res("padding", 10px);
+    }
+    &-img {
+      z-index: 2;
+      position: absolute;
+      @include res("height", 260px);
+      @include res("width", 260px);
+      @include res("left", 10px);
+      @include res("top", 10px);
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.3s all;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+    &-zone {
+      overflow: hidden;
+      position: absolute;
+      @include res("left", 10px);
+      @include res("top", 10px);
+      @include res("height", 260px);
+      @include res("width", 260px);
+      z-index: 3;
+      @include res("padding-top-left-radius", 50px);
+      @include res("padding-top-right-radius", 50px);
+      span {
+        display: inline-block;
+        width: 25%;
+        height: 100%;
+      }
+    }
+    &-pagination {
+      z-index: 3;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      @include res("gap", 5px);
+      @include res("left", 30px);
+      @include res("bottom", 10px);
+      span {
+        transition: 0.3s all;
+        display: inline-block;
+        @include res("width", 10px);
+        @include res("height", 2px);
+        @include res("border-radius", 2px);
+        background-color: $white;
+        &.active {
+          background-color: $default;
+        }
+      }
+    }
+
+    &-box {
+      @include res("margin-top", 12px);
+      @include res("padding-left", 40px);
+      @include res("padding-right", 40px);
+      @include res("padding-bottom", 36px);
+    }
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22.5px;
+      @include res("font-size", 18px);
+      @include res("line-height", 23px);
+
+      text-align: left;
+    }
+    &-text {
+      @include res("margin-top", 15px);
+      font-weight: 300;
+      @include res("font-size", 14px);
+      @include res("line-height", 18px);
+
+      text-align: left;
+    }
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include res("margin-top", 40px);
+      h3 {
+        @include res("font-size", 14px);
+        @include res("line-height", 18px);
+        font-weight: 300;
+        color: $gray;
+      }
+    }
+  }
+  &__bottom {
+    @include res("margin-top", 80px);
+    display: flex;
+    justify-content: space-between;
+    @include res("padding-bottom", 30px);
+    border-bottom-color: $grayLight;
+    border-bottom-style: solid;
+    @include res("border-width", 1px);
+  }
+  &__pagination {
+    display: flex;
+    align-items: center;
+    @include res("gap", 20px);
+    &-arrow {
+      &.left {
+        svg {
+          path {
+            color: $grayMid;
+          }
+        }
+      }
+      &.right {
+        svg {
+          path {
+            color: $default;
+          }
+        }
+      }
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      @include res("gap", 10px);
+    }
+    &-item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include res("width", 40px);
+      @include res("height", 40px);
+      @include res("border-radius", 10px);
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      text-align: center;
+      color: $gray;
+
+      &.active {
+        font-weight: 600;
+        background-color: $default;
+        color: $white;
+      }
+    }
+  }
+}

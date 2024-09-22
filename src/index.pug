@@ -6,7 +6,7 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
         link(rel="stylesheet" href="css/style.min.css")
-        title Mali
+        title Mali - Главная
     body 
         .wrapper 
             .notification 
@@ -28,11 +28,80 @@ html(lang="en")
                 .swiper.mySwiper
                     .swiper-wrapper
                         .swiper-slide  
-                            .banner-item Slide 1
-                        .swiper-slide 
-                            .banner-item Slide 2
-                        .swiper-slide 
-                            .banner-item Slide 3
+                            .banner-item
+                                .banner__left 
+                                    h2.banner__left-title Быстро
+                                        br
+                                        | и вкусно!
+                                    h3.banner__left-subtitle Экономьте время,
+                                        br
+                                        | не экономя на вкусе!
+                                    button(type="button").button-other.banner__left-btn
+                                        h3 Стать партнером
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="30" height="30" rx="15" fill="#E80029"/>
+                                            <mask id="mask0_13_514" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                                            <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                                            </mask>
+                                            <g mask="url(#mask0_13_514)">
+                                            <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="white"/>
+                                            </g>
+                                        </svg>
+                                .banner__right 
+                                    .banner__right-img 
+                                        img(src="@img/banner-bg.webp" alt="banner")
+                                    .banner__right-product 
+                                        img(src="@img/product-item.webp" alt="product")
+                        .swiper-slide  
+                            .banner-item
+                                .banner__left 
+                                    h2.banner__left-title Быстро
+                                        br
+                                        | и вкусно!
+                                    h3.banner__left-subtitle Экономьте время,
+                                        br
+                                        | не экономя на вкусе!
+                                    button(type="button").button-other.banner__left-btn
+                                        h3 Стать партнером
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="30" height="30" rx="15" fill="#E80029"/>
+                                            <mask id="mask0_13_514" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                                            <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                                            </mask>
+                                            <g mask="url(#mask0_13_514)">
+                                            <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="white"/>
+                                            </g>
+                                        </svg>
+                                .banner__right 
+                                    .banner__right-img 
+                                        img(src="@img/banner-bg.webp" alt="banner")
+                                    .banner__right-product 
+                                        img(src="@img/product-item.webp" alt="product")
+                        .swiper-slide  
+                            .banner-item
+                                .banner__left 
+                                    h2.banner__left-title Быстро
+                                        br
+                                        | и вкусно!
+                                    h3.banner__left-subtitle Экономьте время,
+                                        br
+                                        | не экономя на вкусе!
+                                    button(type="button").button-other.banner__left-btn
+                                        h3 Стать партнером
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="30" height="30" rx="15" fill="#E80029"/>
+                                            <mask id="mask0_13_514" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                                            <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                                            </mask>
+                                            <g mask="url(#mask0_13_514)">
+                                            <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="white"/>
+                                            </g>
+                                        </svg>
+                                .banner__right 
+                                    .banner__right-img 
+                                        img(src="@img/banner-bg.webp" alt="banner")
+                                    .banner__right-product 
+                                        img(src="@img/product-item.webp" alt="product")
                     .swiper-button-next
                     .swiper-button-prev
 
@@ -40,7 +109,7 @@ html(lang="en")
 
             include components/main 
             +main 
-            //- include components/footer 
-            //- +footer
+            include components/footer 
+            +footer
         script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
         script(src="js/app.min.js") 

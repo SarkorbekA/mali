@@ -50,7 +50,7 @@
 .mySwiper .swiper {
   &-slide {
     text-align: center;
-    font-size: 18px;
+    @include res("font-size", 18px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +63,7 @@
       z-index: 11;
       @include res("height", 30px);
       @include res("width", 30px);
-      transform: translateY(-0.9375vw);
+      transform: translateY(-1.2vw);
       border-radius: 50%;
       background-color: $default;
       &::after {
@@ -106,5 +106,64 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include res("padding-left", 70px);
+    @include res("padding-right", 100px);
+    @include res("gap", 40px);
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right {
+    position: relative;
+    @include res("width", 630px);
+    @include res("height", 457px);
+    &-img {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-product {
+      position: absolute;
+      @include res("width", 300px);
+      bottom: 0;
+      right: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &__left {
+    @include res("width", 480px);
+    @include res("height", 346px);
+    background-image: url(../../img/banner-shape.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include res("padding-top", 40px);
+    @include res("padding-left", 100px);
+    &-title {
+      @include res("max-width", 290px);
+      @include res("font-size", 60px);
+      @include res("line-height", 57px);
+      font-weight: 700;
+      text-align: left;
+      color: $white;
+    }
+    &-subtitle {
+      @include res("margin-top", 24px);
+      @include res("font-size", 22px);
+      @include res("line-height", 27.5px);
+      font-weight: 400;
+      text-align: left;
+      color: $white;
+      @include res("max-width", 250px);
+    }
+    &-btn {
+      @include res("margin-left", 100px);
+      @include res("margin-top", 66px);
+    }
   }
 }

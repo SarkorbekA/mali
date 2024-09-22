@@ -1,1 +1,159 @@
 // Футер
+
+.footer {
+  @include res("margin-top", 110px);
+
+  &-content {
+    width: 100%;
+    margin: 0 auto;
+    @include res("max-width", 1360px);
+    @include res("padding-left", 20px);
+    @include res("padding-right", 20px);
+  }
+  &-top {
+    background-color: $beige;
+    @include res("border-top-left-radius", 50px);
+    @include res("border-top-right-radius", 50px);
+    @include res("height", 80px);
+    @include res("padding", 15px);
+    @include res("padding-left", 70px);
+    @include res("padding-right", 70px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__left {
+      display: flex;
+      align-items: center;
+      @include res("gap", 17px);
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      @include res("gap", 80px);
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      @include res("gap", 106px);
+    }
+  }
+  &-content {
+  }
+  &-address {
+    display: flex;
+    @include res("gap", 10px);
+    align-items: center;
+    svg {
+      fill: $gray;
+      @include res("height", 20px);
+      @include res("width", 20px);
+    }
+    h3 {
+      color: $gray;
+      font-weight: 300;
+      @include res("font-size", 12px);
+      @include res("line-height", 15px);
+    }
+  }
+  &-phone {
+    display: flex;
+    @include res("gap", 15px);
+    align-items: center;
+    svg {
+      fill: $black;
+      @include res("height", 20px);
+      @include res("width", 20px);
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 400;
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      text-align: left;
+    }
+  }
+  &-logo {
+    display: inline-block;
+    @include res("width", 112.83px);
+    @include res("height", 80px);
+    position: relative;
+    transform: translateY(-50%);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    @include res("gap", 20px);
+    &-item {
+      @include res("height", 20px);
+      @include res("width", 20px);
+      svg {
+        @include res("height", 20px);
+        @include res("width", 20px);
+      }
+    }
+  }
+  &-bottom {
+    background-color: $default;
+    @include res("border-bottom-left-radius", 50px);
+    @include res("border-bottom-right-radius", 50px);
+    @include res("height", 110px);
+    @include res("padding", 45px);
+    @include res("padding-left", 70px);
+    @include res("padding-right", 70px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__nav {
+    &-list {
+      display: flex;
+      align-items: center;
+      @include res("gap", 40px);
+    }
+    &-link {
+      @include res("font-size", 16px);
+      @include res("line-height", 20px);
+      font-weight: 400;
+      text-align: left;
+      color: $white;
+    }
+  }
+  &-email {
+    display: flex;
+    @include res("gap", 15px);
+    align-items: center;
+    svg {
+      @include res("height", 20px);
+      @include res("width", 20px);
+    }
+    h3 {
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 400;
+      text-align: left;
+      color: $white;
+    }
+  }
+  &__list {
+    @include res("margin-top", 15.5px);
+    @include res("margin-bottom", 26.5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-item {
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      color: $gray;
+      a {
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}

@@ -23,7 +23,6 @@
       text-transform: uppercase;
       color: $gray;
       &.active {
-        color: $black;
       }
     }
   }
@@ -41,6 +40,10 @@
       font-weight: 300;
       @include res("font-size", 12px);
       @include res("line-height", 15px);
+      &::selection {
+        color: white;
+        background: red;
+      }
     }
   }
   &-phone {
@@ -58,12 +61,19 @@
       @include res("font-size", 14px);
       @include res("line-height", 17.5px);
       text-align: left;
-      color: $black;
+      &::selection {
+        color: white;
+        background: red;
+      }
     }
   }
   &-search {
     @include res("height", 20px);
     @include res("width", 20px);
+    svg {
+      @include res("height", 20px);
+      @include res("width", 20px);
+    }
   }
   &-right {
     display: flex;
@@ -77,6 +87,10 @@
     &-item {
       @include res("height", 20px);
       @include res("width", 20px);
+      svg {
+        @include res("height", 20px);
+        @include res("width", 20px);
+      }
     }
   }
   &-main {
@@ -105,8 +119,11 @@
       @include res("font-size", 12px);
       @include res("line-height", 15px);
       @include res("max-width", 129px);
-      color: $black;
       text-align: left;
+      &::selection {
+        color: white;
+        background: red;
+      }
     }
   }
   .nav {
@@ -118,7 +135,10 @@
         font-weight: 400;
         @include res("font-size", 16px);
         @include res("line-height", 20px);
-        color: $black;
+        &::selection {
+          color: white;
+          background: red;
+        }
       }
     }
   }
