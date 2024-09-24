@@ -1,6 +1,7 @@
 // Шапка
 .header {
   background-color: $white;
+  position: relative;
   &-top {
     @include res("padding-top", 15px);
     @include res("padding-bottom", 15px);
@@ -18,6 +19,11 @@
     display: flex;
     @include res("gap", 10px);
     align-items: center;
+    @include media(576) {
+      @include resa("margin-top", 44px);
+      @include resa("gap", 20px);
+      @include resa("padding-left", 10px);
+    }
     &-item {
       @include res("font-size", 10px);
       @include res("line-height", 12.5px);
@@ -26,6 +32,10 @@
       text-transform: uppercase;
       color: $gray;
       transition: 0.3s all;
+      @include media(576) {
+        @include resa("font-size", 22px);
+        @include resa("line-height", 27.5px);
+      }
       &.active {
         color: $black;
       }
@@ -38,11 +48,22 @@
     display: flex;
     @include res("gap", 10px);
     align-items: center;
+    @include media(576) {
+      @include resa("gap", 10px);
+      @include resa("margin-top", 40px);
+    }
     svg {
       @include res("height", 20px);
       @include res("width", 20px);
+      @include media(576) {
+        @include resa("height", 20px);
+        @include resa("width", 20px);
+      }
       path {
         color: $gray;
+        @include media(576) {
+          color: $black;
+        }
       }
     }
     h3 {
@@ -50,31 +71,55 @@
       font-weight: 300;
       @include res("font-size", 12px);
       @include res("line-height", 15px);
+      @include media(576) {
+        color: $black;
+        @include resa("font-size", 12px);
+        @include resa("line-height", 15px);
+      }
       &::selection {
         color: white;
         background: red;
       }
     }
   }
-  &-phone {
+
+  &-phone,
+  &-email {
     display: flex;
     @include res("gap", 15px);
     align-items: center;
+    @include media(576) {
+      @include resa("gap", 15px);
+      @include resa("margin-top", 20px);
+    }
     svg {
       fill: $black;
       @include res("height", 20px);
       @include res("width", 20px);
+      @include media(576) {
+        @include resa("height", 20px);
+        @include resa("width", 20px);
+      }
     }
     h3 {
-      font-size: 14px;
       font-weight: 400;
       @include res("font-size", 14px);
       @include res("line-height", 17.5px);
       text-align: left;
+      @include media(576) {
+        @include resa("font-size", 14px);
+        @include resa("line-height", 17.5px);
+      }
       &::selection {
         color: white;
         background: red;
       }
+    }
+  }
+  &-email {
+    display: none;
+    @include media(576) {
+      display: flex;
     }
   }
   &-search {
@@ -94,6 +139,78 @@
       }
     }
   }
+  &__search {
+    @include res("width", 380px);
+    @include res("height", 50px);
+    position: relative;
+    @include media(576) {
+      @include resa("width", 350px);
+      @include resa("height", 50px);
+      @include resa("margin-top", 43px);
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      @include res("border-radius", 30px);
+      border-color: $grayMid;
+      transition: 0.3s all;
+      border-style: solid;
+      @include res("border-width", 1px);
+      @include res("padding-left", 20px);
+      @include res("padding-right", 48px);
+      @include res("font-size", 14px);
+      @include res("line-height", 17.5px);
+      font-weight: 300;
+      text-align: left;
+      @include media(576) {
+        @include resa("border-width", 1px);
+        @include resa("border-radius", 30px);
+        @include resa("font-size", 14px);
+        @include resa("line-height", 17.5px);
+        @include resa("padding-left", 20px);
+        @include resa("padding-right", 48px);
+      }
+      &::placeholder {
+        color: $gray;
+      }
+      &:focus {
+        border-color: $yellow;
+      }
+    }
+    &:hover {
+      input {
+        border-color: $yellow;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      @include res("width", 48px);
+      @include res("padding-top", 15px);
+      @include res("padding-bottom", 15px);
+      @include res("padding-right", 20px);
+      @include media(576) {
+        @include resa("width", 48px);
+        @include resa("padding-top", 15px);
+        @include resa("padding-bottom", 15px);
+        @include resa("padding-right", 20px);
+      }
+    }
+    svg {
+      @include res("width", 20px);
+      @include res("height", 20px);
+      @include media(576) {
+        @include resa("width", 20px);
+        @include resa("height", 20px);
+      }
+    }
+  }
   &-right {
     display: flex;
     @include res("gap", 100px);
@@ -103,12 +220,29 @@
     display: flex;
     align-items: center;
     @include res("gap", 20px);
+    @include media(576) {
+      @include resa("margin-top", 44px);
+      @include resa("gap", 40px);
+    }
     &-item {
       @include res("height", 20px);
       @include res("width", 20px);
+      @include media(576) {
+        @include resa("height", 20px);
+        @include resa("width", 20px);
+      }
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
       svg {
         @include res("height", 20px);
         @include res("width", 20px);
+        @include media(576) {
+          @include resa("height", 20px);
+          @include resa("width", 20px);
+        }
         path {
           color: $default;
           transition: 0.2s all;
@@ -137,10 +271,18 @@
     display: flex;
     align-items: center;
     @include res("gap", 40px);
+    @include media(576) {
+      @include resa("gap", 20px);
+      @include resa("padding-left", 10px);
+    }
     &-link {
       display: inline-block;
       @include res("width", 112.83px);
       @include res("height", 80px);
+      @include media(576) {
+        @include resa("width", 70px);
+        @include resa("height", 50px);
+      }
     }
     img {
       object-fit: contain;
@@ -153,6 +295,11 @@
       @include res("line-height", 15px);
       @include res("max-width", 129px);
       text-align: left;
+      @include media(576) {
+        @include resa("font-size", 10px);
+        @include resa("line-height", 12.5px);
+        @include resa("max-width", 129px);
+      }
       &::selection {
         color: white;
         background: red;
@@ -164,10 +311,21 @@
       display: flex;
       align-items: center;
       @include res("gap", 40px);
+      @include media(576) {
+        @include resa("margin-top", 42px);
+        flex-direction: column;
+        align-items: flex-start;
+        @include resa("gap", 30px);
+      }
       &-link {
         font-weight: 400;
         @include res("font-size", 16px);
         @include res("line-height", 20px);
+        @include media(576) {
+          font-weight: 700;
+          @include resa("font-size", 40px);
+          @include resa("line-height", 48px);
+        }
         &::selection {
           color: white;
           background: red;
@@ -222,6 +380,43 @@
       @include resa("margin-top", 20px);
       display: block;
       width: 100% !important;
+    }
+  }
+  &__bar {
+    transform: translateX(110%);
+    transition: 0.4s all;
+    &.active {
+      transform: translateX(0);
+    }
+    position: fixed;
+    @include resa("top", 5px);
+    @include resa("left", 25px);
+    @include resa("right", 5px);
+    z-index: 9999;
+    height: calc(100vh - 3vh);
+    overflow: scroll;
+    @include resa("border-radius", 50px);
+    border-top-right-radius: 0;
+    &-inner {
+      @include resa("height", 830px);
+      @include resa("width", 400px);
+      background-color: $beige;
+      position: relative;
+      @include resa("padding-top", 25px);
+      @include resa("padding-left", 30px);
+      @include resa("padding-bottom", 40px);
+      @include resa("padding-right", 20px);
+    }
+    &-btn {
+      @include resa("margin-top", 50px);
+      width: 100% !important;
+    }
+    &-exit {
+      position: absolute;
+      @include resa("top", 15px);
+      @include resa("right", 20px);
+      @include resa("width", 40px);
+      @include resa("height", 40px);
     }
   }
 }

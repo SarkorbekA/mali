@@ -12,6 +12,10 @@
     color: $black;
 }
 
+body.active{
+    overflow: hidden;
+}
+
 html,
 body {
     height: 100%;
