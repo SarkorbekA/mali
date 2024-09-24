@@ -11,21 +11,35 @@
   @include res("line-height", 17.5px);
   @include res("letter-spacing", 0.8px);
   text-align: center;
+  width: fit-content;
   background-color: $default;
   color: $white;
   text-transform: uppercase;
   user-select: none;
   transition: 0.3s all;
+  @include media(576) {
+    @include resa("border-radius", 1000px);
+    @include resa("padding", 16px);
+    @include resa("padding-left", 40px);
+    @include resa("padding-right", 40px);
+    @include resa("font-size", 14px);
+    @include resa("line-height", 17.5px);
+    @include resa("letter-spacing", 0.8px);
+  }
   &.other {
     outline-color: $white;
     outline-style: solid;
     @include res("outline-width", 1px);
+    @include media(576) {
+      @include resa("outline-width", 1px);
+    }
     &:hover {
       outline-color: $yellow;
     }
   }
   &:hover {
     background: $yellow;
+    color: $white !important;
   }
 }
 
@@ -33,7 +47,11 @@
   display: flex;
   @include res("gap", 15px);
   align-items: center;
+  width: fit-content;
   user-select: none;
+  @include media(576) {
+    @include resa("gap", 15px);
+  }
   h3 {
     text-wrap: nowrap;
     @include res("font-size", 16px);
@@ -41,10 +59,18 @@
     font-weight: 400;
     text-align: left;
     color: $default;
+    @include media(576) {
+      @include resa("font-size", 16px);
+      @include resa("line-height", 20px);
+    }
   }
   svg {
     @include res("height", 30px);
     @include res("width", 30px);
+    @include media(576) {
+      @include resa("height", 30px);
+      @include resa("width", 30px);
+    }
   }
   &.white {
     h3 {
@@ -58,6 +84,10 @@
   @include res("gap", 10px);
   align-items: center;
   user-select: none;
+  width: fit-content;
+  @include media(576) {
+    @include resa("gap", 10px);
+  }
   h3 {
     text-wrap: nowrap;
     @include res("font-size", 14px);
@@ -65,10 +95,18 @@
     font-weight: 300;
     text-align: left;
     color: $default;
+    @include media(576) {
+      @include resa("font-size", 14px);
+      @include resa("line-height", 17.5px);
+    }
   }
   svg {
     @include res("height", 20px);
     @include res("width", 20px);
+    @include media(576) {
+      @include resa("height", 20px);
+      @include resa("width", 20px);
+    }
   }
   &.white {
     h3 {
@@ -88,16 +126,26 @@
   align-items: center;
   user-select: none;
   cursor: pointer;
+  width: fit-content;
+  @include resa("gap", 15px);
   h3 {
     text-wrap: nowrap;
     @include res("font-size", 14px);
     @include res("line-height", 17.5px);
     font-weight: 300;
     text-align: left;
+    @include media(576) {
+      @include resa("font-size", 14px);
+      @include resa("line-height", 17.5px);
+    }
   }
   svg {
     @include res("height", 20px);
     @include res("width", 20px);
+    @include media(576) {
+      @include resa("height", 20px);
+      @include resa("width", 20px);
+    }
   }
 }
 
@@ -147,6 +195,16 @@
   @include res("line-height", 17.5px);
   font-weight: 300;
   text-align: left;
+  @include media(576) {
+    @include resa("border-radius", 30px);
+    @include resa("border-width", 1px);
+    @include resa("padding-left", 20px);
+    @include resa("padding-top", 16px);
+    @include resa("padding-bottom", 16px);
+    @include resa("padding-right", 20px);
+    @include resa("font-size", 14px);
+    @include resa("line-height", 17.5px);
+  }
   &::placeholder {
     color: $gray;
   }

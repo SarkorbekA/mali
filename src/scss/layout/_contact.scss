@@ -1,23 +1,42 @@
 .contact {
   min-height: 40vh;
+  @include media(576) {
+    @include resa("margin-top", 48px);
+    @include resa("margin-bottom", 80px);
+  }
   &-title {
     @include res("font-size", 40px);
     @include res("line-height", 48px);
     font-weight: 700;
     text-align: left;
+    @include media(576) {
+      text-align: center;
+      @include resa("font-size", 40px);
+      @include resa("line-height", 48px);
+    }
   }
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include media(576) {
+      @include resa("gap", 40px);
+      flex-direction: column;
+    }
     &-btns {
       display: flex;
       align-items: center;
       @include res("gap", 88px);
+      @include media(576) {
+        @include resa("gap", 30px);
+      }
     }
   }
   &-content {
     @include res("margin-top", 68px);
+    @include media(576) {
+      @include resa("margin-top", 49px);
+    }
   }
   &__list {
     display: flex;
@@ -28,20 +47,46 @@
     border-bottom-color: $grayLight;
     border-bottom-style: solid;
     @include res("border-width", 1px);
+    @include media(576) {
+      @include resa("border-width", 1px);
+      flex-direction: column;
+      @include resa("gap", 30px);
+      align-items: flex-start;
+      @include resa("padding-bottom", 50px);
+    }
     &-item {
       display: flex;
       flex-direction: column;
       @include res("gap", 26px);
+      @include media(576) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include resa("row-gap", 26px);
+        justify-content: space-between;
+        @include resa("padding-bottom", 35px);
+        border-bottom-color: $grayLight;
+        border-bottom-style: solid;
+        @include res("border-width", 1px);
+      }
     }
     &-left {
       display: flex;
       align-items: flex-start;
       @include res("gap", 154px);
+      @include media(576) {
+        flex-direction: column;
+        @include resa("gap", 29px);
+      }
     }
     &-right {
       display: flex;
       @include res("gap", 89px);
       align-items: center;
+      @include media(576) {
+        flex-direction: column;
+        @include resa("gap", 25px);
+        align-items: flex-start;
+      }
     }
   }
   &__item {
@@ -50,6 +95,11 @@
       @include res("line-height", 20px);
       font-weight: 400;
       text-align: left;
+      @include media(576) {
+        @include resa("font-size", 16px);
+        @include resa("line-height", 20px);
+        width: 100%;
+      }
     }
     &-link {
       @include res("font-size", 14px);
@@ -57,44 +107,82 @@
       font-weight: 300;
       text-align: left;
       color: $default;
+      @include media(576) {
+        @include resa("font-size", 14px);
+        @include resa("line-height", 17.5px);
+      }
     }
   }
 }
 
 .form {
   @include res("margin-top", 58px);
+  @include media(576) {
+    @include resa("margin-top", 53px);
+  }
   &-title {
     @include res("font-size", 22px);
     @include res("line-height", 27.5px);
     font-weight: 400;
     text-align: left;
+    @include media(576) {
+      @include resa("font-size", 22px);
+      @include resa("line-height", 27.5px);
+      text-align: center;
+    }
   }
   &__box {
     @include res("margin-top", 34px);
+    @include media(576) {
+      @include resa("margin-top", 24px);
+    }
     &-top {
       display: flex;
       @include res("gap", 20px);
+      @include media(576) {
+        flex-direction: column;
+        @include resa("gap", 10px);
+      }
     }
     &-input {
       @include res("width", 380px);
       @include res("height", 50px);
+      @include media(576) {
+        @include resa("width", 380px);
+        @include resa("height", 50px);
+      }
     }
     &-bottom {
       @include res("margin-top", 20px);
       display: flex;
       align-items: flex-end;
       @include res("gap", 20px);
+      @include media(576) {
+        @include resa("margin-top", 10px);
+        flex-direction: column;
+        align-items: center;
+        @include resa("gap", 20px);
+      }
     }
     &-message {
       @include res("height", 110px);
       @include res("width", 880px);
+      @include media(576) {
+        @include resa("width", 380px);
+        @include resa("height", 110px);
+      }
       textarea {
         width: 100%;
         max-width: 100%;
         resize: none;
         @include res("height", 110px);
+        @include media(576) {
+          @include resa("height", 110px);
+        }
         &::-webkit-scrollbar {
-          width: 6px;
+          @include media(576) {
+            @include resa("width", 6px);
+          }
           &-thumb {
             background-color: $default;
           }
@@ -103,6 +191,9 @@
     }
     &-button {
       @include res("width", 280px);
+      @include media(576) {
+        @include resa("width", 180px);
+      }
     }
   }
 }

@@ -16,6 +16,16 @@ html(lang="en")
           .catalog__header 
             .catalog__header-left 
               h2.catalog-title Наша продукция
+              .catalog__header-pricelist.mob.button-mini
+                h3 Прайс-лист 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_25_4772" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                  <rect width="20" height="20" fill="#D9D9D9"/>
+                  </mask>
+                  <g mask="url(#mask0_25_4772)">
+                  <path d="M6 14H12V12.5H6V14ZM6 10.75H14V9.25H6V10.75ZM6 7.5H14V6H6V7.5ZM4.5 17C4.0875 17 3.73437 16.8531 3.44062 16.5594C3.14687 16.2656 3 15.9125 3 15.5V4.5C3 4.0875 3.14687 3.73438 3.44062 3.44063C3.73437 3.14688 4.0875 3 4.5 3H15.5C15.9125 3 16.2656 3.14688 16.5594 3.44063C16.8531 3.73438 17 4.0875 17 4.5V15.5C17 15.9125 16.8531 16.2656 16.5594 16.5594C16.2656 16.8531 15.9125 17 15.5 17H4.5ZM4.5 15.5H15.5V4.5H4.5V15.5Z" fill="#E80029"/>
+                  </g>
+                </svg>
             .catalog__header-right 
               .catalog__header-search   
                 input(type="text" id="search" placeholder="Начните вводить")
@@ -29,7 +39,7 @@ html(lang="en")
                     </g>
                   </svg>
 
-              .catalog__header-pricelist.button-other
+              .catalog__header-pricelist.button-mini
                 h3 Скачать прайс-лист 
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <mask id="mask0_25_4772" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -39,6 +49,17 @@ html(lang="en")
                   <path d="M6 14H12V12.5H6V14ZM6 10.75H14V9.25H6V10.75ZM6 7.5H14V6H6V7.5ZM4.5 17C4.0875 17 3.73437 16.8531 3.44062 16.5594C3.14687 16.2656 3 15.9125 3 15.5V4.5C3 4.0875 3.14687 3.73438 3.44062 3.44063C3.73437 3.14688 4.0875 3 4.5 3H15.5C15.9125 3 16.2656 3.14688 16.5594 3.44063C16.8531 3.73438 17 4.0875 17 4.5V15.5C17 15.9125 16.8531 16.2656 16.5594 16.5594C16.2656 16.8531 15.9125 17 15.5 17H4.5ZM4.5 15.5H15.5V4.5H4.5V15.5Z" fill="#E80029"/>
                   </g>
                 </svg>
+              .catalog__header-filter
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_59_8189" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                  <rect width="24" height="24" fill="#D9D9D9"/>
+                  </mask>
+                  <g mask="url(#mask0_59_8189)">
+                  <path d="M11.3847 19.5C11.1334 19.5 10.9232 19.4153 10.754 19.246C10.5847 19.0768 10.5 18.8666 10.5 18.6152V12.827L4.90199 5.7155C4.70966 5.459 4.68174 5.19233 4.81824 4.9155C4.9549 4.6385 5.18541 4.5 5.50974 4.5H18.4902C18.8146 4.5 19.0451 4.6385 19.1817 4.9155C19.3182 5.19233 19.2903 5.459 19.098 5.7155L13.5 12.827V18.6152C13.5 18.8666 13.4153 19.0768 13.246 19.246C13.0768 19.4153 12.8666 19.5 12.6152 19.5H11.3847Z" fill="#E80029"/>
+                  </g>
+                </svg>
+                h3 Фильтр
+
           .catalog__wrapper  
             .catalog__side 
               .catalog__side-select 

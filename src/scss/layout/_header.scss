@@ -10,6 +10,9 @@
     border-bottom-color: $grayLight;
     border-bottom-style: solid;
     @include res("border-bottom-width", 1px);
+    @include media(576) {
+      display: none;
+    }
   }
   &__lang {
     display: flex;
@@ -22,7 +25,12 @@
       text-align: left;
       text-transform: uppercase;
       color: $gray;
+      transition: 0.3s all;
       &.active {
+        color: $black;
+      }
+      &:hover {
+        color: $yellow;
       }
     }
   }
@@ -31,9 +39,11 @@
     @include res("gap", 10px);
     align-items: center;
     svg {
-      fill: $gray;
       @include res("height", 20px);
       @include res("width", 20px);
+      path {
+        color: $gray;
+      }
     }
     h3 {
       color: $gray;
@@ -70,9 +80,18 @@
   &-search {
     @include res("height", 20px);
     @include res("width", 20px);
+    display: inline-block;
     svg {
       @include res("height", 20px);
       @include res("width", 20px);
+      path {
+        transition: 0.2s all;
+      }
+      &:hover {
+        path {
+          color: $yellow;
+        }
+      }
     }
   }
   &-right {
@@ -90,6 +109,17 @@
       svg {
         @include res("height", 20px);
         @include res("width", 20px);
+        path {
+          color: $default;
+          transition: 0.2s all;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            color: $yellow;
+          }
+        }
       }
     }
   }
@@ -99,6 +129,9 @@
     align-items: center;
     @include res("padding-top", 30px);
     @include res("padding-bottom", 30px);
+    @include media(576) {
+      display: none;
+    }
   }
   &__logo {
     display: flex;
@@ -140,6 +173,55 @@
           background: red;
         }
       }
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @include resa("padding-top", 20px);
+    @include media(576) {
+      display: block;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-logo {
+      @include resa("width", 70px);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      @include resa("gap", 50px);
+      @include resa("margin-left", 89px);
+    }
+    &-link {
+      display: inline-block;
+      @include resa("width", 30px);
+      @include resa("height", 30px);
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-burger {
+      @include resa("margin-left", 70px);
+      @include resa("width", 40px);
+      @include resa("height", 40px);
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-btn {
+      @include resa("margin-top", 20px);
+      display: block;
+      width: 100% !important;
     }
   }
 }

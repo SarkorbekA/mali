@@ -2,17 +2,31 @@
   @include res("margin-top", 52px);
   @include res("margin-bottom", 90px);
   min-height: 40vh;
+  @include media(576) {
+    @include resa("margin-bottom", 20px);
+    @include resa("margin-top", 47px);
+  }
   &-title {
     @include res("font-size", 40px);
     @include res("line-height", 48px);
     font-weight: 700;
     text-align: left;
+    @include media(576) {
+      @include resa("font-size", 40px);
+      @include resa("line-height", 48px);
+      text-align: center;
+    }
   }
   &-input {
     @include res("margin-top", 30px);
     @include res("max-width", 680px);
     @include res("height", 50px);
     position: relative;
+    @include media(576) {
+      @include resa("height", 50px);
+      @include resa("max-width", 380px);
+      @include resa("margin-top", 40px);
+    }
     input {
       width: 100%;
       height: 100%;
@@ -29,6 +43,14 @@
       @include res("line-height", 17.5px);
       font-weight: 300;
       text-align: left;
+      @include media(576) {
+        @include resa("padding-left", 20px);
+        @include resa("padding-right", 48px);
+        @include resa("font-size", 14px);
+        @include resa("line-height", 17.5px);
+        @include resa("border-width", 1px);
+        @include resa("border-radius", 30px);
+      }
       &::placeholder {
         color: $gray;
       }
@@ -54,10 +76,20 @@
       @include res("padding-top", 15px);
       @include res("padding-bottom", 15px);
       @include res("padding-right", 20px);
+      @include media(576) {
+        @include resa("padding-top", 15px);
+        @include resa("padding-bottom", 15px);
+        @include resa("padding-right", 20px);
+        @include resa("width", 48px);
+      }
     }
     svg {
       @include res("width", 20px);
       @include res("height", 20px);
+      @include media(576) {
+        @include resa("width", 20px);
+        @include resa("height", 20px);
+      }
     }
   }
   &-finded {
@@ -66,6 +98,11 @@
     @include res("line-height", 17.5px);
     font-weight: 300;
     text-align: left;
+    @include media(576) {
+      @include resa("margin-top", 31px);
+      @include resa("font-size", 14px);
+      @include resa("line-height", 17.5px);
+    }
   }
   &__list {
     @include res("margin-top", 46px);
@@ -73,12 +110,21 @@
     grid-template-columns: repeat(4, 1fr);
     @include res("row-gap", 30px);
     @include res("column-gap", 20px);
+    @include media(576) {
+      @include resa("margin-top", 31px);
+      @include resa("gap", 20px);
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__item {
     background-color: $beige;
     width: 100%;
     @include res("border-radius", 50px);
     border-bottom-left-radius: 0;
+    @include media(576) {
+      @include resa("border-radius", 50px);
+      border-bottom-left-radius: 0;
+    }
     &-link {
       width: 100%;
       display: flex;
@@ -92,6 +138,11 @@
       @include res("width", 280px);
       @include res("height", 280px);
       @include res("padding", 10px);
+      @include media(576) {
+        @include resa("width", 180px);
+        @include resa("height", 180px);
+        @include resa("padding", 10px);
+      }
     }
     &-img {
       z-index: 2;
@@ -100,6 +151,12 @@
       @include res("width", 260px);
       @include res("left", 10px);
       @include res("top", 10px);
+      @include media(576) {
+        @include resa("height", 160px);
+        @include resa("width", 160px);
+        @include resa("left", 10px);
+        @include resa("top", 10px);
+      }
       img {
         position: absolute;
         width: 100%;
@@ -121,6 +178,14 @@
       z-index: 3;
       @include res("padding-top-left-radius", 50px);
       @include res("padding-top-right-radius", 50px);
+      @include media(576) {
+        @include resa("height", 160px);
+        @include resa("width", 160px);
+        @include resa("left", 10px);
+        @include resa("top", 10px);
+        @include resa("padding-top-left-radius", 50px);
+        @include resa("padding-top-right-radius", 50px);
+      }
       span {
         display: inline-block;
         width: 25%;
@@ -135,6 +200,11 @@
       @include res("gap", 5px);
       @include res("left", 30px);
       @include res("bottom", 10px);
+      @include media(576) {
+        @include resa("gap", 5px);
+        @include resa("left", 10px);
+        @include resa("bottom", -8px);
+      }
       span {
         transition: 0.3s all;
         display: inline-block;
@@ -142,6 +212,11 @@
         @include res("height", 2px);
         @include res("border-radius", 2px);
         background-color: $white;
+        @include media(576) {
+          @include resa("width", 10px);
+          @include resa("height", 2px);
+          @include resa("border-radius", 2px);
+        }
         &.active {
           background-color: $default;
         }
@@ -153,15 +228,22 @@
       @include res("padding-left", 40px);
       @include res("padding-right", 40px);
       @include res("padding-bottom", 36px);
+      @include media(576) {
+        margin: 0;
+        @include resa("padding", 10px);
+        @include resa("padding-top", 27px);
+      }
     }
     &-title {
-      font-size: 18px;
       font-weight: 500;
-      line-height: 22.5px;
       @include res("font-size", 18px);
       @include res("line-height", 23px);
 
       text-align: left;
+      @include media(576) {
+        @include resa("font-size", 18px);
+        @include resa("line-height", 23px);
+      }
     }
     &-text {
       @include res("margin-top", 15px);
@@ -170,17 +252,30 @@
       @include res("line-height", 18px);
 
       text-align: left;
+      @include media(576) {
+        @include resa("margin-top", 15px);
+        @include resa("font-size", 14px);
+        @include resa("line-height", 18px);
+      }
     }
     &-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       @include res("margin-top", 40px);
+      @include media(576) {
+        @include resa("margin-top", 27px);
+        @include resa("max-width", 140px);
+      }
       h3 {
         @include res("font-size", 14px);
         @include res("line-height", 18px);
         font-weight: 300;
         color: $gray;
+        @include media(576) {
+          @include resa("font-size", 14px);
+          @include resa("line-height", 18px);
+        }
       }
     }
   }

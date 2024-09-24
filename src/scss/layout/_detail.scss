@@ -1,35 +1,37 @@
 .detail {
   @include res("margin-top", 60px);
   @include res("margin-bottom", 36px);
+  @include media(576) {
+    @include resa("margin-top", 25px);
+    @include resa("margin-bottom", 20px);
+  }
+  &-wrapper {
+    header {
+      @include media(576) {
+        display: none;
+      }
+    }
+  }
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &-share {
-      display: flex;
-      align-items: center;
-      @include res("gap", 10px);
-      h3 {
-        @include res("font-size", 14px);
-        @include res("line-height", 17.5px);
-        color: $default;
-        font-weight: 300;
-      }
-      svg {
-        @include res("width", 30px);
-        @include res("height", 30px);
-      }
-    }
   }
   &__content {
     display: flex;
     align-items: flex-start;
     @include res("gap", 60px);
     @include res("margin-top", 22px);
+    @include media(576) {
+      @include resa("margin-top", 43px);
+    }
   }
   &__item {
     &-img {
       @include res("width", 440px);
+      @include media(576) {
+        display: none;
+      }
     }
     &-type {
       @include res("font-size", 18px);
@@ -37,6 +39,11 @@
       font-weight: 500;
       text-align: left;
       color: $default;
+      @include media(576) {
+        text-align: center;
+        @include resa("font-size", 18px);
+        @include resa("line-height", 22.5px);
+      }
     }
     &-name {
       @include res("margin-top", 13px);
@@ -44,6 +51,12 @@
       @include res("line-height", 48px);
       font-weight: 700;
       text-align: left;
+      @include media(576) {
+        @include resa("margin-top", 12px);
+        @include resa("font-size", 40px);
+        @include resa("line-height", 48px);
+        text-align: center;
+      }
     }
     &-info {
       @include res("margin-top", 18px);
@@ -51,6 +64,12 @@
       @include res("line-height", 20px);
       font-weight: 400;
       text-align: left;
+      @include media(576) {
+        @include resa("margin-top", 26px);
+        @include resa("font-size", 16px);
+        @include resa("line-height", 20px);
+        text-align: center;
+      }
     }
     &-btns {
       @include res("margin-top", 36px);
@@ -60,12 +79,41 @@
       border-bottom-color: $grayLight;
       border-bottom-style: solid;
       @include res("border-width", 1px);
+      @include media(576) {
+        flex-direction: column;
+        @include resa("margin-top", 40px);
+        @include resa("padding-bottom", 30px);
+        @include resa("border-width", 1px);
+        .button-other {
+          display: none;
+        }
+      }
     }
   }
   &__options {
     @include res("margin-top", 46px);
     display: flex;
     @include res("gap", 10px);
+    @include media(576) {
+      display: none;
+      @include resa("gap", 10px);
+    }
+    &.mob {
+      display: none;
+      @include media(576) {
+        display: flex;
+        @include resa("padding-left", 25px);
+        @include resa("padding-right", 25px);
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+    &-box {
+      overflow: hidden;
+      @include resa("max-width", 430px);
+    }
     &-item {
       @include res("width", 190px);
       @include res("height", 180px);
@@ -76,6 +124,16 @@
       @include res("padding-top", 14px);
       @include res("padding-left", 21px);
       @include res("padding-bottom", 24px);
+      @include media(576) {
+        @include resa("border-width", 2px);
+        @include resa("min-width", 160px);
+        @include resa("width", 160px);
+        @include resa("height", 165px);
+        @include resa("padding", 15px);
+        @include resa("padding-top", 14px);
+        @include resa("padding-bottom", 17px);
+        @include resa("border-radius", 30px);
+      }
       &.active {
         border-color: $default;
       }
@@ -85,12 +143,20 @@
       @include res("font-size", 16px);
       @include res("line-height", 20px);
       text-align: left;
+      @include media(576) {
+        @include resa("font-size", 16px);
+        @include resa("line-height", 20px);
+      }
     }
     &-list {
       @include res("margin-top", 23.5px);
       display: flex;
       flex-direction: column;
       @include res("gap", 9.5px);
+      @include media(576) {
+        @include resa("margin-top", 12px);
+        @include resa("gap", 10px);
+      }
     }
     &-el {
       display: flex;
@@ -102,12 +168,20 @@
         font-weight: 300;
         text-align: left;
         color: $gray;
+        @include media(576) {
+          @include resa("font-size", 12px);
+          @include resa("line-height", 15px);
+        }
       }
       h3 {
         @include res("font-size", 14px);
         @include res("line-height", 17.5px);
         font-weight: 300;
         text-align: left;
+        @include media(576) {
+          @include resa("font-size", 14px);
+          @include resa("line-height", 17.5px);
+        }
       }
     }
   }
@@ -159,21 +233,36 @@
     display: flex;
     flex-direction: column;
     @include res("gap", 20px);
+    @include media(576) {
+      @include resa("margin-top", 29px);
+      @include resa("gap", 17px);
+    }
     &-btn {
       cursor: pointer;
       display: flex;
       align-items: center;
       @include res("gap", 10px);
+      @include media(576) {
+        @include resa("gap", 10px);
+      }
       h3 {
         @include res("font-size", 16px);
         @include res("line-height", 20px);
         font-weight: 500;
         text-align: left;
+        @include media(576) {
+          @include resa("font-size", 16px);
+          @include resa("line-height", 20px);
+        }
       }
       svg {
         @include res("width", 20px);
         @include res("height", 20px);
         transition: 0.2s all;
+        @include media(576) {
+          @include resa("width", 20px);
+          @include resa("height", 20px);
+        }
       }
       &.active {
         svg {
@@ -183,6 +272,7 @@
     }
     &-content {
       transition: 0.2s all;
+      min-height: 0;
       height: 0;
       overflow: hidden;
       p {
@@ -192,10 +282,69 @@
         @include res("line-height", 17.5px);
         font-weight: 300;
         text-align: left;
+        @include media(576) {
+          @include resa("font-size", 14px);
+          @include resa("line-height", 17.5px);
+          @include resa("padding-top", 12px);
+          @include resa("padding-bottom", 2px);
+        }
       }
     }
   }
   &-product {
     @include res("margin-top", 13px);
+  }
+
+  &-slider {
+    display: none;
+    @include media(576) {
+      @include resa("margin-top", 21px);
+      display: block;
+    }
+    @include resa("height", 387px);
+    @include resa("width", 380px);
+    .swiper.detailSwiper {
+      width: 100%;
+      height: 100%;
+    }
+    .detailSwiper {
+      --swiper-pagination-bottom: 0;
+      @include resa("--swiper-pagination-bullet-horizontal-gap", 5px);
+
+      .detailNav {
+        @include resa("height", 30px);
+        @include resa("width", 30px);
+        background-color: $default;
+        border-radius: 50%;
+        &:after {
+          @include resa("font-size", 12px);
+          color: $white;
+        }
+      }
+      .swiper {
+        &-pagination {
+          &-bullet {
+            @include resa("width", 35px);
+            @include resa("height", 2px);
+            @include resa("border-radius", 2px);
+            background-color: $grayLight;
+            opacity: 1;
+            &-active {
+              background-color: $default;
+            }
+          }
+        }
+      }
+    }
+    .swiper-slide {
+      @include resa("height", 380px);
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

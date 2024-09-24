@@ -4,11 +4,14 @@ mixin program()
       .program-left 
         h3.program-title Партнерская программа
         p.program-text C Mali активно сотрудничают ведущие ритейлеры и представители индустрии HoReCa, такие как:
-        ul.program__list 
-          li.program__list-item
-            img(src="@img/partners/el1.webp" alt="partner")
-          li.program__list-item
-            img(src="@img/partners/el2.webp" alt="partner")
+        .program__left-box
+          ul.program__list 
+            li.program__list-item.first 
+              img(src="@img/partners/el1.webp" alt="partner")
+              img(src="@img/partners/el3.webp" alt="partner").inner
+            li.program__list-item.second
+              img(src="@img/partners/el2.webp" alt="partner")
+              img(src="@img/partners/el4.webp" alt="partner").inner
           a(href="#").button-other.white 
             h3 Вся продукция
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

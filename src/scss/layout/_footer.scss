@@ -2,13 +2,20 @@
 
 .footer {
   @include res("margin-top", 110px);
-
+  @include media(576) {
+    @include resa("margin-top", 125px);
+  }
   &-content {
     width: 100%;
     margin: 0 auto;
     @include res("max-width", 1360px);
     @include res("padding-left", 20px);
     @include res("padding-right", 20px);
+    @include media(576) {
+      @include resa("max-width", 430px);
+      @include resa("padding-left", 25px);
+      @include resa("padding-right", 25px);
+    }
   }
   &-top {
     background-color: $beige;
@@ -21,38 +28,74 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include media(576) {
+      @include resa("border-top-left-radius", 50px);
+      @include resa("border-top-right-radius", 50px);
+      padding: 0;
+      @include resa("padding-bottom", 22px);
+      @include resa("padding-left", 30px);
+      @include resa("padding-right", 30px);
+      flex-direction: column;
+      height: auto;
+      @include resa("gap", 30px);
+    }
     &__left {
       display: flex;
       align-items: center;
       @include res("gap", 17px);
+      @include media(576) {
+        flex-direction: column;
+        @include resa("gap", 26px);
+      }
     }
     &__right {
       display: flex;
       align-items: center;
       @include res("gap", 80px);
+      @include media(576) {
+        @include resa("gap", 18px);
+        flex-direction: column;
+      }
     }
     &__info {
       display: flex;
       align-items: center;
       @include res("gap", 106px);
+      @include media(576) {
+        flex-wrap: wrap;
+        @include resa("row-gap", 24px);
+        @include resa("column-gap", 30px);
+        @include resa("margin-top", -25px);
+      }
     }
-  }
-  &-content {
   }
   &-address {
     display: flex;
     @include res("gap", 10px);
     align-items: center;
+    @include media(576) {
+      width: 100%;
+      justify-content: center;
+      @include resa("gap", 10px);
+    }
     svg {
       fill: $gray;
       @include res("height", 20px);
       @include res("width", 20px);
+      @include media(576) {
+        @include resa("height", 20px);
+        @include resa("width", 20px);
+      }
     }
     h3 {
-      color: $gray;
+      color: $black;
       font-weight: 300;
       @include res("font-size", 12px);
       @include res("line-height", 15px);
+      @include media(576) {
+        @include resa("font-size", 12px);
+        @include resa("line-height", 15px);
+      }
     }
   }
   &-phone {
@@ -63,13 +106,23 @@
       fill: $black;
       @include res("height", 20px);
       @include res("width", 20px);
+      @include media(576) {
+        @include resa("height", 20px);
+        @include resa("width", 20px);
+      }
     }
     h3 {
-      font-size: 14px;
       font-weight: 400;
       @include res("font-size", 14px);
       @include res("line-height", 17.5px);
       text-align: left;
+      @include media(576) {
+        @include resa("font-size", 14px);
+        @include resa("line-height", 17.5px);
+      }
+    }
+    @include media(576) {
+      @include resa("gap", 15px);
     }
   }
   &-logo {
@@ -78,6 +131,10 @@
     @include res("height", 80px);
     position: relative;
     transform: translateY(-50%);
+    @include media(576) {
+      @include resa("width", 70.5px);
+      @include resa("height", 50px);
+    }
     img {
       width: 100%;
       height: 100%;
@@ -87,12 +144,24 @@
     display: flex;
     align-items: center;
     @include res("gap", 20px);
+    @include media(576) {
+      @include resa("gap", 20px);
+    }
     &-item {
-      @include res("height", 20px);
-      @include res("width", 20px);
-      svg {
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
         @include res("height", 20px);
         @include res("width", 20px);
+        @include media(576) {
+          @include resa("height", 20px);
+          @include resa("width", 20px);
+        }
+      }
+      svg {
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -107,12 +176,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include media(576) {
+      height: auto;
+      @include resa("border-bottom-left-radius", 50px);
+      @include resa("border-bottom-right-radius", 50px);
+      justify-content: center;
+      @include resa("padding", 38px);
+    }
   }
   &__nav {
     &-list {
       display: flex;
       align-items: center;
       @include res("gap", 40px);
+      @include media(576) {
+        flex-direction: column;
+        @include resa("gap", 20px);
+      }
     }
     &-link {
       @include res("font-size", 16px);
@@ -120,6 +200,10 @@
       font-weight: 400;
       text-align: left;
       color: $white;
+      @include media(576) {
+        @include resa("font-size", 16px);
+        @include resa("line-height", 20px);
+      }
     }
   }
   &-email {
@@ -129,6 +213,10 @@
     svg {
       @include res("height", 20px);
       @include res("width", 20px);
+      @include media(576) {
+        @include resa("height", 20px);
+        @include resa("width", 20px);
+      }
     }
     h3 {
       @include res("font-size", 14px);
@@ -136,6 +224,26 @@
       font-weight: 400;
       text-align: left;
       color: $white;
+      @include media(576) {
+        @include resa("font-size", 14px);
+        @include resa("line-height", 17.5px);
+      }
+    }
+    &.mob {
+      display: none;
+      h3 {
+        color: $black;
+      }
+      svg path {
+        color: $black;
+      }
+    }
+    @include media(576) {
+      display: none;
+      @include resa("gap", 15px);
+      &.mob {
+        display: flex;
+      }
     }
   }
   &__list {
@@ -144,11 +252,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media(576) {
+      @include resa("margin-top", 26px);
+      @include resa("margin-bottom", 32px);
+      flex-direction: column;
+      @include resa("gap", 15px);
+    }
     &-item {
       @include res("font-size", 14px);
       @include res("line-height", 17.5px);
       font-weight: 300;
       color: $gray;
+      @include media(576) {
+        @include resa("font-size", 14px);
+        @include resa("line-height", 17.5px);
+      }
       a {
         color: inherit;
         font-size: inherit;

@@ -3,14 +3,29 @@
 .notification {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   @include res("gap", 15px);
   @include res("padding-top", 5px);
   @include res("padding-bottom", 5px);
+  @include res("padding-left", 25px);
+  @include res("padding-right", 25px);
+  @include media(576) {
+    @include resa("padding-top", 10px);
+    @include resa("padding-bottom", 10px);
+  }
   background: $default;
   &-icon {
     @include res("width", 20px);
     @include res("height", 20px);
+    @include media(576) {
+      @include resa("width", 20px);
+      @include resa("height", 20px);
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
   &-title {
     @include res("font-size", 12px);
@@ -18,6 +33,10 @@
     font-weight: 400;
     text-align: left;
     color: $white;
+    @include media(576) {
+      @include resa("font-size", 12px);
+      @include resa("line-height", 15px);
+    }
   }
   &-text {
     @include res("font-size", 12px);
@@ -25,23 +44,29 @@
     text-align: left;
     color: $white;
     font-weight: 300;
+    text-align: center;
+    @include media(576) {
+      @include resa("font-size", 12px);
+      @include resa("line-height", 15px);
+    }
   }
 }
-
-// @include media(576) {
-//   @include resa("width", 343px);
 
 .mySwiper.swiper {
   width: 100%;
   height: 100%;
-  --swiper-navigation-top-offset: 100%;
+  --swiper-navigation-top-offset: 95%;
   @include res("padding-bottom", 15px);
 
   --swiper-pagination-color: #e80029;
   --swiper-pagination-bullet-inactive-color: #f1f1f0;
   @include res("--swiper-pagination-bullet-horizontal-gap", 5px);
   @include res("--swiper-navigation-sides-offset", 70px);
-
+  @include media(576) {
+    @include resa("padding-bottom", 15px);
+    @include resa("--swiper-navigation-sides-offset", 10px);
+    @include resa("--swiper-pagination-bullet-horizontal-gap", 5px);
+  }
   &-wrapper {
     width: 100%;
   }
@@ -50,12 +75,14 @@
 .mySwiper .swiper {
   &-slide {
     text-align: center;
-    @include res("font-size", 18px);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     @include res("padding-bottom", 8px);
+    @include media(576) {
+      @include resa("padding-bottom", 8px);
+    }
   }
   &-button {
     &-next,
@@ -63,18 +90,30 @@
       z-index: 11;
       @include res("height", 30px);
       @include res("width", 30px);
-      transform: translateY(-1.2vw);
+      top: auto;
+      bottom: 0;
       border-radius: 50%;
       background-color: $default;
+      @include media(576) {
+        @include resa("height", 30px);
+        @include resa("width", 30px);
+      }
       &::after {
         @include res("font-size", 12px);
         color: $white;
         transform: translate(0.0625vw, 0.0625vw);
+        @include media(576) {
+          transform: translate(0.4vw, 0.3vw);
+          @include resa("font-size", 12px);
+        }
       }
     }
     &-prev {
       &::after {
         transform: translate(-0.0625vw, 0.0625vw);
+        @include media(576) {
+          transform: translate(-0.4vw, 0.3vw);
+        }
       }
     }
   }
@@ -84,6 +123,10 @@
       @include res("width", 100px);
       @include res("height", 2px);
       @include res("border-radius", 2px);
+      @include media(576) {
+        @include resa("width", 35px);
+        @include resa("height", 2px);
+      }
     }
   }
 }
@@ -96,6 +139,14 @@
     @include res("padding-left", 20px);
     @include res("padding-right", 20px);
     @include res("height", 515px);
+    @include media(576) {
+      @include resa("max-width", 380px);
+      @include resa("margin-top", 35px);
+      margin-bottom: 0;
+      @include resa("height", 675px);
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   &-item {
     background: $beige;
@@ -111,11 +162,22 @@
     @include res("gap", 40px);
     justify-content: space-between;
     align-items: center;
+    @include media(576) {
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+      gap: 0;
+    }
   }
   &__right {
     position: relative;
     @include res("width", 630px);
     @include res("height", 457px);
+    @include media(576) {
+      @include resa("width", 360px);
+      @include resa("height", 660px);
+      @include resa("margin-top", -9px);
+    }
     &-img {
       width: 100%;
       img {
@@ -128,6 +190,9 @@
       @include res("width", 300px);
       bottom: 0;
       right: 0;
+      @include media(576) {
+        @include resa("width", 200px);
+      }
       img {
         width: 100%;
         height: 100%;
@@ -138,16 +203,33 @@
   &__left {
     @include res("width", 480px);
     @include res("height", 346px);
+
     background-image: url(../../img/banner-shape.png);
     background-position: center;
     background-size: cover;
+
     background-repeat: no-repeat;
     @include res("padding-top", 40px);
     @include res("padding-left", 100px);
+    @include media(576) {
+      background-size: 120%;
+      @include resa("background-position-y", -5px);
+      @include resa("padding-top", 38px);
+      @include resa("padding-bottom", 34px);
+      @include resa("width", 380px);
+      @include resa("height", 346px);
+      @include resa("padding-left", 45px);
+      @include resa("padding-right", 45px);
+    }
     &-title {
       @include res("max-width", 290px);
       @include res("font-size", 60px);
       @include res("line-height", 57px);
+      @include media(576) {
+        @include resa("max-width", 290px);
+        @include resa("font-size", 60px);
+        @include resa("line-height", 57px);
+      }
       font-weight: 700;
       text-align: left;
       color: $white;
@@ -160,10 +242,20 @@
       text-align: left;
       color: $white;
       @include res("max-width", 250px);
+      @include media(576) {
+        @include resa("margin-top", 19px);
+        @include resa("font-size", 22px);
+        @include resa("line-height", 27.5px);
+        @include resa("max-width", 230px);
+      }
     }
     &-btn {
       @include res("margin-left", 100px);
       @include res("margin-top", 66px);
+      @include media(576) {
+        @include resa("margin-left", 108px);
+        @include resa("margin-top", 43px);
+      }
     }
   }
 }
