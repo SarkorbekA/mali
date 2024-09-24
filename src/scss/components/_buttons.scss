@@ -154,15 +154,26 @@
   @include res("gap", 15px);
   align-items: center;
   position: relative;
+  @include media(576) {
+    @include resa("gap", 15px);
+  }
   svg {
     @include res("height", 30px);
     @include res("width", 30px);
+    @include media(576) {
+      @include resa("height", 30px);
+      @include resa("width", 30px);
+    }
   }
   h3 {
     @include res("font-size", 14px);
     @include res("line-height", 17.5px);
     font-weight: 300;
     text-align: left;
+    @include media(576) {
+      @include resa("font-size", 14px);
+      @include resa("line-height", 17.5px);
+    }
   }
   input {
     width: 0px;

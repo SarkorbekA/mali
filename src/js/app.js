@@ -21,6 +21,26 @@ burgerClose.addEventListener('click', () => {
 })
 
 
+
+const filterSide = document.querySelector('.catalog__side');
+const filterClose = document.querySelectorAll('.catalog__side-close');
+const filterOpen = document.querySelector('.catalog__header-filter');
+
+filterClose.forEach(el => {
+  el.addEventListener('click', () => {
+    filterSide.classList.remove('active')
+    body.classList.remove('active')
+  })
+})
+
+
+filterOpen.addEventListener('click', () => {
+  filterSide.classList.add('active')
+  body.classList.add('active')
+})
+
+
+
 import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
 
 var swiper = new Swiper(".mySwiper", {

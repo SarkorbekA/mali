@@ -930,6 +930,53 @@
   width: 20.5882352941vw;
 }
 
+.catalog__side-wrapper {
+  width: 20.5882352941vw;
+}
+
+.catalog__side-exit {
+  display: none;
+  gap: 2.3255813953vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.catalog__side-exit h3 {
+  text-wrap: nowrap;
+  font-weight: 400;
+  text-align: left;
+  color: #e80029;
+}
+
+.catalog__side-exit svg {
+  height: 1.7647058824vw;
+  width: 1.7647058824vw;
+}
+
+.catalog__side-show {
+  position: absolute;
+  bottom: 5.8139534884vw;
+  left: 5.8139534884vw;
+  right: 5.8139534884vw;
+  max-width: 88.3720930233vw;
+  width: 100% !important;
+  display: none;
+}
+
+.catalog__side-title {
+  display: none;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 5.3488372093vw;
+  font-size: 9.3023255814vw;
+  line-height: 11.1627906977vw;
+}
+
 .catalog__side-select {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1017,6 +1064,15 @@
   transition: 0.2s all;
   width: 1.4705882353vw;
   height: 1.4705882353vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .catalog__select-arrow.active {
@@ -1026,8 +1082,8 @@
 }
 
 .catalog__select-arrow svg {
-  width: 100%;
-  height: 100%;
+  width: 1.4705882353vw;
+  height: 1.4705882353vw;
 }
 
 .catalog__select-arrow svg path {
@@ -4463,7 +4519,121 @@ li::selection {
   }
 
   .catalog__side {
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
+    transition: 0.4s all;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+    width: 100vw;
+    position: fixed;
+    background-color: #ffffff;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding-left: 5.8139534884vw;
+    padding-right: 5.8139534884vw;
+    padding-bottom: 19.7674418605vw;
+  }
+
+  .catalog__side.active {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  .catalog__side-wrapper {
+    overflow-y: auto;
+    padding-top: 5.8139534884vw;
+    height: 100%;
+    width: 100%;
+  }
+
+  .catalog__side-exit h3 {
+    font-size: 3.2558139535vw;
+    line-height: 4.0697674419vw;
+  }
+
+  .catalog__side-exit svg {
+    height: 5.5813953488vw;
+    width: 5.5813953488vw;
+  }
+
+  .catalog__side-exit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .catalog__side-show {
+    display: block;
+  }
+
+  .catalog__side-title {
+    display: block;
+  }
+
+  .catalog__side-select {
+    gap: 4.6511627907vw;
+    padding-bottom: 10.6976744186vw;
+    border-width: 0.2325581395vw;
+    margin-top: 5.8139534884vw;
+  }
+
+  .catalog__side-types {
+    margin-top: 6.976744186vw;
+    gap: 2.3255813953vw;
+    padding-bottom: 6.976744186vw;
+    border-width: 0.2325581395vw;
+  }
+
+  .catalog__side-action {
+    margin-top: 6.976744186vw;
+  }
+
+  .catalog__select {
+    padding-left: 6.976744186vw;
+    padding-right: 5.5813953488vw;
+    border-radius: 6.976744186vw;
+  }
+
+  .catalog__select-btn {
+    gap: 2.3255813953vw;
+  }
+
+  .catalog__select-btn h3 {
+    font-size: 3.7209302326vw;
+    line-height: 4.6511627907vw;
+  }
+
+  .catalog__select-btn.active {
+    padding-top: 5.5813953488vw;
+  }
+
+  .catalog__select-arrow {
+    width: 4.6511627907vw;
+    height: 4.6511627907vw;
+  }
+
+  .catalog__select-arrow svg {
+    width: 4.6511627907vw;
+    height: 4.6511627907vw;
+  }
+
+  .catalog__select-list {
+    padding-top: 5.1162790698vw;
+    padding-bottom: 6.0465116279vw;
+    gap: 2.7906976744vw;
+  }
+
+  .catalog__select-item {
+    font-size: 3.2558139535vw;
+    line-height: 4.0697674419vw;
   }
 
   .catalog__content {
@@ -5636,6 +5806,20 @@ li::selection {
   .button-rev svg {
     height: 4.6511627907vw;
     width: 4.6511627907vw;
+  }
+
+  .checkbox {
+    gap: 3.488372093vw;
+  }
+
+  .checkbox svg {
+    height: 6.976744186vw;
+    width: 6.976744186vw;
+  }
+
+  .checkbox h3 {
+    font-size: 3.2558139535vw;
+    line-height: 4.0697674419vw;
   }
 
   .input {
