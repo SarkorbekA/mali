@@ -3343,6 +3343,10 @@
   height: 100%;
 }
 
+.footer__social-item svg path {
+  color: #e80029;
+}
+
 .footer-bottom {
   background-color: #e80029;
   border-bottom-left-radius: 3.6764705882vw;
@@ -3393,6 +3397,10 @@
 .footer-email svg {
   height: 1.4705882353vw;
   width: 1.4705882353vw;
+}
+
+.footer-email svg path {
+  color: #ffffff;
 }
 
 .footer-email h3 {
@@ -3507,11 +3515,24 @@
   font-weight: 400;
   text-align: left;
   color: #e80029;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .button-other svg {
-  height: 2.2058823529vw;
   width: 2.2058823529vw;
+  height: auto;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.button-other svg rect {
+  color: #e80029;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  aspect-ratio: 1/1;
 }
 
 .button-other.white h3 {
@@ -3903,16 +3924,6 @@ body {
   height: 100%;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  width: 6px;
-}
-
-html::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb {
-  background-color: #e80029;
-}
-
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -3960,6 +3971,10 @@ a:hover h3 {
 }
 
 a:hover svg path {
+  color: #FDB913;
+}
+
+a:hover svg rect {
   color: #FDB913;
 }
 

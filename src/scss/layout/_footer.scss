@@ -162,6 +162,9 @@
       svg {
         width: 100%;
         height: 100%;
+        path{
+          color: $default;
+        }
       }
     }
   }
@@ -216,6 +219,9 @@
       @include media(576) {
         @include resa("height", 20px);
         @include resa("width", 20px);
+      }
+      path{
+        color: $white
       }
     }
     h3 {

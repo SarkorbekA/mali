@@ -59,19 +59,29 @@
     font-weight: 400;
     text-align: left;
     color: $default;
+    transition: 0.3s all;
     @include media(576) {
       @include resa("font-size", 16px);
       @include resa("line-height", 20px);
     }
   }
   svg {
-    @include res("height", 30px);
     @include res("width", 30px);
+    height: auto;
+    border-radius: 50%;
+
+    rect {
+      color: $default;
+      transition: 0.3s all;
+      aspect-ratio: 1 / 1;
+    }
     @include media(576) {
       @include resa("height", 30px);
       @include resa("width", 30px);
     }
+    aspect-ratio: 1 / 1;
   }
+
   &.white {
     h3 {
       color: $white;
