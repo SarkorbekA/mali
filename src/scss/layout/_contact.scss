@@ -190,9 +190,9 @@
       }
     }
     &-button {
-      @include res("width", 280px);
+      @include res("min-width", 280px);
       @include media(576) {
-        @include resa("width", 180px);
+        @include resa("min-width", 180px);
       }
     }
   }

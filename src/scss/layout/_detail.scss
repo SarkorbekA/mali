@@ -79,11 +79,18 @@
       border-bottom-color: $grayLight;
       border-bottom-style: solid;
       @include res("border-width", 1px);
+      &.mob {
+        display: none;
+      }
       @include media(576) {
         flex-direction: column;
         @include resa("margin-top", 40px);
         @include resa("padding-bottom", 30px);
         @include resa("border-width", 1px);
+        display: none;
+        &.mob {
+          display: flex;
+        }
         .button-other {
           display: none;
         }
@@ -124,6 +131,7 @@
       @include res("padding-top", 14px);
       @include res("padding-left", 21px);
       @include res("padding-bottom", 24px);
+      cursor: pointer;
       @include media(576) {
         @include resa("border-width", 2px);
         @include resa("min-width", 160px);
@@ -233,9 +241,16 @@
     display: flex;
     flex-direction: column;
     @include res("gap", 20px);
+    &.mob {
+      display: none;
+    }
     @include media(576) {
       @include resa("margin-top", 29px);
       @include resa("gap", 17px);
+      display: none;
+      &.mob {
+        display: flex;
+      }
     }
     &-btn {
       cursor: pointer;

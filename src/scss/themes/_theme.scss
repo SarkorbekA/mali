@@ -46,8 +46,10 @@ a {
     text-decoration: none;
     transition: 0.3s all;
     h3,
-    svg path {
+    svg path,
+    svg rect {
         transition: 0.3s all;
+        color: $default;
     }
     &:hover {
         color: $yellow;

@@ -137,7 +137,9 @@
   user-select: none;
   cursor: pointer;
   width: fit-content;
-  @include resa("gap", 15px);
+  @include media(576) {
+    @include resa("gap", 15px);
+  }
   h3 {
     text-wrap: nowrap;
     @include res("font-size", 14px);
@@ -160,6 +162,7 @@
 }
 
 .checkbox {
+  cursor: pointer;
   display: flex;
   @include res("gap", 15px);
   align-items: center;

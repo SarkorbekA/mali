@@ -556,7 +556,10 @@
   margin-right: auto;
   @include res("padding-left", 15px);
   @include res("padding-right", 15px);
+  @include res("height", 400px);
+  width: 100%;
   @include media(576) {
+    height: auto;
     @include resa("margin-top", 100px);
     @include resa("max-width", 430px);
     @include resa("padding-left", 25px);
@@ -572,6 +575,9 @@
     display: flex;
     align-items: center;
     @include res("gap", 44px);
+    &.second {
+      justify-content: space-between;
+    }
     @include media(576) {
       flex-direction: column;
       @include resa("gap", 36px);

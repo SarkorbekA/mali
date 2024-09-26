@@ -302,6 +302,7 @@
       align-items: center;
       @include res("gap", 10px);
       transition: 0.3s all;
+      cursor: pointer;
       @include media(576) {
         @include resa("gap", 10px);
       }
@@ -358,6 +359,7 @@
     }
     &-content {
       transition: 0.3s all;
+      min-height: 0;
       height: 0;
       overflow: hidden;
     }
@@ -376,8 +378,13 @@
     &-item {
       @include res("font-size", 14px);
       @include res("line-height", 17.5px);
+      cursor: pointer;
       font-weight: 300;
       text-align: left;
+      transition: 0.3s all;
+      &:hover {
+        color: $yellow;
+      }
       @include media(576) {
         @include resa("font-size", 14px);
         @include resa("line-height", 17.5px);
