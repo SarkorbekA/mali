@@ -414,6 +414,7 @@
     &-btn {
       @include resa("margin-top", 50px);
       width: 100% !important;
+      display: inline-block;
     }
     &-exit {
       position: absolute;

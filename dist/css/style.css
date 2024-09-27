@@ -3373,6 +3373,7 @@
 .header__bar-btn {
   margin-top: 11.6279069767vw;
   width: 100% !important;
+  display: inline-block;
 }
 
 .header__bar-exit {
@@ -6245,22 +6246,23 @@ li::selection {
 
   .mySwiper .swiper-button-next,
   .mySwiper .swiper-button-prev {
+    bottom: 2.3255813953vw;
     height: 6.976744186vw;
     width: 6.976744186vw;
   }
 
   .mySwiper .swiper-button-next::after,
   .mySwiper .swiper-button-prev::after {
-    -webkit-transform: translate(0.4vw, 0.3vw);
-        -ms-transform: translate(0.4vw, 0.3vw);
-            transform: translate(0.4vw, 0.3vw);
+    -webkit-transform: translate(0.1vw, 0.3vw);
+        -ms-transform: translate(0.1vw, 0.3vw);
+            transform: translate(0.1vw, 0.3vw);
     font-size: 2.7906976744vw;
   }
 
   .mySwiper .swiper-button-prev::after {
-    -webkit-transform: translate(-0.4vw, 0.3vw);
-        -ms-transform: translate(-0.4vw, 0.3vw);
-            transform: translate(-0.4vw, 0.3vw);
+    -webkit-transform: translate(-0.1vw, 0.3vw);
+        -ms-transform: translate(-0.1vw, 0.3vw);
+            transform: translate(-0.1vw, 0.3vw);
   }
 
   .mySwiper .swiper-pagination-bullet {

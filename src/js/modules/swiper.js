@@ -10,9 +10,8 @@ export function swiper() {
       el: ".swiper-pagination.mySwiperPagination",
       clickable: true,
     },
-    effect: "fade",
     loop: true,
-    modules: [Navigation, Pagination, EffectFade]
+    modules: [Navigation, Pagination]
   });
 
   var swiper5 = new Swiper(".swiperFeatures", {
