@@ -784,6 +784,28 @@
         @include resa("top", 414px);
       }
     }
+    &.third {
+      @include res("width", 108px);
+      @include res("height", 112px);
+      @include res("right", 131px);
+      top: 0;
+      @include media(576) {
+        left: auto;
+        @include resa("width", 108px);
+        @include resa("height", 112px);
+        @include resa("right", -26px);
+      }
+    }
+    &.fourth {
+      display: none;
+      @include media(576) {
+        display: block;
+        @include resa("width", 117px);
+        @include resa("height", 102px);
+        @include resa("left", -43px);
+        @include resa("top", 430px);
+      }
+    }
   }
 }
 

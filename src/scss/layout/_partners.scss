@@ -1,9 +1,26 @@
 .partners {
   @include res("margin-top", 62px);
   @include res("padding-bottom", 140px);
+  position: relative;
   @include media(576) {
     @include resa("margin-top", 26px);
     @include resa("padding-bottom", 28px);
+  }
+  &-item {
+    position: absolute;
+    @include res("width", 117px);
+    @include res("height", 102px);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    @include media(576) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
   &-title {
     @include res("font-size", 40px);
@@ -145,9 +162,9 @@
     @include resa("max-width", 430px);
     overflow: hidden;
     display: none;
-  }
-  @include media(576) {
-    display: block;
+    @include media(576) {
+      display: block;
+    }
   }
 }
 
