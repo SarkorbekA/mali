@@ -24,23 +24,6 @@ export function swiper() {
     modules: [Pagination]
   });
 
-  var swiper1 = new Swiper(".productSwiper", {
-    navigation: {
-      nextEl: ".product__btns-item.right",
-      prevEl: ".product__btns-item.left",
-    },
-    pagination: {
-      el: ".swiper-pagination.productSwiperPagination",
-      clickable: true,
-    },
-    slidesPerView: 2,
-    modules: [Navigation, Pagination],
-    breakpoints: {
-      577: {
-        slidesPerView: 4,
-      },
-    },
-  });
 
   var swiper3 = new Swiper(".itemSwiper", {
     pagination: {
@@ -71,6 +54,7 @@ export function swiper() {
       },
     },
   });
+  
 
   var swiper7 = new Swiper(".partnerSwiper", {
     modules: [Pagination],

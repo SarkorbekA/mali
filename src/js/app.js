@@ -1,11 +1,11 @@
-import * as functions from "./modules/functions.js";
 import * as swiper from "./modules/swiper.js";
+import * as functions from "./modules/functions.js";
 import * as detail from "./modules/detail.js";
 
-functions.data();
-swiper.swiper();
 detail.detail();
-
+swiper.swiper();
+functions.data();
+functions.popular();
 
 
 const burgerClose = document.querySelector('.header__bar-exit');
@@ -70,7 +70,6 @@ document.querySelectorAll('.search__item-top').forEach(item => {
 
   paginationZones.forEach((span, index) => {
     span?.addEventListener('mouseenter', () => {
-      console.log(index);
       item.querySelector('.search__item-img img.active').classList.remove('active');
       item.querySelector('.search__item-pagination span.active').classList.remove('active');
       item.querySelector('.search__item-zone span.active').classList.remove('active');

@@ -354,6 +354,10 @@
         @include resa("padding", 10px);
         @include resa("height", 170px);
       }
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     &-box {
       @include res("margin-top", 22px);
@@ -371,12 +375,14 @@
       font-weight: 500;
       @include res("font-size", 18px);
       @include res("line-height", 22.5px);
+      @include res("height", 45px);
 
       text-align: left;
       color: $black !important;
       @include media(576) {
         @include resa("font-size", 18px);
         @include resa("line-height", 22.5px);
+        @include resa("height", 45px);
       }
     }
     &-text {
@@ -384,21 +390,23 @@
       font-weight: 300;
       @include res("font-size", 14px);
       @include res("line-height", 17.5px);
+      @include res("height", 35px);
 
       text-align: left;
       @include media(576) {
         @include resa("margin-top", 15px);
         @include resa("font-size", 14px);
         @include resa("line-height", 17.5px);
+        @include resa("height", 35px);
       }
     }
     &-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @include res("margin-top", 40px);
+      @include res("margin-top", 32px);
       @include media(576) {
-        @include resa("margin-top", 27px);
+        @include resa("margin-top", 17px);
         @include resa("max-width", 140px);
       }
       h3 {
