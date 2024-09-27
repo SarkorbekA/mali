@@ -455,17 +455,19 @@
     }
   }
   &__item {
-    background-color: $beige;
-    width: 100%;
-    @include res("border-radius", 50px);
-    border-bottom-left-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    @include media(576) {
-      @include resa("border-radius", 50px);
+    &-link {
+      background-color: $beige;
+      width: 100%;
+      @include res("border-radius", 50px);
       border-bottom-left-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include media(576) {
+        @include resa("border-radius", 50px);
+        border-bottom-left-radius: 0;
+      }
     }
     &-top {
       position: relative;
@@ -497,6 +499,7 @@
         width: 100%;
         height: 100%;
         opacity: 0;
+        object-fit: cover;
         transition: 0.3s all;
         &.active {
           opacity: 1;
@@ -511,15 +514,15 @@
       @include res("height", 260px);
       @include res("width", 260px);
       z-index: 3;
-      @include res("padding-top-left-radius", 50px);
-      @include res("padding-top-right-radius", 50px);
+      @include res("border-top-left-radius", 50px);
+      @include res("border-top-right-radius", 50px);
       @include media(576) {
         @include resa("left", 10px);
         @include resa("top", 10px);
         @include resa("height", 160px);
         @include resa("width", 160px);
-        @include resa("padding-top-left-radius", 50px);
-        @include resa("padding-top-right-radius", 50px);
+        @include resa("border-top-left-radius", 50px);
+        @include resa("border-top-right-radius", 50px);
       }
       span {
         display: inline-block;
@@ -563,6 +566,7 @@
       @include res("padding-left", 40px);
       @include res("padding-right", 40px);
       @include res("padding-bottom", 36px);
+      width: 100%;
       @include media(576) {
         @include resa("margin-top", 7px);
         @include resa("padding-left", 10px);
@@ -574,11 +578,13 @@
       font-weight: 500;
       @include res("font-size", 18px);
       @include res("line-height", 23px);
+      @include res("height", 46px);
 
       text-align: left;
       @include media(576) {
         @include resa("font-size", 18px);
         @include resa("line-height", 23px);
+        @include resa("height", 46px);
       }
     }
     &-text {
@@ -586,12 +592,14 @@
       font-weight: 300;
       @include res("font-size", 14px);
       @include res("line-height", 18px);
+      @include res("height", 36px);
 
       text-align: left;
       @include media(576) {
         @include resa("margin-top", 15px);
         @include resa("font-size", 14px);
         @include resa("line-height", 18px);
+        @include resa("height", 36px);
       }
     }
     &-bottom {
@@ -607,7 +615,7 @@
         @include res("font-size", 14px);
         @include res("line-height", 18px);
         font-weight: 300;
-        color: $gray;
+        color: $gray !important;
         @include media(576) {
           @include resa("font-size", 14px);
           @include resa("line-height", 18px);

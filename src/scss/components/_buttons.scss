@@ -87,6 +87,14 @@
       color: $white;
     }
   }
+  &:hover {
+    h3 {
+      color: $yellow;
+    }
+    svg rect {
+      color: $yellow;
+    }
+  }
 }
 
 .button-mini {
@@ -105,6 +113,7 @@
     font-weight: 300;
     text-align: left;
     color: $default;
+    transition: 0.3s all;
     @include media(576) {
       @include resa("font-size", 14px);
       @include resa("line-height", 17.5px);
@@ -117,6 +126,10 @@
       @include resa("height", 20px);
       @include resa("width", 20px);
     }
+    path {
+      color: $default;
+      transition: 0.3s all;
+    }
   }
   &.white {
     h3 {
@@ -126,6 +139,14 @@
   &.black {
     h3 {
       color: $black;
+    }
+  }
+  &:hover {
+    h3 {
+      color: $yellow;
+    }
+    svg path {
+      color: $yellow;
     }
   }
 }

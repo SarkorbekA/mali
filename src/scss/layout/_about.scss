@@ -160,6 +160,10 @@
           }
         }
         &-pagination {
+          display: none;
+          @include media(576) {
+            display: block;
+          }
           &-bullet {
             opacity: 1;
             @include resa("width", 35px);
@@ -186,6 +190,8 @@
     }
     &-next,
     &-prev {
+      border-radius: 50%;
+      overflow: hidden;
       @include res("width", 30px);
       @include res("height", 30px);
       svg {

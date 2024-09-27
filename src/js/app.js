@@ -1,8 +1,10 @@
 import * as functions from "./modules/functions.js";
 import * as swiper from "./modules/swiper.js";
+import * as detail from "./modules/detail.js";
 
-functions.isWebp();
+functions.data();
 swiper.swiper();
+detail.detail();
 
 
 
@@ -50,7 +52,6 @@ document.querySelectorAll('.catalog__item-top').forEach(item => {
 
   paginationZones.forEach((span, index) => {
     span?.addEventListener('mouseenter', () => {
-      console.log(index);
       item.querySelector('.catalog__item-img img.active').classList.remove('active');
       item.querySelector('.catalog__item-pagination span.active').classList.remove('active');
       item.querySelector('.catalog__item-zone span.active').classList.remove('active');
@@ -119,17 +120,5 @@ for (let i = 0; i < infoBtn.length; i++) {
   });
 }
 
-
-document.querySelectorAll('.detail__options-item').forEach(item => {
-  item?.addEventListener('click', () => {
-    if (item.classList.contains('active')) {
-      return;
-    }
-    
-    document.querySelectorAll('.detail__options-item').forEach(el => el.classList.remove('active'));
-
-    item.classList.add('active');
-  });
-});
 
 

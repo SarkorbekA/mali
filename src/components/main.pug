@@ -169,12 +169,12 @@ mixin main()
         .container
             .info 
                 .info-img 
-                    img(src="@img/info-img.webp" alt="info")
+                    img(src="@img/info-img.png" alt="info")
                 .info-box 
                     h2.info-title Mali - ваш верный помощник на кухне!
                     h2.info-text Закажите доставку или ищите нас в магазинах вашего города!
                     .info__btns 
-                        a(href="#").button-other
+                        a(href="#program").button-other
                             h3 Стать партнёром
                             <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="30" height="30" fill="currentColor"/>
@@ -185,7 +185,7 @@ mixin main()
                                 <path d="M18.125 15.75H9V14.25H18.125L13.9375 10.0625L15 9L21 15L15 21L13.9375 19.9375L18.125 15.75Z" fill="white"/>
                                 </g>
                             </svg>
-                        a(href="#").button-other
+                        a(href="./contact.html").button-other
                             h3 Контакты
                             <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="30" height="30" fill="currentColor"/>
@@ -202,7 +202,7 @@ mixin main()
                     h3.product-title Популярное
                     .product__btns 
                         button(type="button").product__btns-item.left
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0_102_5" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                                 <rect width="20" height="20" fill="#D9D9D9"/>
                                 </mask>
@@ -228,11 +228,11 @@ mixin main()
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                     .swiper-pagination.itemSwiperPagination
                             .product__item-box
                                 h3.product__item-title Катлама «С луком» 
@@ -245,11 +245,11 @@ mixin main()
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                     .swiper-pagination.itemSwiperPagination
                             .product__item-box
                                 h3.product__item-title Катлама «С луком» 
@@ -262,11 +262,11 @@ mixin main()
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                     .swiper-pagination.itemSwiperPagination
                             .product__item-box
                                 h3.product__item-title Катлама «С луком» 
@@ -279,11 +279,11 @@ mixin main()
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                     .swiper-pagination.itemSwiperPagination
                             .product__item-box
                                 h3.product__item-title Катлама «С луком» 
@@ -296,11 +296,11 @@ mixin main()
                                 .swiper.itemSwiper
                                     .swiper-wrapper
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                         .swiper-slide 
-                                            img(src="@img/product.webp" alt="")
+                                            img(src="@img/product.png" alt="")
                                     .swiper-pagination.itemSwiperPagination
                             .product__item-box
                                 h3.product__item-title Катлама «С луком» 
@@ -311,7 +311,7 @@ mixin main()
         .container 
             .product-bottom 
                 .swiper-pagination.productSwiperPagination 
-                a(href="#").button-other
+                a(href="./catalog.html").button-other
                     h3 Вся продукция
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="30" height="30"   fill="currentColor"/>
@@ -330,7 +330,7 @@ mixin main()
             .container 
                 .factors-left 
                     h2.factors-title Производство свежезамороженных продуктов
-                    a(href="").button-other 
+                    a(href="./about.html").button-other 
                         h3 Подробнее
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="30" height="30"   fill="currentColor"/>
@@ -344,3 +344,18 @@ mixin main()
                 .factors__right 
                     p.factors__right-title Компания «Mali» с 2016 года представляет на рынке Узбекистана разнообразие полуфабрикатов глубокой заморозки. Вся наша продукция изготавливается при строгом соблюдении технологического процесса, что является залогом стабильного высокого качества.
                     p.factors__right-text «Mali» предлагает широкий ассортимент замороженных полуфабрикатов и готовой продукции, созданных из отборных, натуральных ингредиентов. Наша продукция помогает вам готовить вкусно и полезно за считанные минуты, сохраняя все полезные свойства и натуральный вкус. Мы заботимся о каждом этапе производства, чтобы вы могли наслаждаться качественными и безопасными продуктами на вашем столе.
+            .factors__images 
+                .factors__images-img.first 
+                    img(src="@img/pelmeni/item3.png" draggable="false" alt="item")
+                .factors__images-img.second 
+                    img(src="@img/pelmeni/item4.png" draggable="false" alt="item")
+                .factors__images-img.third 
+                    img(src="@img/pelmeni/item5.png" draggable="false" alt="item")
+                .factors__images-img.fourth 
+                    img(src="@img/pelmeni/item6.png" draggable="false" alt="item")
+                .factors__images-img.fifth 
+                    img(src="@img/pelmeni/item7.png" draggable="false" alt="item")
+                .factors__images-img.sixth 
+                    img(src="@img/pelmeni/item2.png" draggable="false" alt="item")
+                .factors__images-img.seventh 
+                    img(src="@img/pelmeni/item1.png" draggable="false" alt="item")

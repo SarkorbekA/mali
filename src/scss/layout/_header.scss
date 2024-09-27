@@ -99,6 +99,9 @@
       @include media(576) {
         @include resa("height", 20px);
         @include resa("width", 20px);
+        path{
+          color: $black;
+        }
       }
     }
     h3 {
@@ -109,6 +112,7 @@
       @include media(576) {
         @include resa("font-size", 14px);
         @include resa("line-height", 17.5px);
+        color: $black;
       }
       &::selection {
         color: white;

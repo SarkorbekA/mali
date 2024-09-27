@@ -91,9 +91,10 @@
       @include res("height", 30px);
       @include res("width", 30px);
       top: auto;
-      bottom: 0;
+      @include res("bottom", 10px);
       border-radius: 50%;
       background-color: $default;
+      transition: 0.3s all;
       @include media(576) {
         @include resa("height", 30px);
         @include resa("width", 30px);
@@ -106,6 +107,9 @@
           transform: translate(0.4vw, 0.3vw);
           @include resa("font-size", 12px);
         }
+      }
+      &:hover {
+        background-color: $yellow;
       }
     }
     &-prev {
@@ -204,7 +208,7 @@
     @include res("width", 480px);
     @include res("height", 346px);
 
-    background-image: url(../../img/banner-shape.png);
+    background-image: url("../../img/banner-shape.png");
     background-position: center;
     background-size: cover;
 

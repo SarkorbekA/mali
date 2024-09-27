@@ -144,6 +144,10 @@
     @include resa("padding-right", 25px);
     @include resa("max-width", 430px);
     overflow: hidden;
+    display: none;
+  }
+  @include media(576) {
+    display: block;
   }
 }
 

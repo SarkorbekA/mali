@@ -18,6 +18,7 @@ body.active {
 
 html,
 body {
+    scroll-behavior: smooth;
     height: 100%;
     // &::-webkit-scrollbar {
     //     width: 6px;
