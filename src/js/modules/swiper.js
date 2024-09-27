@@ -10,6 +10,7 @@ export function swiper() {
       el: ".swiper-pagination.mySwiperPagination",
       clickable: true,
     },
+    spaceBetween: 10,
     loop: true,
     modules: [Navigation, Pagination]
   });
