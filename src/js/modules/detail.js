@@ -1,5 +1,40 @@
 export function detail() {
-  if (window.location.pathname.includes('detail.html')) {
+  let route = window.location.pathname
+  let lang = ''
+
+  if (route.includes('-en')) {
+    lang = 'en'
+  } else if (route.includes('-uz')) {
+    lang = 'uz'
+  } else {
+    lang = 'ru'
+  }
+
+  const translations = {
+    "weight_per_piece": {
+      "uz": "Og'irlig donaga",
+      "ru": "Вес шт",
+      "en": "Weight per piece"
+    },
+    "in_box": {
+      "uz": "Qutida",
+      "ru": "В коробке",
+      "en": "In box"
+    },
+    "in_pack": {
+      "uz": "Qadoqdagi",
+      "ru": "В упаковке",
+      "en": "In pack"
+    },
+    "weight": {
+      "uz": "Og'irligi",
+      "ru": "Вес",
+      "en": "Weight"
+    },
+  };
+
+
+  if (route.includes('detail.html') || route.includes('detail-uz.html') || route.includes('detail-en.html')) {
     const goBackButton = document.getElementById('goBackButton');
     if (goBackButton) {
       goBackButton.addEventListener('click', () => {
@@ -30,12 +65,12 @@ export function detail() {
             const sliderContainer = document.querySelector('.swiper-wrapper');
             sliderContainer.innerHTML = '';
 
-            document.querySelector('.detail__item-type').textContent = 'Тесто';
-            document.querySelector('.detail__item-name').textContent = product.name;
-            document.querySelector('.detail__item-info').textContent = product.info;
+            document.querySelector('.detail__item-type').textContent = product.type[lang];
+            document.querySelector('.detail__item-name').textContent = product.name[lang];
+            document.querySelector('.detail__item-info').textContent = product.info[lang];
             if (product.compound) {
               document.querySelectorAll('.compound .detail__info-content p').forEach(el => {
-                el.textContent = product.compound;
+                el.textContent = product.compound[lang];
               });
             } else {
               document.querySelectorAll('.compound').forEach(el => el.remove());
@@ -43,7 +78,7 @@ export function detail() {
 
             if (product.energy_value) {
               document.querySelectorAll('.energy_value .detail__info-content p').forEach(el => {
-                el.textContent = product.energy_value + " ккал";
+                el.textContent = product.energy_value[lang] + (lang === 'en' ? " kcal" : lang === 'uz' ? " kkal" : " ккал");
               });
             } else {
               document.querySelectorAll('.energy_value').forEach(el => el.remove());
@@ -51,7 +86,7 @@ export function detail() {
 
             if (product.nutritional_value) {
               document.querySelectorAll('.nutritional_value .detail__info-content p').forEach(el => {
-                el.textContent = product.nutritional_value;
+                el.textContent = product.nutritional_value[lang];
               });
             } else {
               document.querySelectorAll('.nutritional_value').forEach(el => el.remove());
@@ -70,23 +105,23 @@ export function detail() {
                   }
 
                   packEl.innerHTML = `
-                    <h3 class="detail_options-title">${product.pack.type}</h3>
+                    <h3 class="detail_options-title">${product.pack.type[lang]}</h3>
                     <ul class="detail__options-list">
                       <li class="detail__options-el">
-                        <h4>Вес</h4>
-                        <h3>${packItem.weight} г</h3>
+                        <h4>${translations["weight"][lang]}</h4>
+                        <h3>${packItem.weight} ${lang === 'en' ? "g" : lang === 'uz' ? "g" : "г"}</h3>
                       </li>
                       <li class="detail__options-el">
-                        <h4>В упаковке</h4>
-                        <h3>${packItem.inpack} шт</h3>
+                        <h4>${translations["in_pack"][lang]}</h4>
+                        <h3>${packItem.inpack} ${lang === 'en' ? "pcs" : lang === 'uz' ? "dona" : "шт"}</h3>
                       </li>
                       <li class="detail__options-el">
-                        <h4>В коробке</h4>
-                        <h3>${packItem.box} уп</h3>
+                        <h4>${translations["in_box"][lang]}</h4>
+                        <h3>${packItem.box} ${lang === 'en' ? "pkg" : lang === 'uz' ? "pkt" : "уп"}</h3>
                       </li>
                       <li class="detail__options-el">
-                        <h4>Вес шт</h4>
-                        <h3>${packItem.box_weight} кг</h3>
+                        <h4>${translations["weight_per_piece"][lang]}</h4>
+                        <h3>${packItem.box_weight} ${lang === 'en' ? "kg" : lang === 'kg' ? "pkt" : "кг"}</h3>
                       </li>
                     </ul>
                   `;
@@ -121,6 +156,4 @@ export function detail() {
       window.history.back();
     }
   }
-
-
 }

@@ -1,9 +1,21 @@
 [
   {
     "id": 1,
-    "name": "Слоёное бездрожжевое",
-    "type": "Тесто",
-    "info": "256 слоев",
+    "name": {
+      "uz": "Xamirturushsiz",
+      "ru": "Слоёное бездрожжевое",
+      "en": "Yeast-free puff pastry"
+    },
+    "type": {
+      "uz": "Xamir",
+      "ru": "Тесто",
+      "en": "Dough"
+    },
+    "info": {
+      "uz": "256 qatlam",
+      "ru": "256 слоев",
+      "en": "256 layers"
+    },
     "img": "1.png",
     "weight": [
       500,
@@ -26,22 +38,46 @@
         }
       ]
     },
-    "compound": "Мука пшеничная в/с, маргарин, растительное масло, лимонная кислота, соль пищевая, вода.",
-    "energy_value": "367,6",
-    "nutritional_value": "белков - 5,5 г, углеводов - 36 г, жиров 22,4 г."
+    "compound": {
+      "uz": "Bug'doy uni, margarin, o'simlik moyi, limon kislotasi, osh tuzi, suv.",
+      "ru": "Мука пшеничная в/с, маргарин, растительное масло, лимонная кислота, соль пищевая, вода.",
+      "en": "Wheat flour, margarine, vegetable oil, citric acid, table salt, water."
+    },
+    "energy_value": "367.6",
+    "nutritional_value": {
+      "uz": "oqsillar - 5,5 g, uglevodlar - 36 g, yog'lar - 22,4 g.",
+      "ru": "белков - 5,5 г, углеводов - 36 г, жиров - 22,4 г.",
+      "en": "proteins - 5.5 g, carbohydrates - 36 g, fats - 22.4 g."
+    }
   },
   {
     "id": 2,
-    "name": "Слоёное дрожжевое",
-    "type": "Тесто",
-    "info": "Воздушное тесто",
+    "name": {
+      "uz": "Xamirturushli qatlama",
+      "ru": "Слоёное дрожжевое",
+      "en": "Yeast puff pastry"
+    },
+    "type": {
+      "uz": "Xamir",
+      "ru": "Тесто",
+      "en": "Dough"
+    },
+    "info": {
+      "uz": "Havo xamiri",
+      "ru": "Воздушное тесто",
+      "en": "Airy dough"
+    },
     "img": "2.png",
     "weight": [
       500,
       1000
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Packaging"
+      },
       "list": [
         {
           "weight": 500,
@@ -57,20 +93,44 @@
         }
       ]
     },
-    "compound": "Мука пшеничная в/с, дрожжи, маргарин, растительное масло, лимонная кислота, соль пищевая, сахар, вода.",
+    "compound": {
+      "uz": "Bug'doy uni, xamirturush, margarin, o'simlik moyi, limon kislotasi, osh tuzi, shakar, suv.",
+      "ru": "Мука пшеничная в/с, дрожжи, маргарин, растительное масло, лимонная кислота, соль пищевая, сахар, вода.",
+      "en": "Wheat flour, yeast, margarine, vegetable oil, citric acid, table salt, sugar, water."
+    },
     "energy_value": "305",
-    "nutritional_value": "белков - 6,1 г. углеводов - 42,8 г, жиров -12,2г."
+    "nutritional_value": {
+      "uz": "oqsillar - 6,1 g, uglevodlar - 42,8 g, yog'lar - 12,2 g.",
+      "ru": "белков - 6,1 г, углеводов - 42,8 г, жиров - 12,2 г.",
+      "en": "proteins - 6.1 g, carbohydrates - 42.8 g, fats - 12.2 g."
+    }
   },
   {
     "id": 3,
-    "name": "Слоёное на сливочном масле",
-    "type": "Тесто",
-    "info": "Натуральное сливочное масло",
+    "name": {
+      "uz": "Sloyenoye sariyog'da",
+      "ru": "Слоёное на сливочном масле",
+      "en": "Puff pastry with butter"
+    },
+    "type": {
+      "uz": "Xamir",
+      "ru": "Тесто",
+      "en": "Dough"
+    },
+    "info": {
+      "uz": "Tabiiy sariyog'",
+      "ru": "Натуральное сливочное масло",
+      "en": "Natural butter"
+    },
     "weight": [
       450
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 450,
@@ -80,21 +140,45 @@
         }
       ]
     },
-    "compound": "Мука пшеничная в/с, растительное масло, вода, лимонная кислота, соль, сливочное масло.",
-    "energy_value": "205,4",
-    "nutritional_value": "белков 22,2 г., углеводов 22,8 г., жиров 5,5 г."
+    "compound": {
+      "uz": "Bug'doy uni, o'simlik moyi, suv, limon kislotasi, tuz, sariyog'.",
+      "ru": "Мука пшеничная в/с, растительное масло, вода, лимонная кислота, соль, сливочное масло.",
+      "en": "Wheat flour, vegetable oil, water, citric acid, salt, butter."
+    },
+    "energy_value": "205.4",
+    "nutritional_value": {
+      "uz": "oqsillar - 22,2 g, uglevodlar - 22,8 g, yog'lar - 5,5 g.",
+      "ru": "белков 22,2 г., углеводов 22,8 г., жиров 5,5 г.",
+      "en": "proteins - 22.2 g, carbohydrates - 22.8 g, fats - 5.5 g."
+    }
   },
   {
     "id": 4,
-    "name": "Слоёное для самсы",
-    "type": "Тесто",
-    "info": "Хрустящее тесто",
+    "name": {
+      "uz": "Samsa uchun sloyenoye",
+      "ru": "Слоёное для самсы",
+      "en": "Puff pastry for samsa"
+    },
+    "type": {
+      "uz": "Xamir",
+      "ru": "Тесто",
+      "en": "Dough"
+    },
+    "info": {
+      "uz": "Qarsildoq xamir",
+      "ru": "Хрустящее тесто",
+      "en": "Crispy dough"
+    },
     "img": "4.png",
     "weight": [
       900
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 900,
@@ -107,16 +191,32 @@
   },
   {
     "id": 5,
-    "name": "Для пиццы",
-    "type": "Тесто",
-    "info": "Удобный размер",
+    "name": {
+      "uz": "Pitsa uchun",
+      "ru": "Для пиццы",
+      "en": "For pizza"
+    },
+    "type": {
+      "uz": "Xamir",
+      "ru": "Тесто",
+      "en": "Dough"
+    },
+    "info": {
+      "uz": "Qulay o'lcham",
+      "ru": "Удобный размер",
+      "en": "Convenient size"
+    },
     "img": "5.png",
     "count": 2,
     "weight": [
       250
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 500,
@@ -126,21 +226,45 @@
         }
       ]
     },
-    "compound": "Мука пшеничная в/с, масло растительное, сахар, соль пищевая, дрожжи, вода.",
+    "compound": {
+      "uz": "Bug'doy uni, o'simlik yog'i, shakar, ovqat tuzi, xamirturush, suv.",
+      "ru": "Мука пшеничная в/с, масло растительное, сахар, соль пищевая, дрожжи, вода.",
+      "en": "Wheat flour, vegetable oil, sugar, table salt, yeast, water."
+    },
     "energy_value": "320",
-    "nutritional_value": "белков - 8,7 г., углеводов 55,8 г., жиров - 6,8 г."
+    "nutritional_value": {
+      "uz": "oqsillar - 8,7 g, uglevodlar - 55,8 g, yog'lar - 6,8 g.",
+      "ru": "белков - 8,7 г., углеводов 55,8 г., жиров - 6,8 г.",
+      "en": "proteins - 8.7 g, carbohydrates - 55.8 g, fats - 6.8 g."
+    }
   },
   {
     "id": 6,
-    "name": "Сдобное дрожжевое",
-    "type": "Тесто",
-    "info": "Пышное тесто",
+    "name": {
+      "uz": "Xamirturushli boy xamir",
+      "ru": "Сдобное дрожжевое",
+      "en": "Rich yeast dough"
+    },
+    "type": {
+      "uz": "Xamir",
+      "ru": "Тесто",
+      "en": "Dough"
+    },
+    "info": {
+      "uz": "Qopqog'i ko'tarilgan xamir",
+      "ru": "Пышное тесто",
+      "en": "Fluffy dough"
+    },
     "img": "6.png",
     "weight": [
       500
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 500,
@@ -150,22 +274,46 @@
         }
       ]
     },
-    "compound": "Мука пшеничная в/с, маргарин, растительное масло, молоко, соль пищевая, сахар, дрожжи, яйцо, вода.",
+    "compound": {
+      "uz": "Bug'doy uni, margarin, o'simlik yog'i, sut, ovqat tuzi, shakar, xamirturush, tuxum, suv.",
+      "ru": "Мука пшеничная в/с, маргарин, растительное масло, молоко, соль пищевая, сахар, дрожжи, яйцо, вода.",
+      "en": "Wheat flour, margarine, vegetable oil, milk, table salt, sugar, yeast, egg, water."
+    },
     "energy_value": "229",
-    "nutritional_value": "белков 6,7 г, углеводов - 44,8 г, жиров - 2,5 г."
+    "nutritional_value": {
+      "uz": "oqsillar - 6,7 g, uglevodlar - 44,8 g, yog'lar - 2,5 g.",
+      "ru": "белков 6,7 г, углеводов - 44,8 г, жиров - 2,5 г.",
+      "en": "proteins - 6.7 g, carbohydrates - 44.8 g, fats - 2.5 g."
+    }
   },
   {
     "id": 7,
-    "name": "Классическая",
-    "type": "Катлама",
-    "info": "Многослойная",
+    "name": {
+      "uz": "Klassik",
+      "ru": "Классическая",
+      "en": "Classic"
+    },
+    "type": {
+      "uz": "Katlama",
+      "ru": "Катлама",
+      "en": "Katlama"
+    },
+    "info": {
+      "uz": "Ko'p qavatli",
+      "ru": "Многослойная",
+      "en": "Layered"
+    },
     "img": "7.png",
     "count": 4,
     "weight": [
       125
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 500,
@@ -175,20 +323,44 @@
         }
       ]
     },
-    "compound": "Мука пшеничная в/с, маргарин, соль пищевая, вода.",
+    "compound": {
+      "uz": "Bug'doy uni v/s, margarin, ovqat tuzi, suv.",
+      "ru": "Мука пшеничная в/с, маргарин, соль пищевая, вода.",
+      "en": "Wheat flour v/s, margarine, table salt, water."
+    },
     "energy_value": "265.3",
-    "nutritional_value": "Белков - 6,5 г. углеводов - 42,3 г, жиров 7,8 г."
+    "nutritional_value": {
+      "uz": "oqsillar - 6,5 g, uglevodlar - 42,3 g, yog'lar - 7,8 g.",
+      "ru": "Белков - 6,5 г. углеводов - 42,3 г, жиров 7,8 г.",
+      "en": "proteins - 6.5 g, carbohydrates - 42.3 g, fats - 7.8 g."
+    }
   },
   {
     "id": 8,
-    "name": "Песочное",
-    "type": "Тесто",
-    "info": "Рассыпчатое тесто",
+    "name": {
+      "uz": "Qumloq xamir",
+      "ru": "Песочное",
+      "en": "Shortcrust dough"
+    },
+    "type": {
+      "uz": "Xamir",
+      "ru": "Тесто",
+      "en": "Dough"
+    },
+    "info": {
+      "uz": "Bo'tqalangan xamir",
+      "ru": "Рассыпчатое тесто",
+      "en": "Crumbly dough"
+    },
     "weight": [
       500
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 500,
@@ -198,22 +370,46 @@
         }
       ]
     },
-    "compound": "Мука пшеничная 1/с, маргарин, сахар, пищевая сода, яйцо, вода.",
+    "compound": {
+      "uz": "Bug'doy uni 1/s, margarin, shakar, ovqat sodasi, tuxum, suv.",
+      "ru": "Мука пшеничная 1/с, маргарин, сахар, пищевая сода, яйцо, вода.",
+      "en": "Wheat flour 1/s, margarine, sugar, baking soda, egg, water."
+    },
     "energy_value": "412.8",
-    "nutritional_value": "белков - 5,5 г, углеводов 34,7 г, жиров - 28,0 г."
+    "nutritional_value": {
+      "uz": "oqsillar - 5,5 g, uglevodlar - 34,7 g, yog'lar - 28,0 g.",
+      "ru": "белков - 5,5 г, углеводов 34,7 г, жиров - 28,0 г.",
+      "en": "proteins - 5.5 g, carbohydrates - 34.7 g, fats - 28.0 g."
+    }
   },
   {
     "id": 9,
-    "name": "С луком",
-    "type": "Катлама",
-    "info": "Пикантный вкус",
+    "name": {
+      "uz": "Piyoz bilan",
+      "ru": "С луком",
+      "en": "With onion"
+    },
+    "type": {
+      "uz": "Katlama",
+      "ru": "Катлама",
+      "en": "Katlama"
+    },
+    "info": {
+      "uz": "Achchiq ta'm",
+      "ru": "Пикантный вкус",
+      "en": "Spicy taste"
+    },
     "img": "9.png",
     "count": 4,
     "weight": [
       125
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 500,
@@ -223,22 +419,46 @@
         }
       ]
     },
-    "compound": "Мука пшеничная в/с, маргарин, лук, соль пищевая, вода.",
+    "compound": {
+      "uz": "Bug'doy uni v/s, margarin, piyoz, ovqat tuzi, suv.",
+      "ru": "Мука пшеничная в/с, маргарин, лук, соль пищевая, вода.",
+      "en": "Wheat flour v/s, margarine, onion, table salt, water."
+    },
     "energy_value": "280",
-    "nutritional_value": "белков -8,2 г, углеводов 52,8 г, жиров 6,8 г."
+    "nutritional_value": {
+      "uz": "oqsillar - 8,2 g, uglevodlar - 52,8 g, yog'lar - 6,8 g.",
+      "ru": "белков - 8,2 г, углеводов 52,8 г, жиров 6,8 г.",
+      "en": "proteins - 8.2 g, carbohydrates - 52.8 g, fats - 6.8 g."
+    }
   },
   {
     "id": 10,
-    "name": "Классические",
-    "type": "Сырники",
-    "info": "65% натурального творога",
+    "name": {
+      "uz": "Klassik",
+      "ru": "Классические",
+      "en": "Classic"
+    },
+    "type": {
+      "uz": "Sırnikı",
+      "ru": "Сырники",
+      "en": "Cheesecakes"
+    },
+    "info": {
+      "uz": "65% tabiiy tvorog",
+      "ru": "65% натурального творога",
+      "en": "65% natural cottage cheese"
+    },
     "img": "10.png",
     "count": 10,
     "weight": [
       500
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 500,
@@ -248,22 +468,46 @@
         }
       ]
     },
-    "compound": "натуральный творог, мука пшеничная в/с, растительное масло, соль, сахар, ванильный сахар, яйцо.",
-    "energy_value": "205,4",
-    "nutritional_value": "белков 22,2 г., углеводов 22,8 г., жиров 5,5 г."
+    "compound": {
+      "uz": "Tabiiy tvorog, bug'doy uni v/s, o'simlik yog'i, tuz, shakar, vanil shakar, tuxum.",
+      "ru": "натуральный творог, мука пшеничная в/с, растительное масло, соль, сахар, ванильный сахар, яйцо.",
+      "en": "Natural cottage cheese, wheat flour v/s, vegetable oil, salt, sugar, vanilla sugar, egg."
+    },
+    "energy_value": "205.4",
+    "nutritional_value": {
+      "uz": "oqsillar - 22.2 g, uglevodlar - 22.8 g, yog'lar - 5.5 g.",
+      "ru": "белков 22,2 г., углеводов 22,8 г., жиров 5,5 г.",
+      "en": "proteins - 22.2 g, carbohydrates - 22.8 g, fats - 5.5 g."
+    }
   },
   {
     "id": 11,
-    "name": "С мясом",
-    "type": "Блинчики",
-    "info": "100% говядина",
+    "name": {
+      "uz": "Go'sht bilan",
+      "ru": "С мясом",
+      "en": "With meat"
+    },
+    "type": {
+      "uz": "Blınchık",
+      "ru": "Блинчики",
+      "en": "Pancakes"
+    },
+    "info": {
+      "uz": "100% mol go'shti",
+      "ru": "100% говядина",
+      "en": "100% beef"
+    },
     "img": "11.png",
     "count": 4,
     "weight": [
       280
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 280,
@@ -273,21 +517,45 @@
         }
       ]
     },
-    "compound": "Тесто мука пшеничная (в/с), подсолнечное масло, молоко, сахар, разрыхлитель, яица, соль, вода. Начинка - мясо говядина, жир говяжий, лук, подсолнечное масло, соль, специи.",
-    "energy_value": "183,9",
-    "nutritional_value": "белков 8 г., углеводов 3,6 г., жиров - 3,1 г."
+    "compound": {
+      "uz": "Xamir - bug'doy uni (v/s), kungaboqar yog'i, sut, shakar, tuxum, tuz, suv. Ichimlik - mol go'shti, mol yog'i, piyoz, kungaboqar yog'i, tuz, ziravorlar.",
+      "ru": "Тесто мука пшеничная (в/с), подсолнечное масло, молоко, сахар, разрыхлитель, яйца, соль, вода. Начинка - мясо говядина, жир говяжий, лук, подсолнечное масло, соль, специи.",
+      "en": "Dough - wheat flour (v/s), sunflower oil, milk, sugar, eggs, salt, water. Filling - beef, beef fat, onion, sunflower oil, salt, spices."
+    },
+    "energy_value": "183.9",
+    "nutritional_value": {
+      "uz": "oqsillar - 8 g, uglevodlar - 3.6 g, yog'lar - 3.1 g.",
+      "ru": "белков 8 г., углеводов 3,6 г., жиров - 3,1 г.",
+      "en": "proteins - 8 g, carbohydrates - 3.6 g, fats - 3.1 g."
+    }
   },
   {
     "id": 12,
-    "name": "С шоколадом",
-    "type": "Сырники",
-    "info": "Молочный шоколад",
+    "name": {
+      "uz": "Shokolad bilan",
+      "ru": "С шоколадом",
+      "en": "With chocolate"
+    },
+    "type": {
+      "uz": "Sırnikı",
+      "ru": "Сырники",
+      "en": "Cheesecakes"
+    },
+    "info": {
+      "uz": "Sutli shokolad",
+      "ru": "Молочный шоколад",
+      "en": "Milk chocolate"
+    },
     "count": 10,
     "weight": [
       500
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 500,
@@ -297,21 +565,45 @@
         }
       ]
     },
-    "compound": "натуральный творог, мука пшеничная в/с, растительное масло, соль, сахар, ванильный сахар, яйцо, шоколад.",
+    "compound": {
+      "uz": "Tabiiy tvorog, bug'doy uni v/s, o'simlik yog'i, tuz, shakar, vanil shakar, tuxum, shokolad.",
+      "ru": "натуральный творог, мука пшеничная в/с, растительное масло, соль, сахар, ванильный сахар, яйцо, шоколад.",
+      "en": "Natural cottage cheese, wheat flour v/s, vegetable oil, salt, sugar, vanilla sugar, egg, chocolate."
+    },
     "energy_value": "250",
-    "nutritional_value": "белков - 12 г, углеводов - 26 г, жиров - 12 г"
+    "nutritional_value": {
+      "uz": "oqsillar - 12 g, uglevodlar - 26 g, yog'lar - 12 g.",
+      "ru": "белков - 12 г, углеводов - 26 г, жиров - 12 г.",
+      "en": "proteins - 12 g, carbohydrates - 26 g, fats - 12 g."
+    }
   },
   {
     "id": 13,
-    "name": "С творогом",
-    "type": "Блинчики",
-    "info": "Натуральный творог",
+    "name": {
+      "uz": "Tvorog bilan",
+      "ru": "С творогом",
+      "en": "With cottage cheese"
+    },
+    "type": {
+      "uz": "Blınchık",
+      "ru": "Блинчики",
+      "en": "Pancakes"
+    },
+    "info": {
+      "uz": "Tabiiy tvorog",
+      "ru": "Натуральный творог",
+      "en": "Natural cottage cheese"
+    },
     "count": 4,
     "weight": [
       70
     ],
     "pack": {
-      "type": "Упаковка",
+      "type": {
+        "uz": "Qadoq",
+        "ru": "Упаковка",
+        "en": "Package"
+      },
       "list": [
         {
           "weight": 280,
@@ -321,8 +613,16 @@
         }
       ]
     },
-    "compound": "Тесто мука пшеничная (в/с), подсолнечное масло, молоко, сахар, разрыхлитель, яица, соль, вода. Начинка творог, сахар, ваниль",
-    "energy_value": "196,9",
-    "nutritional_value": "белков 9,6 г., углеводов 20,6 г, жиров 8,3 г."
+    "compound": {
+      "uz": "Xamir - bug'doy uni (v/s), kungaboqar yog'i, sut, shakar, tuxum, tuz, suv. Ichimlik - tvorog, shakar, vanil.",
+      "ru": "Тесто мука пшеничная (в/с), подсолнечное масло, молоко, сахар, разрыхлитель, яйца, соль, вода. Начинка творог, сахар, ваниль.",
+      "en": "Dough - wheat flour (v/s), sunflower oil, milk, sugar, eggs, salt, water. Filling - cottage cheese, sugar, vanilla."
+    },
+    "energy_value": "196.9",
+    "nutritional_value": {
+      "uz": "oqsillar - 9,6 g, uglevodlar - 20,6 g, yog'lar - 8,3 g.",
+      "ru": "белков - 9,6 г., углеводов - 20,6 г., жиров - 8,3 г.",
+      "en": "proteins - 9.6 g, carbohydrates - 20.6 g, fats - 8.3 g."
+    }
   }
 ]

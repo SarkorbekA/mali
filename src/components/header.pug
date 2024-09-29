@@ -3,9 +3,9 @@ mixin header()
         .container 
             .header-top 
                 .header__lang 
-                    a(href="/").header__lang-item.active RU 
-                    a(href="/index-uz.html").header__lang-item UZ
-                    a(href="#").header__lang-item EN
+                    a(href="#").header__lang-item.ru.active RU 
+                    a(href="#").header__lang-item.uz UZ
+                    a(href="#").header__lang-item.en EN
                 a(href="https://maps.app.goo.gl/Qh8VSzPJHvmbTETdA").header-address     
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_102_895" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -133,13 +133,13 @@ mixin header()
                         </svg>
 
                     .header__logo 
-                        a(href="./").header__logo-link
+                        a(href="/").header__logo-link
                             img(src="@img/logo_mali.svg" alt="alt")
                         h3 Производство свежезамороженных продуктов
                     .header__lang 
-                        a(href="/").header__lang-item.active RU 
-                        a(href="/index-uz.html").header__lang-item UZ
-                        a(href="/index-uz.html").header__lang-item EN
+                        a(href="#").header__lang-item.ru.active RU 
+                        a(href="#").header__lang-item.uz UZ
+                        a(href="#").header__lang-item.en EN
                     .header__search   
                         input(type="text" id="search" placeholder="Начните вводить")
                         a(href="/search.html") 
@@ -154,11 +154,11 @@ mixin header()
                     nav.nav 
                         ul.nav__list
                             li.nav__list-item 
-                                a(href="./about.html").nav__list-link о компании
+                                a(href="/about.html").nav__list-link о компании
                             li.nav__list-item 
-                                a(href="./catalog.html").nav__list-link продукция
+                                a(href="/catalog.html").nav__list-link продукция
                             li.nav__list-item 
-                                a(href="./contact.html").nav__list-link контакты
+                                a(href="/contact.html").nav__list-link контакты
                     a(href="https://maps.app.goo.gl/Qh8VSzPJHvmbTETdA").header-address     
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_102_895" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">

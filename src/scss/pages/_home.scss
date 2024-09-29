@@ -227,7 +227,7 @@
       @include resa("padding-right", 45px);
     }
     &-title {
-      @include res("max-width", 290px);
+      @include res("max-width", 300px);
       @include res("font-size", 60px);
       @include res("line-height", 57px);
       @include media(576) {

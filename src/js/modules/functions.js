@@ -1,8 +1,18 @@
 import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
 
+let route = window.location.pathname
+let lang = ''
+
+if (route.includes('-en')) {
+  lang = 'en'
+} else if (route.includes('-uz')) {
+  lang = 'uz'
+} else {
+  lang = 'ru'
+}
 
 export function data() {
-  if (window.location.pathname.includes('catalog.html')) {
+  if (route.includes('catalog.html') || route.includes('catalog-uz.html') || route.includes('catalog-en.html')) {
 
     fetch('./files/products.json')
       .then(response => response.json())
@@ -18,12 +28,26 @@ export function data() {
 
           let weightDisplay;
           if (product.count) {
-            weightDisplay = product.weight.map(w => `<h3>${w} г / ${product.count} шт</h3>`).join('');
+            if (lang === 'en') {
+              weightDisplay = product.weight.map(w => `<h3>${w} g / ${product.count} pcs</h3>`).join('');
+            } else if (lang === 'uz') {
+              weightDisplay = product.weight.map(w => `<h3>${w} g / ${product.count} dona</h3>`).join('');
+            } else {
+              weightDisplay = product.weight.map(w => `<h3>${w} г / ${product.count} шт</h3>`).join('');
+            }
           } else {
             weightDisplay = product.weight.map(w => `<h3>${w} г</h3>`).join('');
           }
 
-          const detailPageUrl = `detail.html?id=${product.id}`;
+          let detailPageUrl;
+
+          if (route.includes('-en')) {
+            detailPageUrl = `detail-en.html?id=${product.id}`;
+          } else if (route.includes('-uz')) {
+            detailPageUrl = `detail-uz.html?id=${product.id}`;
+          } else {
+            detailPageUrl = `detail.html?id=${product.id}`;
+          }
 
           li.innerHTML = `
                   <a href="${detailPageUrl}" class="catalog__item-link">
@@ -32,15 +56,15 @@ export function data() {
                         <span class="active"></span>
                       </div>
                       <div class="catalog__item-img">
-                        <img src="${baseUrl + product.img}" alt="${product.name}" class="active">
+                        <img src="${baseUrl + product.img}" alt="${product.name[lang]}" class="active">
                       </div>
                       <div class="catalog__item-pagination">
                         <span class="active"></span>
                       </div>
                     </div>
                     <div class="catalog__item-box">
-                      <h3 class="catalog__item-title">${product.type} «${product.name}»</h3>
-                      <p class="catalog__item-text">${product.info}</p>
+                      <h3 class="catalog__item-title">${product.type[lang]} «${product.name[lang]}»</h3>
+                      <p class="catalog__item-text">${product.info[lang]}</p>
                       <div class="catalog__item-bottom">
                         ${weightDisplay}
                       </div>
@@ -59,7 +83,7 @@ export function data() {
 
 
 export function popular() {
-  if (window.location.pathname === '/' || window.location.pathname.includes('index.html') || window.location.pathname.includes('detail.html')) {
+  if (route === '/' || route.includes('index.html') || route.includes('detail.html') || route === '/index-uz.html' || route.includes('index-en.html') || route.includes('detail.html') || route.includes('detail-uz.html')) {
 
     fetch('./files/products.json')
       .then(response => response.json())
@@ -79,21 +103,35 @@ export function popular() {
 
           let weightDisplay;
           if (product.count) {
-            weightDisplay = product.weight.map(w => `<h3>${w} г / ${product.count} шт</h3>`).join('');
+            if (lang === 'en') {
+              weightDisplay = product.weight.map(w => `<h3>${w} g / ${product.count} pcs</h3>`).join('');
+            } else if (lang === 'uz') {
+              weightDisplay = product.weight.map(w => `<h3>${w} g / ${product.count} dona</h3>`).join('');
+            } else {
+              weightDisplay = product.weight.map(w => `<h3>${w} г / ${product.count} шт</h3>`).join('');
+            }
           } else {
-            weightDisplay = product.weight.map(w => `<h3>${w} г</h3>`).join('');
+
+            weightDisplay = product.weight.map(w => `<h3>${w} ${lang === 'en' ? "g" : lang === 'uz' ? "g" : "г"}</h3>`).join('');
           }
 
-          const detailPageUrl = `detail.html?id=${product.id}`;
+          let detailPageUrl;
+          if (route.includes('-en')) {
+            detailPageUrl = `detail-en.html?id=${product.id}`;
+          } else if (route.includes('-uz')) {
+            detailPageUrl = `detail-uz.html?id=${product.id}`;
+          } else {
+            detailPageUrl = `detail.html?id=${product.id}`;
+          }
 
           slide.innerHTML = `
                     <a href="${detailPageUrl}" class="product__item">
                       <div class="product__item-img">
-                        <img src="${baseUrl + product.img}" alt="${product.name}">
+                        <img src="${baseUrl + product.img}" alt="${product.name[lang]}">
                       </div>
                       <div class="product__item-box">
-                        <h3 class="product__item-title">${product.type} «${product.name}»</h3>
-                        <p class="product__item-text">${product.info}</p>
+                        <h3 class="product__item-title">${product.type[lang]} «${product.name[lang]}»</h3>
+                        <p class="product__item-text">${product.info[lang]}</p>
                         <div class="product__item-bottom">
                           ${weightDisplay}
                         </div>

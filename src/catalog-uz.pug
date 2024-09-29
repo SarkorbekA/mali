@@ -1,0 +1,322 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+    link(rel="stylesheet" href="css/style.min.css")
+    title Mali - Katalog
+  body 
+    .wrapper 
+      include components/header-uz
+      +header 
+      .catalog  
+        .container    
+          .catalog__header 
+            .catalog__header-left 
+              h2.catalog-title Mahsulotlarimiz
+              .catalog__header-pricelist.mob.button-mini
+                h3 Narxlar ro'yxati
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_25_4772" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                  <rect width="20" height="20" fill="#D9D9D9"/>
+                  </mask>
+                  <g mask="url(#mask0_25_4772)">
+                  <path d="M6 14H12V12.5H6V14ZM6 10.75H14V9.25H6V10.75ZM6 7.5H14V6H6V7.5ZM4.5 17C4.0875 17 3.73437 16.8531 3.44062 16.5594C3.14687 16.2656 3 15.9125 3 15.5V4.5C3 4.0875 3.14687 3.73438 3.44062 3.44063C3.73437 3.14688 4.0875 3 4.5 3H15.5C15.9125 3 16.2656 3.14688 16.5594 3.44063C16.8531 3.73438 17 4.0875 17 4.5V15.5C17 15.9125 16.8531 16.2656 16.5594 16.5594C16.2656 16.8531 15.9125 17 15.5 17H4.5ZM4.5 15.5H15.5V4.5H4.5V15.5Z" fill="#E80029"/>
+                  </g>
+                </svg>
+            .catalog__header-right 
+              .catalog__header-search   
+                input(type="text" id="search" placeholder="Начните вводить")
+                a(href="/search.html") 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_159_1118" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                    <rect width="20" height="20" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_159_1118)">
+                    <path d="M15.9375 17L10.9583 12.0208C10.5417 12.3264 10.0848 12.566 9.58771 12.7396C9.09063 12.9132 8.5616 13 8.00063 13C6.61132 13 5.43056 12.5139 4.45833 11.5417C3.48611 10.5694 3 9.38889 3 8C3 6.61111 3.48611 5.43056 4.45833 4.45833C5.43056 3.48611 6.61111 3 8 3C9.38889 3 10.5694 3.48611 11.5417 4.45833C12.5139 5.43056 13 6.61132 13 8.00063C13 8.5616 12.9132 9.09063 12.7396 9.58771C12.566 10.0848 12.3264 10.5417 12.0208 10.9583L17 15.9375L15.9375 17ZM8 11.5C8.97222 11.5 9.79861 11.1597 10.4792 10.4792C11.1597 9.79861 11.5 8.97222 11.5 8C11.5 7.02778 11.1597 6.20139 10.4792 5.52083C9.79861 4.84028 8.97222 4.5 8 4.5C7.02778 4.5 6.20139 4.84028 5.52083 5.52083C4.84028 6.20139 4.5 7.02778 4.5 8C4.5 8.97222 4.84028 9.79861 5.52083 10.4792C6.20139 11.1597 7.02778 11.5 8 11.5Z" fill="black"/>
+                    </g>
+                  </svg>
+
+              a(href="#").catalog__header-pricelist.button-mini
+                h3 Narxlar ro'yxatini yuklab olish
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_25_4772" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                  <rect width="20" height="20" fill="#D9D9D9"/>
+                  </mask>
+                  <g mask="url(#mask0_25_4772)">
+                  <path d="M6 14H12V12.5H6V14ZM6 10.75H14V9.25H6V10.75ZM6 7.5H14V6H6V7.5ZM4.5 17C4.0875 17 3.73437 16.8531 3.44062 16.5594C3.14687 16.2656 3 15.9125 3 15.5V4.5C3 4.0875 3.14687 3.73438 3.44062 3.44063C3.73437 3.14688 4.0875 3 4.5 3H15.5C15.9125 3 16.2656 3.14688 16.5594 3.44063C16.8531 3.73438 17 4.0875 17 4.5V15.5C17 15.9125 16.8531 16.2656 16.5594 16.5594C16.2656 16.8531 15.9125 17 15.5 17H4.5ZM4.5 15.5H15.5V4.5H4.5V15.5Z" fill="currentColor"/>
+                  </g>
+                </svg>
+              .catalog__header-filter
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_59_8189" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                  <rect width="24" height="24" fill="#D9D9D9"/>
+                  </mask>
+                  <g mask="url(#mask0_59_8189)">
+                  <path d="M11.3847 19.5C11.1334 19.5 10.9232 19.4153 10.754 19.246C10.5847 19.0768 10.5 18.8666 10.5 18.6152V12.827L4.90199 5.7155C4.70966 5.459 4.68174 5.19233 4.81824 4.9155C4.9549 4.6385 5.18541 4.5 5.50974 4.5H18.4902C18.8146 4.5 19.0451 4.6385 19.1817 4.9155C19.3182 5.19233 19.2903 5.459 19.098 5.7155L13.5 12.827V18.6152C13.5 18.8666 13.4153 19.0768 13.246 19.246C13.0768 19.4153 12.8666 19.5 12.6152 19.5H11.3847Z" fill="#E80029"/>
+                  </g>
+                </svg>
+                h3 Filtr
+
+          .catalog__wrapper  
+            .catalog__side 
+              .catalog__side-wrapper 
+
+                .catalog__side-exit.catalog__side-close 
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_59_8797" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_59_8797)">
+                    <path d="M8.2871 11.9879L15.6371 19.3379C15.8871 19.5879 16.0079 19.8837 15.9996 20.2254C15.9913 20.5671 15.8621 20.8629 15.6121 21.1129C15.3621 21.3629 15.0663 21.4879 14.7246 21.4879C14.3829 21.4879 14.0871 21.3629 13.8371 21.1129L6.1621 13.4129C5.9621 13.2129 5.8121 12.9879 5.7121 12.7379C5.6121 12.4879 5.5621 12.2379 5.5621 11.9879C5.5621 11.7379 5.6121 11.4879 5.7121 11.2379C5.8121 10.9879 5.9621 10.7629 6.1621 10.5629L13.8621 2.86291C14.1121 2.61291 14.4038 2.49208 14.7371 2.50041C15.0704 2.50875 15.3621 2.63791 15.6121 2.88791C15.8621 3.13791 15.9871 3.43375 15.9871 3.77542C15.9871 4.11708 15.8621 4.41291 15.6121 4.66291L8.2871 11.9879Z" fill="#E80029"/>
+                    </g>
+                  </svg>
+                  h3 Ortga
+                h3.catalog__side-title Filtr
+                .catalog__side-select 
+                  .catalog__select
+                    .catalog__select-btn
+                      h3 Xamir
+                      .catalog__select-arrow 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="mask0_27_2182" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                          <rect width="20" height="20" fill="currentColor"/>
+                          </mask>
+                          <g mask="url(#mask0_27_2182)">
+                          <path d="M10 9.0625L6.58335 12.4792C6.43058 12.6319 6.25349 12.7083 6.0521 12.7083C5.85071 12.7083 5.67363 12.6319 5.52085 12.4792C5.36808 12.3264 5.29169 12.1493 5.29169 11.9479C5.29169 11.7465 5.36808 11.5694 5.52085 11.4167L9.47919 7.45833C9.63196 7.30555 9.80558 7.22917 10 7.22917C10.1945 7.22917 10.3681 7.30555 10.5209 7.45833L14.4792 11.4167C14.632 11.5694 14.7084 11.7431 14.7084 11.9375C14.7084 12.1319 14.632 12.3056 14.4792 12.4583C14.3264 12.6111 14.1493 12.6875 13.9479 12.6875C13.7465 12.6875 13.5695 12.6111 13.4167 12.4583L10 9.0625Z" fill="currentColor"/>
+                          </g>
+                        </svg>
+                    .catalog__select-content
+                      ul.catalog__select-list 
+                        li.catalog__select-item Xamirturushli qatlama
+                        li.catalog__select-item Xamirturushsiz qatlama
+                        li.catalog__select-item Pitsa uchun
+                        li.catalog__select-item Sdobnoy xamir
+                        li.catalog__select-item Sariyog‘li qatlama
+                        li.catalog__select-item Dumaloq qatlama
+                  .catalog__select
+                    .catalog__select-btn
+                      h3 Nonushta uchun
+                      .catalog__select-arrow 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="mask0_27_2182" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                          <rect width="20" height="20" fill="currentColor"/>
+                          </mask>
+                          <g mask="url(#mask0_27_2182)">
+                          <path d="M10 9.0625L6.58335 12.4792C6.43058 12.6319 6.25349 12.7083 6.0521 12.7083C5.85071 12.7083 5.67363 12.6319 5.52085 12.4792C5.36808 12.3264 5.29169 12.1493 5.29169 11.9479C5.29169 11.7465 5.36808 11.5694 5.52085 11.4167L9.47919 7.45833C9.63196 7.30555 9.80558 7.22917 10 7.22917C10.1945 7.22917 10.3681 7.30555 10.5209 7.45833L14.4792 11.4167C14.632 11.5694 14.7084 11.7431 14.7084 11.9375C14.7084 12.1319 14.632 12.3056 14.4792 12.4583C14.3264 12.6111 14.1493 12.6875 13.9479 12.6875C13.7465 12.6875 13.5695 12.6111 13.4167 12.4583L10 9.0625Z" fill="currentColor"/>
+                          </g>
+                        </svg>
+                    .catalog__select-content
+                      ul.catalog__select-list 
+                        li.catalog__select-item Xamirturushli qatlama
+                        li.catalog__select-item Xamirturushsiz qatlama
+                        li.catalog__select-item Pitsa uchun
+                        li.catalog__select-item Sdobnoy xamir
+                        li.catalog__select-item Sariyog‘li qatlama
+                        li.catalog__select-item Dumaloq qatlama
+                  .catalog__select
+                    .catalog__select-btn
+                      h3 Oilaviy bayram uchun
+                      .catalog__select-arrow 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="mask0_27_2182" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                          <rect width="20" height="20" fill="currentColor"/>
+                          </mask>
+                          <g mask="url(#mask0_27_2182)">
+                          <path d="M10 9.0625L6.58335 12.4792C6.43058 12.6319 6.25349 12.7083 6.0521 12.7083C5.85071 12.7083 5.67363 12.6319 5.52085 12.4792C5.36808 12.3264 5.29169 12.1493 5.29169 11.9479C5.29169 11.7465 5.36808 11.5694 5.52085 11.4167L9.47919 7.45833C9.63196 7.30555 9.80558 7.22917 10 7.22917C10.1945 7.22917 10.3681 7.30555 10.5209 7.45833L14.4792 11.4167C14.632 11.5694 14.7084 11.7431 14.7084 11.9375C14.7084 12.1319 14.632 12.3056 14.4792 12.4583C14.3264 12.6111 14.1493 12.6875 13.9479 12.6875C13.7465 12.6875 13.5695 12.6111 13.4167 12.4583L10 9.0625Z" fill="currentColor"/>
+                          </g>
+                        </svg>
+                    .catalog__select-content
+                      ul.catalog__select-list 
+                        li.catalog__select-item Xamirturushli qatlama
+                        li.catalog__select-item Xamirturushsiz qatlama
+                        li.catalog__select-item Pitsa uchun
+                        li.catalog__select-item Sdobnoy xamir
+                        li.catalog__select-item Sariyog‘li qatlama
+                        li.catalog__select-item Dumaloq qatlama
+                  .catalog__select
+                    .catalog__select-btn
+                      h3 Xamir mahsulotlari
+                      .catalog__select-arrow 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="mask0_27_2182" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                          <rect width="20" height="20" fill="currentColor"/>
+                          </mask>
+                          <g mask="url(#mask0_27_2182)">
+                          <path d="M10 9.0625L6.58335 12.4792C6.43058 12.6319 6.25349 12.7083 6.0521 12.7083C5.85071 12.7083 5.67363 12.6319 5.52085 12.4792C5.36808 12.3264 5.29169 12.1493 5.29169 11.9479C5.29169 11.7465 5.36808 11.5694 5.52085 11.4167L9.47919 7.45833C9.63196 7.30555 9.80558 7.22917 10 7.22917C10.1945 7.22917 10.3681 7.30555 10.5209 7.45833L14.4792 11.4167C14.632 11.5694 14.7084 11.7431 14.7084 11.9375C14.7084 12.1319 14.632 12.3056 14.4792 12.4583C14.3264 12.6111 14.1493 12.6875 13.9479 12.6875C13.7465 12.6875 13.5695 12.6111 13.4167 12.4583L10 9.0625Z" fill="currentColor"/>
+                          </g>
+                        </svg>
+                    .catalog__select-content
+                      ul.catalog__select-list 
+                        li.catalog__select-item Xamirturushli qatlama
+                        li.catalog__select-item Xamirturushsiz qatlama
+                        li.catalog__select-item Pitsa uchun
+                        li.catalog__select-item Sdobnoy xamir
+                        li.catalog__select-item Sariyog‘li qatlama
+                        li.catalog__select-item Dumaloq qatlama
+                .catalog__side-types 
+                  label(for="type1").catalog__types-item.checkbox 
+                    input(type="checkbox" id="type1" name="check")
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect opacity="0.5" x="0.5" y="0.5" width="29" height="29" rx="9.5" fill="white" stroke="#D9D9D9"/>
+                      <mask id="mask0_25_3074" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                      <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_25_3074)">
+                      <path d="M13.1042 19.4375L9.0625 15.4167L10.125 14.3333L13.1042 17.3125L19.875 10.5625L20.9375 11.625L13.1042 19.4375Z" fill="#F1F1F0"/>
+                      </g>
+                    </svg>
+                    h3 Og'irligi
+                  label(for="type2").catalog__types-item.checkbox 
+                    input(type="checkbox" id="type2" name="check")
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect opacity="0.5" x="0.5" y="0.5" width="29" height="29" rx="9.5" fill="white" stroke="#D9D9D9"/>
+                      <mask id="mask0_25_3074" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                      <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_25_3074)">
+                      <path d="M13.1042 19.4375L9.0625 15.4167L10.125 14.3333L13.1042 17.3125L19.875 10.5625L20.9375 11.625L13.1042 19.4375Z" fill="#F1F1F0"/>
+                      </g>
+                    </svg>
+                    h3 Qadoqlangan
+                  label(for="type3").catalog__types-item.checkbox 
+                    input(type="checkbox" id="type3" name="check")
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect opacity="0.5" x="0.5" y="0.5" width="29" height="29" rx="9.5" fill="white" stroke="#D9D9D9"/>
+                      <mask id="mask0_25_3074" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                      <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_25_3074)">
+                      <path d="M13.1042 19.4375L9.0625 15.4167L10.125 14.3333L13.1042 17.3125L19.875 10.5625L20.9375 11.625L13.1042 19.4375Z" fill="#F1F1F0"/>
+                      </g>
+                    </svg>
+                    h3 500 g
+                  label(for="type4").catalog__types-item.checkbox 
+                    input(type="checkbox" id="type4" name="check")
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect opacity="0.5" x="0.5" y="0.5" width="29" height="29" rx="9.5" fill="white" stroke="#D9D9D9"/>
+                      <mask id="mask0_25_3074" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                      <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_25_3074)">
+                      <path d="M13.1042 19.4375L9.0625 15.4167L10.125 14.3333L13.1042 17.3125L19.875 10.5625L20.9375 11.625L13.1042 19.4375Z" fill="#F1F1F0"/>
+                      </g>
+                    </svg>
+                    h3 1000 g
+                  label(for="type5").catalog__types-item.checkbox 
+                    input(type="checkbox" id="type5" name="check")
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect opacity="0.5" x="0.5" y="0.5" width="29" height="29" rx="9.5" fill="white" stroke="#D9D9D9"/>
+                      <mask id="mask0_25_3074" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                      <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_25_3074)">
+                      <path d="M13.1042 19.4375L9.0625 15.4167L10.125 14.3333L13.1042 17.3125L19.875 10.5625L20.9375 11.625L13.1042 19.4375Z" fill="#F1F1F0"/>
+                      </g>
+                    </svg>
+                    h3 1500 g
+                .catalog__side-action
+                  label(for="type6").catalog__types-item.checkbox 
+                    input(type="checkbox" id="type6" name="check")
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect opacity="0.5" x="0.5" y="0.5" width="29" height="29" rx="9.5" fill="white" stroke="#D9D9D9"/>
+                      <mask id="mask0_25_3074" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                      <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_25_3074)">
+                      <path d="M13.1042 19.4375L9.0625 15.4167L10.125 14.3333L13.1042 17.3125L19.875 10.5625L20.9375 11.625L13.1042 19.4375Z" fill="#F1F1F0"/>
+                      </g>
+                    </svg>
+                    h3 Aksiya
+                button.button.catalog__side-show.catalog__side-close Ko`rsatish
+
+            .catalog__content   
+              a(href="#").catalog__content-banner 
+                img(src="@img/product-banner.png" alt="product banner")
+              .catalog__content-top 
+                .catalog__drop
+                  button(type="button").catalog__drop-btn 
+                    h3 Saralash
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_25_3059" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                      <rect width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_25_3059)">
+                      <path d="M10 12L6 8H14L10 12Z" fill="black"/>
+                      </g>
+                    </svg>
+                .catalog__drop 
+                  button(type="button").catalog__drop-btn 
+                    h3 9
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_25_3045" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                      <rect width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_25_3045)">
+                      <path d="M10 12L6 8H14L10 12Z" fill="black"/>
+                      </g>
+                    </svg>
+              ul.catalog__list
+                //- li.catalog__item 
+                //-   .catalog__item-top
+                //-     .catalog__item-zone 
+                //-       span.active
+                //-       span
+                //-       span
+                //-       span
+                //-     .catalog__item-img
+                //-       img(src="@img/product.png" alt="1").active
+                //-       img(src="@img/product.png" alt="2")
+                //-       img(src="@img/product.png" alt="3")
+                //-       img(src="@img/product.png" alt="4")
+                //-     .catalog__item-pagination 
+                //-       span
+                //-       span.active
+                //-       span
+                //-       span
+                //-   .catalog__item-box
+                //-     h3.catalog__item-title Катлама «С луком» 
+                //-     p.catalog__item-text Хрустящая, ароматная, традиционная
+                //-     .catalog__item-bottom 
+                //-       h3 500 г
+                //-       h3 1000 г
+
+
+              .catalog__bottom 
+                button(type="button").catalog__bottom-btn.button Yana
+                .catalog__pagination 
+                  button(type="button").catalog__pagination-arrow.left
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_159_1559" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                      <rect width="20" height="20" fill="currentColor"/>
+                      </mask>
+                      <g mask="url(#mask0_159_1559)">
+                      <path d="M6.83333 10L12.7083 15.875C12.9028 16.0695 13 16.3056 13 16.5834C13 16.8612 12.9028 17.0973 12.7083 17.2917C12.5139 17.4862 12.2778 17.5834 12 17.5834C11.7222 17.5834 11.4861 17.4862 11.2917 17.2917L5.0625 11.0625C4.90972 10.9098 4.79861 10.7431 4.72917 10.5625C4.65972 10.382 4.625 10.1945 4.625 10C4.625 9.8056 4.65972 9.61809 4.72917 9.43754C4.79861 9.25698 4.90972 9.09032 5.0625 8.93754L11.2917 2.70837C11.4861 2.51393 11.7222 2.41671 12 2.41671C12.2778 2.41671 12.5139 2.51393 12.7083 2.70837C12.9028 2.90282 13 3.13893 13 3.41671C13 3.69448 12.9028 3.9306 12.7083 4.12504L6.83333 10Z" fill="currentColor"/>
+                      </g>
+                    </svg>
+                  .catalog__pagination-list 
+                    .catalog__pagination-item.active 1
+                    .catalog__pagination-item 2
+                    .catalog__pagination-item.other ...
+                    .catalog__pagination-item 3
+                  button(type="button").catalog__pagination-arrow.right
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_159_1555" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                      <rect width="20" height="20" fill="currentColor"/>
+                      </mask>
+                      <g mask="url(#mask0_159_1555)">
+                      <path d="M13.1667 9.99996L7.29167 4.12496C7.09722 3.93051 7 3.6944 7 3.41663C7 3.13885 7.09722 2.90274 7.29167 2.70829C7.48611 2.51385 7.72222 2.41663 8 2.41663C8.27778 2.41663 8.51389 2.51385 8.70833 2.70829L14.9375 8.93746C15.0903 9.09024 15.2014 9.2569 15.2708 9.43746C15.3403 9.61801 15.375 9.80551 15.375 9.99996C15.375 10.1944 15.3403 10.3819 15.2708 10.5625C15.2014 10.743 15.0903 10.9097 14.9375 11.0625L8.70833 17.2916C8.51389 17.4861 8.27778 17.5833 8 17.5833C7.72222 17.5833 7.48611 17.4861 7.29167 17.2916C7.09722 17.0972 7 16.8611 7 16.5833C7 16.3055 7.09722 16.0694 7.29167 15.875L13.1667 9.99996Z" fill="currentColor"/>
+                      </g>
+                    </svg>
+
+      include components/program-uz
+      +program
+      include components/call-uz
+      +call
+      include components/footer-uz
+      +footer
+    script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+    script(src="js/app.min.js") 
+

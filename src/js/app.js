@@ -2,6 +2,77 @@ import * as swiper from "./modules/swiper.js";
 import * as functions from "./modules/functions.js";
 import * as detail from "./modules/detail.js";
 
+function changeLanguage(lang) {
+  let currentUrl = window.location.href;
+  const regex = /-(ru|uz|en)\.html/;
+  const defaultRegex = /\/$/;
+  const htmlRegex = /\.html$/;
+
+  if (currentUrl === window.location.origin + '/' || currentUrl === window.location.origin) {
+    if (lang === 'ru') {
+      window.location.href = '/index.html';
+    } else {
+      window.location.href = `/index-${lang}.html`;
+    }
+    return;
+  }
+
+  if (lang === 'ru') {
+    if (regex.test(currentUrl)) {
+      const newUrl = currentUrl.replace(regex, '.html');
+      window.location.href = newUrl;
+    } else if (defaultRegex.test(currentUrl)) {
+      const newUrl = currentUrl.replace(defaultRegex, '.html');
+      window.location.href = newUrl;
+    } else if (htmlRegex.test(currentUrl)) {
+      window.location.href = currentUrl;
+    } else {
+      window.location.href = currentUrl.replace(/\/$/, '') + '.html';
+    }
+  } else {
+    let newUrl;
+
+    if (regex.test(currentUrl)) {
+      newUrl = currentUrl.replace(regex, `-${lang}.html`);
+    } else if (htmlRegex.test(currentUrl)) {
+      newUrl = currentUrl.replace(htmlRegex, `-${lang}.html`);
+    } else if (defaultRegex.test(currentUrl)) {
+      newUrl = currentUrl.replace(defaultRegex, `-${lang}.html`);
+    } else {
+      newUrl = currentUrl.replace(/\/$/, `-${lang}.html`);
+    }
+
+    console.log(newUrl);
+    window.location.href = newUrl;
+  }
+}
+
+const ruLink = document.querySelector('.ru');
+const uzLink = document.querySelector('.uz');
+const enLink = document.querySelector('.en');
+
+if (ruLink) {
+  ruLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    changeLanguage('ru');
+  });
+}
+
+if (uzLink) {
+  uzLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    changeLanguage('uz');
+  });
+}
+
+if (enLink) {
+  enLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    changeLanguage('en');
+    console.log('hello');
+  });
+}
+
 detail.detail();
 swiper.swiper();
 functions.data();
