@@ -243,7 +243,7 @@
     font-weight: 400;
     text-align: left;
 
-    @include res("max-width", 240px);
+    @include res("max-width", 330px);
     @include media(576) {
       text-align: center;
       @include resa("max-width", 240px);
