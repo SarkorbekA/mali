@@ -3741,6 +3741,10 @@
   color: #ffffff;
 }
 
+.button-other.white svg rect {
+  color: #ffffff;
+}
+
 .button-other:hover h3 {
   color: #FDB913;
 }
