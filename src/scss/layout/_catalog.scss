@@ -579,7 +579,7 @@
       @include res("font-size", 18px);
       @include res("line-height", 23px);
       @include res("height", 46px);
-
+      color: $black;
       text-align: left;
       @include media(576) {
         @include resa("font-size", 18px);

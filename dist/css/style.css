@@ -354,6 +354,8 @@
 .product__item-img img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product__item-box {
@@ -1442,6 +1444,7 @@
   font-size: 1.3235294118vw;
   line-height: 1.6911764706vw;
   height: 3.3823529412vw;
+  color: #000000;
   text-align: left;
 }
 
@@ -1706,6 +1709,8 @@
 .detail__img-main img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .detail__img-main.mob {
@@ -1751,6 +1756,8 @@
 .detail__img-item img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .detail__img-item svg {
