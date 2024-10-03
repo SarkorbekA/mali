@@ -68,14 +68,14 @@ export function detail() {
 
           if (product) {
             document.querySelectorAll('.detail__img-main img').forEach(el => {
-              el.src = baseUrl + product.id + '.png'
+              el.src = baseUrl + product.img
             });
-            document.querySelector('.detail__img-item img').src = baseUrl + product.id + '.png';
+            document.querySelector('.detail__img-item img').src = baseUrl + product.img;
 
             const sliderContainer = document.querySelector('.swiper-wrapper');
             sliderContainer.innerHTML = '';
 
-            document.querySelector('.detail__item-type').textContent = product?.type[lang];
+            document.querySelector('.detail__item-type').textContent = product?.type?.[lang];
             document.querySelector('.detail__item-name').textContent = product?.name?.[lang];
             document.querySelector('.detail__item-info').textContent = product?.info[lang];
             if (product.compound) {

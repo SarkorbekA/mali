@@ -1089,13 +1089,19 @@
   {
     "id": 23,
     "name": {
-      "ru": "С картошкой"
+      "ru": "С картошкой",
+      "uz": "Kartoshkali",
+      "en": "With potatoes"
     },
     "type": {
-      "ru": "Самса"
+      "ru": "Самса",
+      "uz": "Samsa",
+      "en": "Samsa"
     },
     "info": {
-      "ru": "Отборный картофель"
+      "ru": "Отборный картофель",
+      "uz": "Saralangan kartoshka",
+      "en": "Selected potatoes"
     },
     "img": "23.png",
     "count": 40,
@@ -1125,6 +1131,199 @@
       "ru": "белков - 6 г, углеводов - 50 г, жиров - 20 г.",
       "uz": "oqsillar - 6 g, uglevodlar - 50 g, yog'lar - 20 g.",
       "en": "proteins - 6 g, carbohydrates - 50 g, fats - 20 g."
+    }
+  },
+  {
+    "id": 24,
+    "name": {
+      "ru": "С говядиной и овощами",
+      "uz": "Mol go‘shti va sabzavotlar bilan",
+      "en": "With beef and vegetables"
+    },
+    "type": {
+      "ru": "Самса",
+      "uz": "Samsa",
+      "en": "Samsa"
+    },
+    "info": {
+      "ru": "Сочная начинка",
+      "uz": "Sharbatsiz nachinka",
+      "en": "Juicy filling"
+    },
+    "img": "24.png",
+    "count": 40,
+    "weight": [
+      63
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "ru": "Коробка",
+            "uz": "Quti",
+            "en": "Box"
+          },
+          "weight_big": 2.5,
+          "inbox": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "name": {
+      "ru": "С зеленью",
+      "uz": "Ko‘katli",
+      "en": "With herbs"
+    },
+    "type": {
+      "ru": "Самса",
+      "uz": "Samsa",
+      "en": "Samsa"
+    },
+    "info": {
+      "ru": "Свежая зелень",
+      "uz": "Yangi ko'katlar",
+      "en": "Fresh herbs"
+    },
+    "img": "25.png",
+    "count": 40,
+    "weight": [
+      63
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "ru": "Коробка",
+            "uz": "Quti",
+            "en": "Box"
+          },
+          "weight_big": 2.5,
+          "inbox": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "name": {
+      "ru": "С курицей",
+      "uz": "Tovuq go‘shti bilan",
+      "en": "With chicken"
+    },
+    "type": {
+      "ru": "Самса",
+      "uz": "Samsa",
+      "en": "Samsa"
+    },
+    "info": {
+      "ru": "Рубленое куриное филе",
+      "uz": "Tug'ralgan tovuq filesi",
+      "en": "Chopped chicken fillet"
+    },
+    "img": "26.png",
+    "count": 40,
+    "weight": [
+      63
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "ru": "Коробка",
+            "uz": "Quti",
+            "en": "Box"
+          },
+          "weight_big": 2.5,
+          "inbox": 40
+        }
+      ]
+    },
+    "compound": {
+      "ru": "Тесто - мука пшеничная (в/с), соль, вода, маргарин, подсолнечное масло, лимонная кислота, яйцо. Начинка - куриное мясо, лук, подсолнечное масло, соль пищевая, специи.",
+      "uz": "Xamir - tayyor bug'doy uni, tuz, suv, margarin, kungaboqar yog'i, limon kislotasi, tuxum. Nachinka - tovuq go'shti, piyoz, kungaboqar yog'i, ovqat tuzi, ziravorlar.",
+      "en": "Dough: premium wheat flour, salt, water, margarine, sunflower oil, citric acid, egg. Filling: chicken meat, onion, sunflower oil, table salt, spices."
+    },
+    "energy_value": "250",
+    "nutritional_value": {
+      "ru": "белков - 12 г, углеводов - 22 г, жиров - 12 г.",
+      "uz": "oqsillar - 12 g, uglevodlar - 22 g, yog'lar - 12 g.",
+      "en": "proteins - 12 g, carbohydrates - 22 g, fats - 12 g."
+    }
+  },
+  {
+    "id": 27,
+    "name": {
+      "ru": "С мясом"
+    },
+    "type": {
+      "ru": "Чебуреки"
+    },
+    "info": {
+      "ru": "100% говядина"
+    },
+    "img": "27.png",
+    "count": 18,
+    "weight": [
+      85
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "ru": "Коробка",
+            "uz": "Quti",
+            "en": "Box"
+          },
+          "weight_big": 1.5,
+          "inbox": 40
+        }
+      ]
+    },
+    "compound": {
+      "ru": "Тесто - мука пшеничная в/с, растительное масло, соль, вода. Начинка - говядина, лук, растительное масло, соль пищевая, специи. "
+    },
+    "energy_value": "320",
+    "nutritional_value": {
+      "ru": "белков - 12 г, углеводов - 25 г, жиров - 18 г. "
+    }
+  },
+  {
+    "id": 28,
+    "name": {
+      "ru": "Сыр с зеленью"
+    },
+    "type": {
+      "ru": "Чебуреки"
+    },
+    "info": {
+      "ru": "Твердый сыр"
+    },
+    "img": "27.png",
+    "count": 24,
+    "weight": [
+      65
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "ru": "Коробка",
+            "uz": "Quti",
+            "en": "Box"
+          },
+          "weight_big": 1.5,
+          "inbox": 40
+        }
+      ]
+    },
+    "compound": {
+      "ru": "Тесто - мука пшеничная в/с, растительное масло, соль, вода. Начинка - зелень, сыр, лук, растительное масло, соль пищевая, специи."
+    },
+    "energy_value": "310",
+    "nutritional_value": {
+      "ru": "белков - 10 г, углеводов - 27 г, жиров - 17 г."
     }
   }
 ]
