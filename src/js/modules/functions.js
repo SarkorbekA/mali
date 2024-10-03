@@ -63,7 +63,7 @@ export function data() {
                       </div>
                     </div>
                     <div class="catalog__item-box">
-                      <h3 class="catalog__item-title">${product?.type?.[lang]} «${product?.name?.[lang]}»</h3>
+                      <h3 class="catalog__item-title">${product?.type?.[lang] ? product?.type?.[lang] : ''} «${product?.name?.[lang]}»</h3>
                       <p class="catalog__item-text">${product.info[lang]}</p>
                       <div class="catalog__item-bottom">
                         ${weightDisplay}

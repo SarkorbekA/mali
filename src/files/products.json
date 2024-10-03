@@ -1255,13 +1255,19 @@
   {
     "id": 27,
     "name": {
-      "ru": "С мясом"
+      "ru": "С мясом",
+      "uz": "Go‘sht bilan",
+      "en": "With meat"
     },
     "type": {
-      "ru": "Чебуреки"
+      "ru": "Чебуреки",
+      "uz": "Chibureklar",
+      "en": "Chebureki"
     },
     "info": {
-      "ru": "100% говядина"
+      "ru": "100% говядина",
+      "uz": "100% mol go'shti",
+      "en": "100% beef"
     },
     "img": "27.png",
     "count": 18,
@@ -1282,25 +1288,35 @@
       ]
     },
     "compound": {
-      "ru": "Тесто - мука пшеничная в/с, растительное масло, соль, вода. Начинка - говядина, лук, растительное масло, соль пищевая, специи. "
+      "ru": "Тесто - мука пшеничная в/с, растительное масло, соль, вода. Начинка - говядина, лук, растительное масло, соль пищевая, специи.",
+      "uz": "Xamir - tayyor bug'doy uni, o'simlik yog'i, tuz, suv. Nachinka - mol go'shti, piyoz, o'simlik yog'i, ovqat tuzi, ziravorlar.",
+      "en": "Dough: premium wheat flour, vegetable oil, salt, water. Filling: beef, onion, vegetable oil, table salt, spices."
     },
     "energy_value": "320",
     "nutritional_value": {
-      "ru": "белков - 12 г, углеводов - 25 г, жиров - 18 г. "
+      "ru": "белков - 12 г, углеводов - 25 г, жиров - 18 г.",
+      "uz": "oqsillar - 12 g, uglevodlar - 25 g, yog'lar - 18 g.",
+      "en": "proteins - 12 g, carbohydrates - 25 g, fats - 18 g."
     }
   },
   {
     "id": 28,
     "name": {
-      "ru": "Сыр с зеленью"
+      "ru": "Сыр с зеленью",
+      "uz": "Pishloq va ko‘kat bilan",
+      "en": "Cheese with herbs"
     },
     "type": {
-      "ru": "Чебуреки"
+      "ru": "Чебуреки",
+      "uz": "Chibureklar",
+      "en": "Chebureki"
     },
     "info": {
-      "ru": "Твердый сыр"
+      "ru": "Твердый сыр",
+      "uz": "Qattiq pishloq",
+      "en": "Hard cheese"
     },
-    "img": "27.png",
+    "img": "28.png",
     "count": 24,
     "weight": [
       65
@@ -1319,11 +1335,232 @@
       ]
     },
     "compound": {
-      "ru": "Тесто - мука пшеничная в/с, растительное масло, соль, вода. Начинка - зелень, сыр, лук, растительное масло, соль пищевая, специи."
+      "ru": "Тесто - мука пшеничная в/с, растительное масло, соль, вода. Начинка - зелень, сыр, лук, растительное масло, соль пищевая, специи.",
+      "uz": "Xamir - tayyor bug'doy uni, o'simlik yog'i, tuz, suv. Nachinka - ko'kat, pishloq, piyoz, o'simlik yog'i, ovqat tuzi, ziravorlar.",
+      "en": "Dough: premium wheat flour, vegetable oil, salt, water. Filling: herbs, cheese, onion, vegetable oil, table salt, spices."
     },
     "energy_value": "310",
     "nutritional_value": {
-      "ru": "белков - 10 г, углеводов - 27 г, жиров - 17 г."
+      "ru": "белков - 10 г, углеводов - 27 г, жиров - 17 г.",
+      "uz": "oqsillar - 10 g, uglevodlar - 27 g, yog'lar - 17 g.",
+      "en": "proteins - 10 g, carbohydrates - 27 g, fats - 17 g."
+    }
+  },
+  {
+    "id": 29,
+    "name": {
+      "ru": "Фрикадельки",
+      "uz": "Frikadelkalar",
+      "en": "Meatballs"
+    },
+    "info": {
+      "ru": "100% говядина",
+      "uz": "100% mol go'shti",
+      "en": "100% beef"
+    },
+    "count": 20,
+    "img": "28.png",
+    "weight": [
+      10
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "uz": "Qadoq",
+            "ru": "Упаковка",
+            "en": "Package"
+          },
+          "weight": 200,
+          "inpack": 20,
+          "in_container": 6,
+          "box_weight": 1.2
+        }
+      ]
+    },
+    "compound": {
+      "ru": "Мясо говядины, лук, чеснок, подсолнечное масло, хлеб, яйца, соль, специи.",
+      "uz": "Mol go'shti, piyoz, sarimsoq, kungaboqar yog'i, non, tuxum, tuz, ziravorlar.",
+      "en": "Beef, onion, garlic, sunflower oil, bread, eggs, salt, spices."
+    },
+    "energy_value": "161.1",
+    "nutritional_value": {
+      "ru": "белков 13,7 г., углеводов 5,9 г, жиров - 9,4 г.",
+      "uz": "oqsillar - 13,7 g, uglevodlar - 5,9 g, yog'lar - 9,4 g.",
+      "en": "proteins - 13.7 g, carbohydrates - 5.9 g, fats - 9.4 g."
+    }
+  },
+  {
+    "id": 30,
+    "name": {
+      "ru": "Говяжьи",
+      "uz": "Mol go‘shti",
+      "en": "Beef"
+    },
+    "type": {
+      "ru": "Котлеты",
+      "uz": "Kotletlar",
+      "en": "Cutlets"
+    },
+    "info": {
+      "ru": "100% говядина",
+      "uz": "100% mol go'shti",
+      "en": "100% beef"
+    },
+    "count": 4,
+    "img": "29.png",
+    "weight": [
+      75
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "uz": "Qadoq",
+            "ru": "Упаковка",
+            "en": "Package"
+          },
+          "weight": 300,
+          "inpack": 4,
+          "in_container": 6,
+          "box_weight": 1.8
+        }
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "name": {
+      "ru": "Перцы фаршированные",
+      "uz": "Go'shtli qalampir",
+      "en": "Stuffed peppers"
+    },
+    "info": {
+      "ru": "100% говядина",
+      "uz": "100% mol go'shti",
+      "en": "100% beef"
+    },
+    "img": "30.png",
+    "weight": [
+      500
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "uz": "Qadoq",
+            "ru": "Упаковка",
+            "en": "Package"
+          },
+          "weight": 500,
+          "in_container": 6,
+          "box_weight": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "name": {
+      "ru": "Куриные",
+      "uz": "Tovuq go‘shti",
+      "en": "Chicken"
+    },
+    "type": {
+      "ru": "Котлеты",
+      "uz": "Kotletlar",
+      "en": "Cutlets"
+    },
+    "info": {
+      "ru": "100% куриное филе",
+      "uz": "100% tovuq filesi",
+      "en": "100% chicken fillet"
+    },
+    "count": 4,
+    "img": "31.png",
+    "weight": [
+      75
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "uz": "Qadoq",
+            "ru": "Упаковка",
+            "en": "Package"
+          },
+          "weight": 300,
+          "inpack": 4,
+          "in_container": 6,
+          "box_weight": 1.8
+        }
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "name": {
+      "ru": "Голубцы",
+      "uz": "Gulubtsi",
+      "en": "Stuffed cabbage rolls"
+    },
+    "info": {
+      "ru": "100% говядина",
+      "uz": "100% mol go'shti",
+      "en": "100% beef"
+    },
+    "img": "32.png",
+    "count": 8,
+    "weight": [
+      65
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "uz": "Qadoq",
+            "ru": "Упаковка",
+            "en": "Package"
+          },
+          "weight": 500,
+          "inpack": 8,
+          "in_container": 6,
+          "box_weight": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "name": {
+      "ru": "Долма",
+      "uz": "Dolma",
+      "en": "Dolma"
+    },
+    "info": {
+      "ru": "100% говядина",
+      "uz": "100% mol go'shti",
+      "en": "100% beef"
+    },
+    "img": "33.png",
+    "count": 12,
+    "weight": [
+      23
+    ],
+    "pack": {
+      "list": [
+        {
+          "type": {
+            "uz": "Qadoq",
+            "ru": "Упаковка",
+            "en": "Package"
+          },
+          "weight": 270,
+          "inpack": 12,
+          "in_container": 6,
+          "box_weight": 1.6
+        }
+      ]
     }
   }
 ]
