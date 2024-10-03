@@ -56,14 +56,14 @@ export function data() {
                         <span class="active"></span>
                       </div>
                       <div class="catalog__item-img">
-                        <img src="${baseUrl + product.img}" alt="${product.name[lang]}" class="active">
+                        <img src="${baseUrl + product.img}" alt="${product?.name?.[lang]}" class="active">
                       </div>
                       <div class="catalog__item-pagination">
                         <span class="active"></span>
                       </div>
                     </div>
                     <div class="catalog__item-box">
-                      <h3 class="catalog__item-title">${product.type[lang]} «${product.name[lang]}»</h3>
+                      <h3 class="catalog__item-title">${product.type[lang]} «${product?.name?.[lang]}»</h3>
                       <p class="catalog__item-text">${product.info[lang]}</p>
                       <div class="catalog__item-bottom">
                         ${weightDisplay}
@@ -89,6 +89,7 @@ export function popular() {
       .then(response => response.json())
       .then(data => {
         data = data.filter(el => el.img);
+        data = data.slice(0, 10);
 
         const productSliderContainer = document.querySelector('.productSwiper .swiper-wrapper');
 
@@ -127,10 +128,11 @@ export function popular() {
           slide.innerHTML = `
                     <a href="${detailPageUrl}" class="product__item">
                       <div class="product__item-img">
-                        <img src="${baseUrl + product.img}" alt="${product.name[lang]}">
+                        <img loading="lazy" src="${baseUrl + product.img}" alt="${product?.name?.[lang]}">
                       </div>
                       <div class="product__item-box">
-                        <h3 class="product__item-title">${product.type[lang]} «${product.name[lang]}»</h3>
+                        <h3 class="product__item-title">${product.type[lang]} ${product?.name?.[lang] ? `«${product.name[lang]}»` : ''}
+                        </h3>
                         <p class="product__item-text">${product.info[lang]}</p>
                         <div class="product__item-bottom">
                           ${weightDisplay}

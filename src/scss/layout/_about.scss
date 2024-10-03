@@ -343,6 +343,84 @@
       }
     }
   }
+
+  &__wrapper {
+    position: relative;
+    &-img {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &.first {
+        @include res("top", 80px);
+        @include res("right", 385px);
+        @include res("width", 204px);
+        @include res("height", 135px);
+        @include media(576) {
+          display: none;
+        }
+      }
+      &.second {
+        top: 0;
+        @include res("right", 75px);
+        @include res("width", 200px);
+        @include res("height", 193px);
+        @include media(576) {
+          display: none;
+        }
+      }
+      &.third {
+        @include res("bottom", 64px);
+        @include res("left", 60px);
+        @include res("width", 202px);
+        @include res("height", 189px);
+        z-index: 3;
+        @include media(576) {
+          display: none;
+        }
+      }
+      &.fourth {
+        @include res("width", 114.5px);
+        @include res("height", 124.5px);
+        bottom: 0;
+        left: 0;
+        @include media(576) {
+          display: none;
+        }
+      }
+      &.fifth {
+        z-index: 2;
+        @include res("bottom", 90px);
+        @include res("width", 257px);
+        @include res("height", 246px);
+        @include res("right", -20px);
+        @include media(576) {
+          display: none;
+        }
+      }
+      &.sixth {
+        @include res("top", 272px);
+        @include res("left", 31px);
+        @include res("width", 118px);
+        @include res("height", 123px);
+        @include media(576) {
+          display: none;
+        }
+      }
+      &.seventh {
+        z-index: 1;
+        right: 0;
+        @include res("width", 128.5px);
+        @include res("height", 112px);
+        @include res("top", 351px);
+        @include media(576) {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .standarts {

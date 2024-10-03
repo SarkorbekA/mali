@@ -31,6 +31,16 @@ export function detail() {
       "ru": "Вес",
       "en": "Weight"
     },
+    "inbox": {
+      "uz": "Qutida",
+      "ru": "В коробке",
+      "en": "In box"
+    },
+    "in_container": {
+      "uz": "Konteynerda",
+      "ru": "В таре ",
+      "en": "In container"
+    },
   };
 
 
@@ -65,9 +75,9 @@ export function detail() {
             const sliderContainer = document.querySelector('.swiper-wrapper');
             sliderContainer.innerHTML = '';
 
-            document.querySelector('.detail__item-type').textContent = product.type[lang];
-            document.querySelector('.detail__item-name').textContent = product.name[lang];
-            document.querySelector('.detail__item-info').textContent = product.info[lang];
+            document.querySelector('.detail__item-type').textContent = product?.type[lang];
+            document.querySelector('.detail__item-name').textContent = product?.name?.[lang];
+            document.querySelector('.detail__item-info').textContent = product?.info[lang];
             if (product.compound) {
               document.querySelectorAll('.compound .detail__info-content p').forEach(el => {
                 el.textContent = product.compound[lang];
@@ -78,7 +88,7 @@ export function detail() {
 
             if (product.energy_value) {
               document.querySelectorAll('.energy_value .detail__info-content p').forEach(el => {
-                el.textContent = product.energy_value[lang] + (lang === 'en' ? " kcal" : lang === 'uz' ? " kkal" : " ккал");
+                el.textContent = product.energy_value + (lang === 'en' ? " kcal" : lang === 'uz' ? " kkal" : " ккал");
               });
             } else {
               document.querySelectorAll('.energy_value').forEach(el => el.remove());
@@ -105,25 +115,44 @@ export function detail() {
                   }
 
                   packEl.innerHTML = `
-                    <h3 class="detail_options-title">${product.pack.type[lang]}</h3>
-                    <ul class="detail__options-list">
+                  <h3 class="detail_options-title">${packItem?.type?.[lang] ?? ''}</h3>
+                  <ul class="detail__options-list">
+                    ${packItem.weight ? `
                       <li class="detail__options-el">
-                        <h4>${translations["weight"][lang]}</h4>
+                        <h4>${translations["weight"]?.[lang] ?? ''}</h4>
                         <h3>${packItem.weight} ${lang === 'en' ? "g" : lang === 'uz' ? "g" : "г"}</h3>
-                      </li>
+                      </li>` : ''}
+                    ${packItem.weight_big ? `
                       <li class="detail__options-el">
-                        <h4>${translations["in_pack"][lang]}</h4>
+                        <h4>${translations["weight"]?.[lang] ?? ''}</h4>
+                        <h3>${packItem.weight_big} ${lang === 'en' ? "kg" : lang === 'uz' ? "kg" : "кг"}</h3>
+                      </li>` : ''}
+                    ${packItem.inpack ? `
+                      <li class="detail__options-el">
+                        <h4>${translations["in_pack"]?.[lang] ?? ''}</h4>
                         <h3>${packItem.inpack} ${lang === 'en' ? "pcs" : lang === 'uz' ? "dona" : "шт"}</h3>
-                      </li>
+                      </li>` : ''}
+                    ${packItem.box ? `
                       <li class="detail__options-el">
-                        <h4>${translations["in_box"][lang]}</h4>
+                        <h4>${translations["in_box"]?.[lang] ?? ''}</h4>
                         <h3>${packItem.box} ${lang === 'en' ? "pkg" : lang === 'uz' ? "pkt" : "уп"}</h3>
-                      </li>
+                      </li>` : ''}
+                    ${packItem.in_container ? `
                       <li class="detail__options-el">
-                        <h4>${translations["weight_per_piece"][lang]}</h4>
-                        <h3>${packItem.box_weight} ${lang === 'en' ? "kg" : lang === 'kg' ? "pkt" : "кг"}</h3>
-                      </li>
-                    </ul>
+                        <h4>${translations["in_container"]?.[lang] ?? ''}</h4>
+                        <h3>${packItem.in_container} ${lang === 'en' ? "pcs" : lang === 'uz' ? "dona" : "шт"}</h3>
+                      </li>` : ''}
+                    ${packItem.box_weight ? `
+                      <li class="detail__options-el">
+                        <h4>${translations["weight_per_piece"]?.[lang] ?? ''}</h4>
+                        <h3>${packItem.box_weight} ${lang === 'en' ? "kg" : lang === 'uz' ? "pkt" : "кг"}</h3>
+                      </li>` : ''}
+                      ${packItem.inbox ? `
+                      <li class="detail__options-el">
+                        <h4>${translations["inbox"]?.[lang] ?? ''}</h4>
+                        <h3>${packItem.inbox} ${lang === 'en' ? "pcs" : lang === 'uz' ? "dona" : "шт"}</h3>
+                      </li>` : ''}
+                  </ul>
                   `;
 
                   packContainer.appendChild(packEl);

@@ -46,72 +46,88 @@ html(lang="en")
                   <path d="M6 14H12V12.5H6V14ZM6 10.75H14V9.25H6V10.75ZM6 7.5H14V6H6V7.5ZM4.5 17C4.0875 17 3.73437 16.8531 3.44062 16.5594C3.14687 16.2656 3 15.9125 3 15.5V4.5C3 4.0875 3.14687 3.73438 3.44062 3.44063C3.73437 3.14688 4.0875 3 4.5 3H15.5C15.9125 3 16.2656 3.14688 16.5594 3.44063C16.8531 3.73438 17 4.0875 17 4.5V15.5C17 15.9125 16.8531 16.2656 16.5594 16.5594C16.2656 16.8531 15.9125 17 15.5 17H4.5ZM4.5 15.5H15.5V4.5H4.5V15.5Z" fill="#E80029"/>
                   </g>
                 </svg>
-          .about-text
-            p 2016-yildan beri Mali kompaniyasi O‘zbekistonda chuqur muzlatilgan yarim tayyor mahsulotlar sanoatida yuqori sifat standartlarini o‘rnatmoqda.
-            p Ishlab chiqarishning har bir bosqichi diqqat bilan nazorat qilinadi, bu mahsulotlarning barcha foydali xususiyatlari va tabiiy ta’mini saqlab qolishga imkon beradi, iste'molchilarga sog‘lom va mazali taomlardan bahramand bo‘lish imkoniyatini beradi.
-          .about__video
-            .about__video-top Barcha Mali mahsulotlari tanlab olingan tabiiy ingredientlardan tayyorlanadi 
-              br
-              | , tengsiz sifat va ta'mni ta'minlab.
-            .about__video-slider 
-              .swiper.videoSlider
-                .swiper-wrapper
-                  .swiper-slide 
-                    img(src="@img/about-video.jpg" alt="video" draggable=false)
-                    button(type="button").about__video-btn
-                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_55_2850" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
-                        <rect width="60" height="60" fill="#D9D9D9"/>
-                        </mask>
-                        <g mask="url(#mask0_55_2850)">
-                        <path d="M24 40.5L40.5 30L24 19.5V40.5ZM30.0175 54C26.7142 54 23.6042 53.375 20.6875 52.125C17.7708 50.875 15.2188 49.1562 13.0312 46.9688C10.8438 44.7812 9.125 42.23 7.875 39.315C6.625 36.4 6 33.2854 6 29.9713C6 26.6571 6.625 23.5521 7.875 20.6563C9.125 17.7604 10.8438 15.2188 13.0312 13.0312C15.2188 10.8438 17.77 9.125 20.685 7.875C23.6 6.625 26.7146 6 30.0288 6C33.3429 6 36.4479 6.625 39.3438 7.875C42.2396 9.125 44.7812 10.8438 46.9688 13.0312C49.1562 15.2188 50.875 17.765 52.125 20.67C53.375 23.5754 54 26.6796 54 29.9825C54 33.2858 53.375 36.3958 52.125 39.3125C50.875 42.2292 49.1562 44.7812 46.9688 46.9688C44.7812 49.1562 42.235 50.875 39.33 52.125C36.4246 53.375 33.3204 54 30.0175 54ZM30 49.5C35.4167 49.5 40.0208 47.6042 43.8125 43.8125C47.6042 40.0208 49.5 35.4167 49.5 30C49.5 24.5833 47.6042 19.9792 43.8125 16.1875C40.0208 12.3958 35.4167 10.5 30 10.5C24.5833 10.5 19.9792 12.3958 16.1875 16.1875C12.3958 19.9792 10.5 24.5833 10.5 30C10.5 35.4167 12.3958 40.0208 16.1875 43.8125C19.9792 47.6042 24.5833 49.5 30 49.5Z" fill="white"/>
-                        </g>
-                      </svg>
-                  .swiper-slide 
-                    img(src="@img/about-video.jpg" alt="video" draggable=false)
-                    button(type="button").about__video-btn
-                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_55_2850" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
-                        <rect width="60" height="60" fill="#D9D9D9"/>
-                        </mask>
-                        <g mask="url(#mask0_55_2850)">
-                        <path d="M24 40.5L40.5 30L24 19.5V40.5ZM30.0175 54C26.7142 54 23.6042 53.375 20.6875 52.125C17.7708 50.875 15.2188 49.1562 13.0312 46.9688C10.8438 44.7812 9.125 42.23 7.875 39.315C6.625 36.4 6 33.2854 6 29.9713C6 26.6571 6.625 23.5521 7.875 20.6563C9.125 17.7604 10.8438 15.2188 13.0312 13.0312C15.2188 10.8438 17.77 9.125 20.685 7.875C23.6 6.625 26.7146 6 30.0288 6C33.3429 6 36.4479 6.625 39.3438 7.875C42.2396 9.125 44.7812 10.8438 46.9688 13.0312C49.1562 15.2188 50.875 17.765 52.125 20.67C53.375 23.5754 54 26.6796 54 29.9825C54 33.2858 53.375 36.3958 52.125 39.3125C50.875 42.2292 49.1562 44.7812 46.9688 46.9688C44.7812 49.1562 42.235 50.875 39.33 52.125C36.4246 53.375 33.3204 54 30.0175 54ZM30 49.5C35.4167 49.5 40.0208 47.6042 43.8125 43.8125C47.6042 40.0208 49.5 35.4167 49.5 30C49.5 24.5833 47.6042 19.9792 43.8125 16.1875C40.0208 12.3958 35.4167 10.5 30 10.5C24.5833 10.5 19.9792 12.3958 16.1875 16.1875C12.3958 19.9792 10.5 24.5833 10.5 30C10.5 35.4167 12.3958 40.0208 16.1875 43.8125C19.9792 47.6042 24.5833 49.5 30 49.5Z" fill="white"/>
-                        </g>
-                      </svg>
-                  .swiper-slide 
-                    img(src="@img/about-video.jpg" alt="video" draggable=false)
-                    button(type="button").about__video-btn
-                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_55_2850" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
-                        <rect width="60" height="60" fill="#D9D9D9"/>
-                        </mask>
-                        <g mask="url(#mask0_55_2850)">
-                        <path d="M24 40.5L40.5 30L24 19.5V40.5ZM30.0175 54C26.7142 54 23.6042 53.375 20.6875 52.125C17.7708 50.875 15.2188 49.1562 13.0312 46.9688C10.8438 44.7812 9.125 42.23 7.875 39.315C6.625 36.4 6 33.2854 6 29.9713C6 26.6571 6.625 23.5521 7.875 20.6563C9.125 17.7604 10.8438 15.2188 13.0312 13.0312C15.2188 10.8438 17.77 9.125 20.685 7.875C23.6 6.625 26.7146 6 30.0288 6C33.3429 6 36.4479 6.625 39.3438 7.875C42.2396 9.125 44.7812 10.8438 46.9688 13.0312C49.1562 15.2188 50.875 17.765 52.125 20.67C53.375 23.5754 54 26.6796 54 29.9825C54 33.2858 53.375 36.3958 52.125 39.3125C50.875 42.2292 49.1562 44.7812 46.9688 46.9688C44.7812 49.1562 42.235 50.875 39.33 52.125C36.4246 53.375 33.3204 54 30.0175 54ZM30 49.5C35.4167 49.5 40.0208 47.6042 43.8125 43.8125C47.6042 40.0208 49.5 35.4167 49.5 30C49.5 24.5833 47.6042 19.9792 43.8125 16.1875C40.0208 12.3958 35.4167 10.5 30 10.5C24.5833 10.5 19.9792 12.3958 16.1875 16.1875C12.3958 19.9792 10.5 24.5833 10.5 30C10.5 35.4167 12.3958 40.0208 16.1875 43.8125C19.9792 47.6042 24.5833 49.5 30 49.5Z" fill="white"/>
-                        </g>
-                      </svg>
-                .swiper-pagination.videoPagination
+          .about__wrapper 
+            .about-text
+              p 2016-yildan beri Mali kompaniyasi O‘zbekistonda chuqur muzlatilgan yarim tayyor mahsulotlar sanoatida yuqori sifat standartlarini o‘rnatmoqda.
+              p Ishlab chiqarishning har bir bosqichi diqqat bilan nazorat qilinadi, bu mahsulotlarning barcha foydali xususiyatlari va tabiiy ta’mini saqlab qolishga imkon beradi, iste'molchilarga sog‘lom va mazali taomlardan bahramand bo‘lish imkoniyatini beradi.
+            .about__video
+              .about__video-top Barcha Mali mahsulotlari tanlab olingan tabiiy ingredientlardan tayyorlanadi 
+                br
+                | , tengsiz sifat va ta'mni ta'minlab.
+              .about__video-slider 
+                .swiper.videoSlider
+                  .swiper-wrapper
+                    .swiper-slide 
+                      img(src="@img/about-video.jpg" alt="video" draggable=false)
+                      button(type="button").about__video-btn
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="mask0_55_2850" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+                          <rect width="60" height="60" fill="#D9D9D9"/>
+                          </mask>
+                          <g mask="url(#mask0_55_2850)">
+                          <path d="M24 40.5L40.5 30L24 19.5V40.5ZM30.0175 54C26.7142 54 23.6042 53.375 20.6875 52.125C17.7708 50.875 15.2188 49.1562 13.0312 46.9688C10.8438 44.7812 9.125 42.23 7.875 39.315C6.625 36.4 6 33.2854 6 29.9713C6 26.6571 6.625 23.5521 7.875 20.6563C9.125 17.7604 10.8438 15.2188 13.0312 13.0312C15.2188 10.8438 17.77 9.125 20.685 7.875C23.6 6.625 26.7146 6 30.0288 6C33.3429 6 36.4479 6.625 39.3438 7.875C42.2396 9.125 44.7812 10.8438 46.9688 13.0312C49.1562 15.2188 50.875 17.765 52.125 20.67C53.375 23.5754 54 26.6796 54 29.9825C54 33.2858 53.375 36.3958 52.125 39.3125C50.875 42.2292 49.1562 44.7812 46.9688 46.9688C44.7812 49.1562 42.235 50.875 39.33 52.125C36.4246 53.375 33.3204 54 30.0175 54ZM30 49.5C35.4167 49.5 40.0208 47.6042 43.8125 43.8125C47.6042 40.0208 49.5 35.4167 49.5 30C49.5 24.5833 47.6042 19.9792 43.8125 16.1875C40.0208 12.3958 35.4167 10.5 30 10.5C24.5833 10.5 19.9792 12.3958 16.1875 16.1875C12.3958 19.9792 10.5 24.5833 10.5 30C10.5 35.4167 12.3958 40.0208 16.1875 43.8125C19.9792 47.6042 24.5833 49.5 30 49.5Z" fill="white"/>
+                          </g>
+                        </svg>
+                    .swiper-slide 
+                      img(src="@img/about-video.jpg" alt="video" draggable=false)
+                      button(type="button").about__video-btn
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="mask0_55_2850" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+                          <rect width="60" height="60" fill="#D9D9D9"/>
+                          </mask>
+                          <g mask="url(#mask0_55_2850)">
+                          <path d="M24 40.5L40.5 30L24 19.5V40.5ZM30.0175 54C26.7142 54 23.6042 53.375 20.6875 52.125C17.7708 50.875 15.2188 49.1562 13.0312 46.9688C10.8438 44.7812 9.125 42.23 7.875 39.315C6.625 36.4 6 33.2854 6 29.9713C6 26.6571 6.625 23.5521 7.875 20.6563C9.125 17.7604 10.8438 15.2188 13.0312 13.0312C15.2188 10.8438 17.77 9.125 20.685 7.875C23.6 6.625 26.7146 6 30.0288 6C33.3429 6 36.4479 6.625 39.3438 7.875C42.2396 9.125 44.7812 10.8438 46.9688 13.0312C49.1562 15.2188 50.875 17.765 52.125 20.67C53.375 23.5754 54 26.6796 54 29.9825C54 33.2858 53.375 36.3958 52.125 39.3125C50.875 42.2292 49.1562 44.7812 46.9688 46.9688C44.7812 49.1562 42.235 50.875 39.33 52.125C36.4246 53.375 33.3204 54 30.0175 54ZM30 49.5C35.4167 49.5 40.0208 47.6042 43.8125 43.8125C47.6042 40.0208 49.5 35.4167 49.5 30C49.5 24.5833 47.6042 19.9792 43.8125 16.1875C40.0208 12.3958 35.4167 10.5 30 10.5C24.5833 10.5 19.9792 12.3958 16.1875 16.1875C12.3958 19.9792 10.5 24.5833 10.5 30C10.5 35.4167 12.3958 40.0208 16.1875 43.8125C19.9792 47.6042 24.5833 49.5 30 49.5Z" fill="white"/>
+                          </g>
+                        </svg>
+                    .swiper-slide 
+                      img(src="@img/about-video.jpg" alt="video" draggable=false)
+                      button(type="button").about__video-btn
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="mask0_55_2850" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+                          <rect width="60" height="60" fill="#D9D9D9"/>
+                          </mask>
+                          <g mask="url(#mask0_55_2850)">
+                          <path d="M24 40.5L40.5 30L24 19.5V40.5ZM30.0175 54C26.7142 54 23.6042 53.375 20.6875 52.125C17.7708 50.875 15.2188 49.1562 13.0312 46.9688C10.8438 44.7812 9.125 42.23 7.875 39.315C6.625 36.4 6 33.2854 6 29.9713C6 26.6571 6.625 23.5521 7.875 20.6563C9.125 17.7604 10.8438 15.2188 13.0312 13.0312C15.2188 10.8438 17.77 9.125 20.685 7.875C23.6 6.625 26.7146 6 30.0288 6C33.3429 6 36.4479 6.625 39.3438 7.875C42.2396 9.125 44.7812 10.8438 46.9688 13.0312C49.1562 15.2188 50.875 17.765 52.125 20.67C53.375 23.5754 54 26.6796 54 29.9825C54 33.2858 53.375 36.3958 52.125 39.3125C50.875 42.2292 49.1562 44.7812 46.9688 46.9688C44.7812 49.1562 42.235 50.875 39.33 52.125C36.4246 53.375 33.3204 54 30.0175 54ZM30 49.5C35.4167 49.5 40.0208 47.6042 43.8125 43.8125C47.6042 40.0208 49.5 35.4167 49.5 30C49.5 24.5833 47.6042 19.9792 43.8125 16.1875C40.0208 12.3958 35.4167 10.5 30 10.5C24.5833 10.5 19.9792 12.3958 16.1875 16.1875C12.3958 19.9792 10.5 24.5833 10.5 30C10.5 35.4167 12.3958 40.0208 16.1875 43.8125C19.9792 47.6042 24.5833 49.5 30 49.5Z" fill="white"/>
+                          </g>
+                        </svg>
+                  .swiper-pagination.videoPagination
 
-              .about__video-navigation 
-                button(type="button").about__video-prev
-                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="30" height="30"   fill="#E80029"/>
-                    <mask id="mask0_55_2839" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
-                    <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_55_2839)">
-                    <path d="M11.8333 15L17.7083 20.875C17.9028 21.0695 18 21.3056 18 21.5834C18 21.8612 17.9028 22.0973 17.7083 22.2917C17.5139 22.4862 17.2778 22.5834 17 22.5834C16.7222 22.5834 16.4861 22.4862 16.2917 22.2917L10.0625 16.0625C9.90972 15.9098 9.79861 15.7431 9.72917 15.5625C9.65972 15.382 9.625 15.1945 9.625 15C9.625 14.8056 9.65972 14.6181 9.72917 14.4375C9.79861 14.257 9.90972 14.0903 10.0625 13.9375L16.2917 7.70837C16.4861 7.51393 16.7222 7.41671 17 7.41671C17.2778 7.41671 17.5139 7.51393 17.7083 7.70837C17.9028 7.90282 18 8.13893 18 8.41671C18 8.69448 17.9028 8.9306 17.7083 9.12504L11.8333 15Z" fill="white"/>
-                    </g>
-                  </svg>
-                button(type="button").about__video-next
-                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="30" height="30"   fill="#E80029"/>
-                    <mask id="mask0_55_2838" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
-                    <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_55_2838)">
-                    <path d="M18.1667 15L12.2917 9.12502C12.0972 8.93058 12 8.69446 12 8.41669C12 8.13891 12.0972 7.9028 12.2917 7.70835C12.4861 7.51391 12.7222 7.41669 13 7.41669C13.2778 7.41669 13.5139 7.51391 13.7083 7.70835L19.9375 13.9375C20.0903 14.0903 20.2014 14.257 20.2708 14.4375C20.3403 14.6181 20.375 14.8056 20.375 15C20.375 15.1945 20.3403 15.382 20.2708 15.5625C20.2014 15.7431 20.0903 15.9097 19.9375 16.0625L13.7083 22.2917C13.5139 22.4861 13.2778 22.5834 13 22.5834C12.7222 22.5834 12.4861 22.4861 12.2917 22.2917C12.0972 22.0972 12 21.8611 12 21.5834C12 21.3056 12.0972 21.0695 12.2917 20.875L18.1667 15Z" fill="white"/>
-                    </g>
-                  </svg>
+                .about__video-navigation 
+                  button(type="button").about__video-prev
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="30" height="30"   fill="#E80029"/>
+                      <mask id="mask0_55_2839" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                      <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_55_2839)">
+                      <path d="M11.8333 15L17.7083 20.875C17.9028 21.0695 18 21.3056 18 21.5834C18 21.8612 17.9028 22.0973 17.7083 22.2917C17.5139 22.4862 17.2778 22.5834 17 22.5834C16.7222 22.5834 16.4861 22.4862 16.2917 22.2917L10.0625 16.0625C9.90972 15.9098 9.79861 15.7431 9.72917 15.5625C9.65972 15.382 9.625 15.1945 9.625 15C9.625 14.8056 9.65972 14.6181 9.72917 14.4375C9.79861 14.257 9.90972 14.0903 10.0625 13.9375L16.2917 7.70837C16.4861 7.51393 16.7222 7.41671 17 7.41671C17.2778 7.41671 17.5139 7.51393 17.7083 7.70837C17.9028 7.90282 18 8.13893 18 8.41671C18 8.69448 17.9028 8.9306 17.7083 9.12504L11.8333 15Z" fill="white"/>
+                      </g>
+                    </svg>
+                  button(type="button").about__video-next
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="30" height="30"   fill="#E80029"/>
+                      <mask id="mask0_55_2838" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="20" height="20">
+                      <rect x="5" y="5" width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_55_2838)">
+                      <path d="M18.1667 15L12.2917 9.12502C12.0972 8.93058 12 8.69446 12 8.41669C12 8.13891 12.0972 7.9028 12.2917 7.70835C12.4861 7.51391 12.7222 7.41669 13 7.41669C13.2778 7.41669 13.5139 7.51391 13.7083 7.70835L19.9375 13.9375C20.0903 14.0903 20.2014 14.257 20.2708 14.4375C20.3403 14.6181 20.375 14.8056 20.375 15C20.375 15.1945 20.3403 15.382 20.2708 15.5625C20.2014 15.7431 20.0903 15.9097 19.9375 16.0625L13.7083 22.2917C13.5139 22.4861 13.2778 22.5834 13 22.5834C12.7222 22.5834 12.4861 22.4861 12.2917 22.2917C12.0972 22.0972 12 21.8611 12 21.5834C12 21.3056 12.0972 21.0695 12.2917 20.875L18.1667 15Z" fill="white"/>
+                      </g>
+                    </svg>
+            .about__wrapper-images 
+              .about__wrapper-img.first 
+                img(src="@img/pelmeni/item3.png" draggable="false" alt="item")
+              .about__wrapper-img.second 
+                img(src="@img/pelmeni/item4.png" draggable="false" alt="item")
+              .about__wrapper-img.third 
+                img(src="@img/pelmeni/item5.png" draggable="false" alt="item")
+              .about__wrapper-img.fourth 
+                img(src="@img/pelmeni/item6.png" draggable="false" alt="item")
+              .about__wrapper-img.fifth 
+                img(src="@img/pelmeni/item7.png" draggable="false" alt="item")
+              .about__wrapper-img.sixth 
+                img(src="@img/pelmeni/item2.png" draggable="false" alt="item")
+              .about__wrapper-img.seventh 
+                img(src="@img/pelmeni/item1.png" draggable="false" alt="item")
 
           .about__center 
             .about__center-img

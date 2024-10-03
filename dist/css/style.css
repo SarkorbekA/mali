@@ -354,8 +354,8 @@
 .product__item-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .product__item-box {
@@ -1373,8 +1373,8 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
@@ -1709,8 +1709,8 @@
 .detail__img-main img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .detail__img-main.mob {
@@ -1756,8 +1756,8 @@
 .detail__img-item img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .detail__img-item svg {
@@ -2626,6 +2626,73 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.about__wrapper {
+  position: relative;
+}
+
+.about__wrapper-img {
+  position: absolute;
+}
+
+.about__wrapper-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.about__wrapper-img.first {
+  top: 5.8823529412vw;
+  right: 28.3088235294vw;
+  width: 15vw;
+  height: 9.9264705882vw;
+}
+
+.about__wrapper-img.second {
+  top: 0;
+  right: 5.5147058824vw;
+  width: 14.7058823529vw;
+  height: 14.1911764706vw;
+}
+
+.about__wrapper-img.third {
+  bottom: 4.7058823529vw;
+  left: 4.4117647059vw;
+  width: 14.8529411765vw;
+  height: 13.8970588235vw;
+  z-index: 3;
+}
+
+.about__wrapper-img.fourth {
+  width: 8.4191176471vw;
+  height: 9.1544117647vw;
+  bottom: 0;
+  left: 0;
+}
+
+.about__wrapper-img.fifth {
+  z-index: 2;
+  bottom: 6.6176470588vw;
+  width: 18.8970588235vw;
+  height: 18.0882352941vw;
+  right: -1.4705882353vw;
+}
+
+.about__wrapper-img.sixth {
+  top: 20vw;
+  left: 2.2794117647vw;
+  width: 8.6764705882vw;
+  height: 9.0441176471vw;
+}
+
+.about__wrapper-img.seventh {
+  z-index: 1;
+  right: 0;
+  width: 9.4485294118vw;
+  height: 8.2352941176vw;
+  top: 25.8088235294vw;
 }
 
 .standarts {
@@ -5670,6 +5737,34 @@ li::selection {
     width: 100%;
     margin-top: 0;
     height: 58.1395348837vw;
+  }
+
+  .about__wrapper-img.first {
+    display: none;
+  }
+
+  .about__wrapper-img.second {
+    display: none;
+  }
+
+  .about__wrapper-img.third {
+    display: none;
+  }
+
+  .about__wrapper-img.fourth {
+    display: none;
+  }
+
+  .about__wrapper-img.fifth {
+    display: none;
+  }
+
+  .about__wrapper-img.sixth {
+    display: none;
+  }
+
+  .about__wrapper-img.seventh {
+    display: none;
   }
 
   .standarts {
